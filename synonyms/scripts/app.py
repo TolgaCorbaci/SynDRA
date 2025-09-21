@@ -3,26 +3,47 @@ import pandas as pd
 import re
 import os
 
+# --- Load synonyms ---
 csv_path = os.path.join(os.path.dirname(__file__), "data", "merged_200K_drug_synonyms.csv")
 synonyms_df = pd.read_csv(csv_path, dtype=str)
-
-
-# Clean the synonyms column
 synonyms_df["synonyms"] = synonyms_df["synonyms"].str.lower().str.strip()
 
+# --- Load compound metadata ---
+tsv_path = os.path.join(os.path.dirname(__file__), "data", "compoundinfo_beta.tsv")
+metadata_df = pd.read_csv(tsv_path, sep="\t", dtype=str)
 
 # --- Function to find synonyms efficiently ---
 def find_synonyms(drug_names):
-    # Clean input
     drug_names = [d.lower().strip() for d in drug_names if d.strip()]
     if not drug_names:
         return pd.DataFrame()
 
-    # Combine all drug names into a single regex pattern
+    # Regex for all drug names
     pattern = r"\b(" + "|".join(map(re.escape, drug_names)) + r")\b"
-    matches = synonyms_df[synonyms_df["synonyms"].str.contains(pattern, regex=True, na=False)]
+    matches = synonyms_df[
+    synonyms_df["synonyms"].str.contains(pattern, regex=True, na=False, flags=re.IGNORECASE)
+]
 
-    return matches[["BROAD_drug_ID", "synonyms"]].drop_duplicates().reset_index(drop=True)
+
+    if matches.empty:
+        return pd.DataFrame()
+
+    # Collapse synonyms into one row per BROAD_drug_ID
+    grouped = (
+        matches.groupby("BROAD_drug_ID")["synonyms"]
+        .apply(lambda x: ", ".join(sorted(set(x))))
+        .reset_index()
+    )
+
+    # Merge with compound metadata (BROAD_drug_ID ↔ pert_id)
+    final = grouped.merge(
+        metadata_df,
+        left_on="BROAD_drug_ID",
+        right_on="pert_id",
+        how="left"
+    )
+
+    return final
 
 
 # --- UI ---
@@ -30,8 +51,8 @@ app_ui = ui.page_fluid(
     ui.h2("SynDRA: Synonym & BROAD_drug Finder"),
     ui.p("Enter drug names (newline or comma-separated)."),
     ui.input_text_area(
-        "drugs", 
-        "Drug names:", 
+        "drugs",
+        "Drug names:",
         placeholder="e.g., aspirin\nmetformin, ibuprofen"
     ),
     ui.input_action_button("go", "Find Synonyms"),
@@ -50,7 +71,6 @@ def server(input, output, session):
     cached_results = {}
 
     def get_results():
-        # Check cache to avoid repeated computation
         drug_text = input.drugs()
         if drug_text in cached_results:
             return cached_results[drug_text]
@@ -75,7 +95,7 @@ def server(input, output, session):
         df = get_results()
         if df.empty:
             return "No matches found."
-        return f"{len(df)} matches found."
+        return f"{len(df)} unique BROAD_drug_IDs matched."
 
     @output
     @render.download

@@ -1,163 +1,153 @@
 # SynDRA: Synonym Mapping for Alignment of Repurposing Therapeutics
 
-**SynDRA** is a unified drug synonym mapping system designed to harmonize identifiers across major biomedical resources.  
-It bridges gaps between external drug sources and transcriptomic perturbation datasets such as **LINCS/CMap**, improving drug repurposing workflows by resolving inconsistent naming.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<!-- After you mint a Zenodo DOI (see "Citing SynDRA"), replace the line below: -->
+<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX) -->
 
-## 🌐 Web App
+**SynDRA** is a structure-aware drug synonym mapping system that harmonizes drug
+identifiers across major biomedical resources. It bridges external drug sources
+and transcriptomic perturbation datasets (**LINCS/CMap L1000**), increasing match
+rates in signature-based drug repurposing by resolving inconsistent naming **and**
+collapsing salt, solvate, and stereo variants onto a single parent compound.
 
-Try SynDRA interactively online: [https://tolgacorbaci.shinyapps.io/syndra/](https://tolgacorbaci.shinyapps.io/syndra/)
+## Web app
 
+Try SynDRA interactively: <https://tolgacorbaci.shinyapps.io/syndra/>
 
-![SynDRA Pipeline Overview](https://github.com/hidelab/SynDRA/blob/main/SynDRA%20figure.png)
+![SynDRA pipeline overview](SynDRA%20figure.png)
 
+## What SynDRA does
 
----
+- Integrates drug synonyms from **KatDB**, **TTD**, **PRISM**, and **LINCS 2020**
+- Normalizes and deduplicates synonyms into a single mapping across
+  **BRD IDs**, **TTD IDs**, and **PubChem CIDs**
+- **(new)** Resolves each compound to a standardized **parent InChIKey** (salt/solvent
+  stripped, neutralized), so `imatinib mesylate` and `imatinib` map to one drug
+- **(new)** Provides a **structural consolidation map** that links the many BRD IDs
+  representing the same parent compound, recovering replicate L1000 signatures that
+  exact-name matching would miss
 
-## 📌 Overview
+## Key result
 
-- Integrates synonyms from **KatDB**, **TTD**, **PRISM**, and **LINCS2020**
-- Normalizes and deduplicates synonyms into a single mapping
-- Links identifiers across **BRD_IDs**, **TTD_IDs**, and **PubChem CIDs**
-- Increases match rates for drug repurposing pipelines (e.g., +8.5% for FO5A benchmark set)
+Validating the harmonized resource against the canonical structures in LINCS
+`compoundinfo_beta` shows the L1000 catalog is highly redundant: **33,515
+structurally-resolved BRD IDs collapse to 11,685 unique parent compounds.** About
+**75% of catalog entries are salt/form/stereo variants** of a smaller parent set
+(up to 32 BRD IDs for a single compound). SynDRA's parent-aware layer lets a single
+query recover all of these instead of one.
 
-**Result:**  
-193,113 unique synonyms mapped to 33,858 BRD_IDs, 2,775 TTD_IDs, and 950 PubChem CIDs.
+A structure-based audit of the merge shows synonym→BRD assignment is **99.96%
+unambiguous** at the synonym level; of the 76 colliding synonyms, ~37 are benign
+salt/form variants and ~36 are genuine ambiguities concentrated on compound-code
+strings (e.g. `CHIR-99021`, `AZD-2014`). See [Validation](#validation).
 
----
-
-## 🔬 Methods
-
-### Data Sources
-
-1. **KatDB Synonyms**  
-   - *Source*: Kat Koler  
-   - *File*: `L1000_BRD_name_translated_drug_list.csv`  
-   - *Purpose*: Expand recognition of BRD compounds in L1000 assays  
-   - *Example*: `BRD-K52256627` → “chlorhexidine,” “N-[4-methylpiperazinyl]-…”
-
-2. **Therapeutic Targets Database (TTD)**  
-   - *URL*: [TTD Download](https://idrblab.org/ttd/)  
-   - *File*: `P1-04-Drug_synonyms.txt`  
-   - *Purpose*: Drug–target linked synonyms  
-   - *Example*: `D00AAN` → “d00aan,” chemical descriptors
-
-3. **PRISM Drug Synonyms**  
-   - *URL*: [PRISM GitHub](https://github.com/broadinstitute/prism_repurposing)  
-   - *File*: `PRISM_drug_synonyms.csv`  
-   - *Purpose*: Supports MOA enrichment  
-   - *Example*: `PubChem_CID 11314340` → “a-674563”
-
-4. **LINCS 2020 Compound Metadata**  
-   - *URL*: [Clue.io Data Dashboard](https://clue.io/releases/data-dashboard)  
-   - *File*: `compoundinfo_beta.txt`  
-   - *Purpose*: Standard compound identifiers for L1000 perturbation studies  
-
----
-
-### Data Characteristics
-
-- **Initial entry counts**  
-  - katdb_df: 13,176  
-  - ttd_df: 299,047  
-  - prism_df: 112,784  
-
-- **Initial unique identifiers**  
-  - BROAD_drug_IDs: 5,539  
-  - TTD_drug_IDs: 30,713  
-  - PubChem_CIDs: 1,351  
-
-- **LINCS2020 coverage**  
-  - Unique BROAD_drug_IDs: 33,613  
-  - Synonyms: 34,234  
-
-- **LINCS2020 + KatDB combined**  
-  - Unique BROAD_drug_IDs: 33,858  
-  - Synonyms: 45,617  
-
----
-
-### Data Preparation
-
-- Convert all synonyms to lowercase  
-- Split multi-synonym strings into separate rows  
-- Strip whitespace and formatting artifacts  
-
----
-
-### Merging Strategy
-
-1. **Synonym explosion** → one synonym per row  
-2. **Outer join on synonyms** → maximize matches  
-3. **ID propagation** → forward/backward fill with shared synonyms  
-4. **Grouping & aggregation** → unique sets of IDs  
-5. **Filter** → drop rows without `BROAD_drug_ID`  
-
----
-
-## 📊 Results
-
-### Final Dataset
-
-- **Rows**: 193,221  
-- **Unique synonyms**: 193,113  
-- **Identifiers**:  
-  - BROAD_drug_IDs: 33,858  
-  - TTD_drug_IDs: 2,775  
-  - PubChem_CIDs: 950  
-
-- **Missing values (NaNs)**:  
-  - BROAD_drug_ID: 0  
-  - synonyms: 0  
-  - TTD_drug_ID: 45,737  
-  - PubChem_CID: 88,237  
-
-- **Duplicate rows**: 0  
-
----
-
-### Sample Entries
-
-| BROAD_drug_ID | Synonym                     | TTD_drug_ID | PubChem_CID |
-|---------------|-----------------------------|-------------|-------------|
-| BRD-K52256627 | chlorhexidine               | D0V4GY      | 9552079     |
-| BRD-K52256627 | chlorhexidine, combinations | D0V4GY      | 9552079     |
-| BRD-K52256627 | 1,1'-hexamethylenebis[...]  | D0V4GY      | 9552079     |
-
----
-
-### Match Statistics
-
-| Category                        | Initial Entries | Final Entries |
-|---------------------------------|-----------------|---------------|
-| BROAD_drug_ID                   | 45,617          | 33,858        |
-| TTD_drug_ID                     | 299,047         | 2,775         |
-| PubChem_CID                     | 112,784         | 950           |
-| **Total merged rows**           | —               | 435,530       |
-| **Final unique synonym groups** | —               | 193,221       |
-| **Matched identifier instances**| —               | 1,145         |
-
----
-
-## 🚀 Usage
-
-Clone and run the pipeline:
+## Installation
 
 ```bash
 git clone https://github.com/hidelab/SynDRA.git
 cd SynDRA
-jupyter notebook SynDRA_pipeline.ipynb
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 ```
----
 
-## 📄 License
+RDKit is required for the structural steps (`pip install rdkit`).
 
-This project is licensed under the MIT License.
+## Usage
 
----
+The harmonized resource is provided directly; the scripts reproduce and validate it.
 
-## 📚 Citation
+```bash
+# 1. Validate the merge against chemical structure (offline; no internet needed)
+make validate
 
-If you use SynDRA in your work, please cite:
+# 2. Produce the structure-augmented synonym table + the BRD consolidation map
+make enhance
 
-> T. Corbaci et. al., *SynDRA: Synonym Mapping for Alignment of Repurposing Therapeutics* (Brazilian Symposium on Bioinformatics BSB, 2025).
+# 3. Run the interactive web app locally
+make app
+```
 
+Or call the scripts directly from `synonyms/scripts/`:
+
+```bash
+python syndra_structural_validation.py --synonyms data/merged_200K_drug_synonyms.csv \
+                                       --compound-info data/compoundinfo_beta.tsv
+python syndra_enhance.py
+```
+
+The reusable core is `parent_inchikey(smiles, connectivity_only=True)` in
+`syndra_structural_validation.py` — pass `connectivity_only=False` to preserve
+stereochemistry (see [Limitations](#limitations)).
+
+## Repository structure
+
+```
+SynDRA/
+├── README.md
+├── LICENSE                         # MIT (code)
+├── CITATION.cff                    # how to cite
+├── DATA_SOURCES.md                 # provenance, versions, and licenses of inputs
+├── requirements.txt
+├── Makefile
+├── SynDRA figure.png
+└── synonyms/
+    ├── input/                      # raw source files (see DATA_SOURCES.md)
+    └── scripts/
+        ├── create_synonym_database.ipynb   # build pipeline
+        ├── synonym_matching.ipynb          # benchmark matching
+        ├── syndra_structural_validation.py # structure-based validation (new)
+        ├── syndra_enhance.py               # parent-aug + consolidation (new)
+        ├── app.py                          # Shiny web app
+        └── data/                           # released outputs
+```
+
+## Outputs
+
+| File | Description |
+|------|-------------|
+| `merged_200K_drug_synonyms.csv` | Harmonized synonym → BRD/TTD/PubChem mapping |
+| `merged_synonyms_parent_augmented.csv` | Above + `parent_inchikey`, junk synonyms removed, ambiguous synonyms flagged |
+| `brd_parent_consolidation.csv` | `parent_inchikey` → set of BRD IDs that are the same parent compound |
+
+## Data sources
+
+All inputs, with download URLs, release versions, dates, and license terms, are
+documented in **[DATA_SOURCES.md](DATA_SOURCES.md)**. Please confirm redistribution
+terms for your use before reusing the merged table.
+
+## Validation
+
+Run `make validate` to regenerate. On the released resource:
+
+| Metric | Value |
+|--------|-------|
+| Unique synonyms | 192,109 |
+| Unique BRD IDs | 33,858 |
+| BRD IDs with a resolved parent structure | 33,515 (85% of catalog) |
+| Unique parent compounds | 11,685 |
+| Catalog entries that are salt/form/stereo duplicates | ~75% |
+| Synonym-level ambiguity (synonym → >1 BRD) | 76 (0.04%) |
+| Junk synonyms removed (numeric / ≤2 char) | 2,413 |
+
+## Limitations
+
+- **BROAD-centric.** Rows without a BRD ID are dropped, so standalone TTD/PubChem
+  coverage is intentionally reduced in favor of L1000 linkage.
+- **Stereochemistry.** The default parent key uses the InChIKey connectivity block,
+  which collapses enantiomers and other stereoisomers. This is usually desirable for
+  repurposing but not always (e.g. thalidomide enantiomers differ in activity). Use
+  `connectivity_only=False` for a stereo-preserving key.
+- **Structure coverage.** ~15% of catalog compounds lack a usable SMILES and are not
+  structurally validated.
+
+## Citing SynDRA
+
+If you use SynDRA, please cite the work (see `CITATION.cff`):
+
+> Corbaci, T. *et al.* SynDRA: Synonym Mapping for Alignment of Repurposing
+> Therapeutics. *Brazilian Symposium on Bioinformatics (BSB)*, 2025.
+
+## License
+
+Code is released under the [MIT License](LICENSE). Input datasets retain the
+licenses of their original providers — see [DATA_SOURCES.md](DATA_SOURCES.md).

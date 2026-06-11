@@ -1,0 +1,17 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1        # reading .xlsx inputs
+
+# Cheminformatics (structural validation / parent InChIKey)
+rdkit>=2023.9
+
+# Web app
+shiny>=0.6
+jinja2>=3.0
+
+# Notebooks (build + benchmark pipeline)
+jupyter>=1.0
+
+# For an exact reproducible lock, after installing run:
+#   pip freeze > requirements-lock.txt

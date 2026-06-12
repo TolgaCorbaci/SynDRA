@@ -298,8 +298,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <div class="results" id="results"></div>
     <div class="nores" id="nores">
       <div class="ic"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 5 5M8 11h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-      <h3>No match in the demo set</h3>
-      <p id="nores-msg">This live demo carries a sample of compounds. The full SynDRA resource covers every L1000 compound — see the Data section to run it on the complete map.</p>
+      <h3>No match found</h3>
+      <p id="nores-msg">The search term could not be resolved to any compound or synonym across the complete SynDRA registry. Please double-check the identifier format or spelling.</p>
     </div>
   </div>
 </section>
@@ -361,7 +361,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 <div class="toast" id="toast"></div>
 
 <script>
-  
+
 fetch('syndra_data.json')
   .then(res => res.json())
   .then(fullData => { 

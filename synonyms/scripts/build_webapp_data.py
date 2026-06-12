@@ -76,8 +76,8 @@ def main(compound_info, synonyms_path, out_path):
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--compound-info", default="data/compoundinfo_beta.tsv")
-    p.add_argument("--synonyms", default="data/merged_200K_drug_synonyms.csv")
+    p.add_argument("--compound-info", default="synonyms/scripts/data/compoundinfo_beta.tsv")
+    p.add_argument("--synonyms", default="synonyms/scripts/data/merged_200K_drug_synonyms.csv")
     p.add_argument("--out", default="syndra_data.json")
     args = p.parse_args()
     main(args.compound_info, args.synonyms, args.out)

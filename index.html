@@ -108,6 +108,7 @@ h1.head em{font-style:normal;color:var(--teal);position:relative;white-space:now
   line-height:1.1;color:var(--ink);margin:0}
 .res-sub{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .badge{font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--line)}
+.badge{cursor:pointer}
 .badge.target{background:#eef0fb;border-color:#dadffa;color:#4b46b8}
 .badge.moa{background:#fff;color:var(--ink-2)}
 .badge.class{background:var(--teal-050);border-color:#cfe9e5;color:var(--teal-700)}
@@ -658,6 +659,15 @@ function show(brd) {
   const dl = $('#dl'); 
   if (dl) dl.onclick = () => download(brd, c);
 
+  // Make badges clickable: show other compounds sharing the same target or MOA
+  $('#results').querySelectorAll('.badge').forEach(b => {
+    b.style.cursor = 'pointer';
+  });
+  const targBadge = $('#results').querySelector('.badge.target');
+  if (targBadge) targBadge.onclick = () => showByTag('target', c.target);
+  const moaBadge = $('#results').querySelector('.badge.moa');
+  if (moaBadge) moaBadge.onclick = () => showByTag('moa', c.moa);
+
   scrollToEl('#results');
 }
 
@@ -708,6 +718,40 @@ function download(brd, c) {
   a.download = `syndra_${brd}.json`; 
   a.click(); 
   URL.revokeObjectURL(a.href);
+}
+
+// Show other compounds that share a target or MOA
+function showByTag(tagType, tagValue) {
+  if (!tagValue) return toast('No value to search');
+  const key = tagType === 'target' ? 'target' : 'moa';
+  const matches = Object.entries(COMP).filter(([brd, c]) => {
+    return c && c[key] && String(c[key]).toLowerCase() === String(tagValue).toLowerCase();
+  }).map(([brd, c]) => ({brd, name: c.name || brd, parent: c.parent}));
+
+  if (!matches.length) return toast('No matching compounds found');
+
+  // Render a compact list of matches
+  $('#results').innerHTML = `
+    <div class="res-head">
+      <div>
+        <h2 class="res-name">${esc(tagValue)}</h2>
+        <div class="res-sub"><span class="badge">${matches.length} matches</span></div>
+      </div>
+      <button class="btn-ghost" onclick="resetView()">Close</button>
+    </div>
+    <div class="card">
+      <h3><span class="ic">⬡</span> Compounds sharing this ${esc(tagType)}</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+        ${matches.map(m => `<div class="ac-item" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:8px;cursor:pointer" data-brd="${m.brd}"><span style="font-weight:600">${esc(m.name)}</span><span style="float:right;font-family:var(--mono);color:var(--muted)">${esc(m.brd)}</span></div>`).join('')}
+      </div>
+    </div>`;
+
+  // Attach click handlers
+  $('#results').querySelectorAll('[data-brd]').forEach(el => {
+    el.onclick = () => show(el.dataset.brd);
+  });
+  $('#results').classList.add('show');
+  scrollToEl('#results');
 }
 </script>
 </body>

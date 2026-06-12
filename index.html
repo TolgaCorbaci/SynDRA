@@ -252,8 +252,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Search a drug name, synonym, brand, or BRD ID…" aria-label="Search for a drug">
         <button class="btn-go" id="go">Search</button>
+        <button class="btn-go" id="list-btn" style="margin-left:8px;background:#0A7A72">List</button>
       </div>
       <div class="ac" id="ac"></div>
+    </div>
+
+    <!-- List query panel -->
+    <div id="list-panel" style="display:none;max-width:720px;margin:18px auto 0">
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--sh)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <strong>Query a list of drugs</strong>
+          <button class="btn-ghost" id="list-close">Close</button>
+        </div>
+        <textarea id="list-ta" placeholder="Paste drug names, synonyms, or BRD IDs (one per line or comma-separated)" style="width:100%;height:120px;border:1px solid var(--line);border-radius:8px;padding:10px;font-family:var(--mono);font-size:14px"></textarea>
+        <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
+          <button class="btn-ghost" id="list-clear">Clear</button>
+          <button class="btn-go" id="list-run">Run list</button>
+        </div>
+      </div>
     </div>
 
     <div class="examples">
@@ -504,6 +520,138 @@ document.querySelectorAll('.chip').forEach(c => {
   };
 });
 
+// List UI wiring
+$('#list-btn').onclick = () => { $('#list-panel').style.display = 'block'; $('#list-ta').focus(); };
+$('#list-close').onclick = () => { $('#list-panel').style.display = 'none'; };
+$('#list-clear').onclick = () => { $('#list-ta').value = ''; };
+$('#list-run').onclick = () => { processList($('#list-ta').value); };
+
+// Resolve a single query string to a BRD (or null)
+function resolveQuery(q) {
+  if (!q) return null;
+  const raw = String(q).trim();
+  if (!raw) return null;
+  const v = raw.toLowerCase();
+  const brdMatch = raw.match(/^brd-[a-z0-9]+$/i);
+  if (brdMatch) {
+    const brdKey = raw.toUpperCase();
+    if (COMP[brdKey]) return brdKey;
+  }
+  if (INDEX[v]) return INDEX[v];
+  const k = KEYS.find(k => k.startsWith(v)) || KEYS.find(k => k.includes(v));
+  if (k) return INDEX[k];
+  return null;
+}
+
+// Process a pasted list of queries (one per line or comma-separated)
+function processList(text) {
+  const parts = text.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+  if (!parts.length) return toast('No entries in list');
+  const resolved = parts.map(p => ({q: p, brd: resolveQuery(p)}));
+
+  // Aggregate by parent (so variants are grouped) and capture target/moa
+  const agg = {};
+  const unmatchedList = [];
+  for (const r of resolved) {
+    const brd = r.brd;
+    if (!brd) {
+      unmatchedList.push(r.q);
+      agg[`unmatched:${r.q}`] = (agg[`unmatched:${r.q}`] || 0) + 1;
+      continue;
+    }
+    const comp = COMP[brd] || {};
+    const key = comp.parent ? `parent:${comp.parent}` : `brd:${brd}`;
+    if (!agg[key]) agg[key] = {count:0, brd: brd, name: comp.name || brd, target: comp.target || '', moa: comp.moa || ''};
+    agg[key].count += 1;
+  }
+
+  // Build HTML summary including target/moa metadata
+  const rows = Object.entries(agg).map(([k,v]) => {
+    if (k.startsWith('unmatched:')) {
+      const q = k.replace('unmatched:','');
+      return `<div style="padding:8px 12px;border-bottom:1px solid var(--line-2)"><span style="font-weight:600;color:var(--muted)">${esc(q)}</span> <span style="color:var(--coral);margin-left:8px">(no match)</span></div>`;
+    }
+    const meta = (v.target || v.moa) ? `<div style="color:var(--muted);font-size:13px;margin-top:6px">${v.target?`Target: ${esc(v.target)}`:''}${v.target && v.moa ? ' · ' : ''}${v.moa?`MOA: ${esc(v.moa)}`:''}</div>` : '';
+    return `<div style="padding:8px 12px;border-bottom:1px solid var(--line-2);display:flex;justify-content:space-between;align-items:center"><div><div style="font-weight:600">${esc(v.name)}</div><div style="font-family:var(--mono);color:var(--muted);font-size:13px">${esc(v.brd)}</div>${meta}</div><div><span class="badge">${v.count} hits</span><button class="btn-ghost" style="margin-left:8px" onclick="show('${v.brd}')">Open</button></div></div>`;
+  }).join('');
+
+  // Save last list results for copying
+  window.LAST_LIST_RESULTS = {matched: Object.values(agg).filter(x => x.brd), unmatched: unmatchedList, total: parts.length};
+
+  $('#results').innerHTML = `
+    <div class="res-head">
+      <div>
+        <h2 class="res-name">List query results</h2>
+        <div class="res-sub"><span class="badge">${parts.length} items</span></div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="btn-ghost" id="list-copy-names">Copy names</button>
+        <button class="btn-ghost" id="list-copy-brd">Copy BRD IDs</button>
+        <button class="btn-ghost" onclick="resetView()">Clear</button>
+      </div>
+    </div>
+    <div class="card">${rows}</div>`;
+
+  // Append a small preview area so users can see what will be copied (debug aid)
+  const preview = document.createElement('pre');
+  preview.id = 'list-copy-preview';
+  preview.style.display = 'none';
+  preview.style.whiteSpace = 'pre-wrap';
+  preview.style.marginTop = '8px';
+  preview.style.padding = '10px';
+  preview.style.border = '1px dashed var(--line-2)';
+  preview.style.borderRadius = '8px';
+  preview.style.fontFamily = 'var(--mono)';
+  preview.style.fontSize = '13px';
+  $('#results').querySelector('.card').appendChild(preview);
+
+  // Attach copy handlers: separate options for names and BRD IDs
+  $('#list-copy-names').onclick = () => {
+    const L = window.LAST_LIST_RESULTS || {matched: [], unmatched: []};
+    const lines = [];
+    // Normalize: strip any embedded tabs or extra columns to keep only the name
+    for (const m of L.matched) {
+      const nm = m && m.name ? String(m.name).split('\t')[0] : '';
+      lines.push(nm);
+    }
+    if (L.unmatched && L.unmatched.length) {
+      lines.push('');
+      lines.push('Unmatched:');
+      for (const u of L.unmatched) lines.push(u);
+    }
+    const payload = lines.join('\n');
+    console.log('Copy names payload:', payload);
+    // show preview briefly
+    const pv = $('#list-copy-preview'); if (pv) { pv.textContent = payload; pv.style.display = 'block'; setTimeout(()=>pv.style.display='none', 5000); }
+    copy(payload, `Names copied (${L.matched.length} items)`);
+  };
+
+  $('#list-copy-brd').onclick = () => {
+    const L = window.LAST_LIST_RESULTS || {matched: [], unmatched: []};
+    const lines = [];
+    // Normalize: ensure we only copy the BRD identifier (strip any leading/trailing text)
+    for (const m of L.matched) {
+      let b = m && m.brd ? String(m.brd) : '';
+      // If the brd was accidentally stored as "name\tBRD", take the last column
+      if (b.includes('\t')) b = b.split('\t').pop();
+      // Trim whitespace
+      lines.push(b.trim());
+    }
+    if (L.unmatched && L.unmatched.length) {
+      lines.push('');
+      lines.push('Unmatched:');
+      for (const u of L.unmatched) lines.push(u);
+    }
+    const payload = lines.join('\n');
+    console.log('Copy BRD payload:', payload);
+    const pv2 = $('#list-copy-preview'); if (pv2) { pv2.textContent = payload; pv2.style.display = 'block'; setTimeout(()=>pv2.style.display='none', 5000); }
+    copy(payload, `BRD IDs copied (${L.matched.length} items)`);
+  };
+
+  $('#results').classList.add('show');
+  scrollToEl('#results');
+}
+
 function runSearch() {
   const raw = qEl.value.trim();
   if (!raw) return;
@@ -624,6 +772,8 @@ function show(brd) {
           ${idRow('LINCS BRD ID', brd)}
           ${idRow('Parent InChIKey', c.parent)}
           ${idRow('Full InChIKey', c.inchikey)}
+          ${idRow('Target', c.target)}
+          ${idRow('MOA', c.moa)}
           ${idRow('PubChem CID', c.pubchem, {href: pubchemHref})}
           ${idRow('TTD drug ID', c.ttd, {nocopy: false})}
         </div>

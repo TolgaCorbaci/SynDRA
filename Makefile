@@ -1,40 +1,11 @@
 # SynDRA — common tasks. Run from the repo root.
-SCRIPTS = synonyms/scripts
 
-.PHONY: setup build build-new benchmark benchmark-new validate enhance \
-        reproduce enrich build-web app app-new clean
+.PHONY: setup build-new benchmark-new benchmark-drugbank enrich build-web app-new clean
 
 setup:
 	pip install -r requirements.txt
 
-# ── Legacy pipeline (BRD-centric) ──────────────────────────────────────────
-
-# Rebuild the harmonized synonym map from the raw sources in synonyms/input/
-build:
-	cd $(SCRIPTS) && python build_synonym_db.py
-
-# Benchmark match rate: SynDRA vs LINCS cmap_name baseline (527-drug library)
-benchmark:
-	cd $(SCRIPTS) && python benchmark_matching.py
-
-# Offline structure-based validation of the synonym->BROAD merge
-validate:
-	cd $(SCRIPTS) && python syndra_structural_validation.py \
-		--synonyms data/merged_200K_drug_synonyms.csv \
-		--compound-info data/compoundinfo_beta.tsv
-
-# Produce structure-augmented synonym table + BRD consolidation map
-enhance:
-	cd $(SCRIPTS) && python syndra_enhance.py
-
-# Full legacy pipeline
-reproduce: build benchmark validate enhance
-
-# Launch the legacy Shiny web app locally
-app:
-	cd $(SCRIPTS) && shiny run app.py
-
-# ── New structure-anchored pipeline (syndra_id canonical key) ──────────────
+# ── Structure-anchored pipeline (syndra_id canonical key) ──────────────────
 
 # Build canonical compounds/xrefs/synonyms tables -> outputs/
 build-new:
@@ -57,10 +28,10 @@ build-web:
 	python build_webapp_data.py
 	python build_enrichment_data.py
 
-# Full new pipeline: build -> recall benchmark -> enrichment -> web data
+# Full pipeline: build -> recall benchmark -> enrichment -> web data
 reproduce-new: build-new benchmark-new enrich build-web
 
-# Launch the new Shiny app (Lookup + Enrichment tabs)
+# Launch the Shiny app (Lookup + Enrichment tabs)
 app-new:
 	shiny run app/app.py
 

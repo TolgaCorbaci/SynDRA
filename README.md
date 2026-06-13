@@ -10,38 +10,81 @@ and transcriptomic perturbation datasets (**LINCS/CMap L1000**), increasing matc
 rates in signature-based drug repurposing by resolving inconsistent naming **and**
 collapsing salt, solvate, and stereo variants onto a single parent compound.
 
-## Web app
+## Portal
 
-Try SynDRA interactively: <https://tolgacorbaci.shinyapps.io/syndra/>
+Try SynDRA interactively: <https://hidelab.github.io/SynDRA/>
 
 ![SynDRA pipeline overview](SynDRA%20figure.png)
 
-## What SynDRA does
+## Methodology
 
-- Integrates drug synonyms from **TTD**, **PRISM**, **LINCS 2020**, and **DrugCentral**
-- Normalizes and deduplicates synonyms into a single mapping across
-  **BRD IDs**, **TTD IDs**, and **PubChem CIDs**
-- Resolves each compound to a standardized **parent InChIKey** (salt/solvent
-  stripped, neutralized), so `imatinib mesylate` and `imatinib` map to one drug
-- Provides a **structural consolidation map** that links the many BRD IDs
-  representing the same parent compound, recovering replicate L1000 signatures that
-  exact-name matching would miss
+SynDRA builds a **structure-anchored compound hub** in six phases:
 
-## Key results
+### Phase 2 — Canonical compound nodes
 
-Validating the harmonized resource against the canonical structures in LINCS
-`compoundinfo_beta` shows the L1000 catalog is highly redundant: **33,515
-structurally-resolved BRD IDs collapse to 11,685 unique parent compounds.** About
-**75% of catalog entries are salt/form/stereo variants** of a smaller parent set
-(up to 32 BRD IDs for a single compound). SynDRA's parent-aware layer lets a single
-query recover all of these instead of one.
+Every compound with a usable SMILES string is standardized using RDKit:
+salt fragments are stripped, charges neutralized, and the canonical InChIKey is
+computed. Compounds that share the same full InChIKey are collapsed to a single
+`syndra_id` node. This means salt forms, solvates, and co-crystals of the same
+parent (e.g. `imatinib mesylate` → `imatinib`) receive one identifier rather than
+one per formulation.
 
-Synonym→BRD assignment is **fully unambiguous** — every one of the 199,375 synonyms
-maps to exactly one BROAD compound (0 collisions).
+### Phase 3 — Cross-reference linking
 
-On a 527-drug benchmark library, SynDRA matches **71.9%** of drugs to a BROAD ID
-versus **58.1%** using the LINCS `cmap_name` field alone — a **+13.9 percentage-point**
-gain in recall. See [Validation](#validation).
+External identifiers — BRD (LINCS/Broad), PubChem CID, ChEMBL, TTD, UNII,
+KEGG, DrugCentral, and others — are attached to their resolved `syndra_id` nodes.
+Resolution follows a strict priority: full InChIKey match first, then known xref,
+then normalized name, so each external ID is anchored to a chemically unique node.
+
+### Phase 4+5 — Synonym integration and orphan handling
+
+Names from all sources are Unicode-normalized (NFKC), lowercased, and
+whitespace-stripped before matching. Sources are integrated in dependency order:
+
+| Source | Type | License |
+|--------|------|---------|
+| LINCS 2020 (CMap) | `cmap_name` + compound aliases | clue.io terms |
+| Therapeutic Targets Database (TTD) | drug names + synonyms | academic |
+| PRISM Repurposing | drug names + PubChem synonyms | DepMap terms |
+| DrugCentral | INN/synonym table + identifier xrefs | CC BY-SA 4.0 |
+
+Compounds that cannot be resolved to a structure (no usable SMILES or InChIKey
+across any source) are retained as **orphan nodes** rather than dropped. This
+preserves coverage for biologics, mixtures, and early-stage compounds that are not
+yet in structure databases.
+
+### Phase 6 — Dual outputs
+
+Two builds are written to `outputs/`:
+
+- **Full build** (`syndra_full_*`) — all integrated sources.
+- **Redistributable build** (`syndra_redistributable_*`) — rows from
+  sources with permissive open licenses only, inheriting CC BY-SA 4.0 from
+  ChEMBL/DrugCentral. DrugBank rows are excluded from this build.
+
+### Enrichment
+
+Compounds are mapped to **21 pharmacological libraries** spanning targets &
+mechanisms of action, gene associations, biological pathways, side effects,
+transcriptional signatures, ATC classification, and pharmacogenomics. Client-side
+enrichment analysis uses **Fisher's exact test** (one-tailed hypergeometric
+probability, computed in log-space to avoid overflow) with
+**Benjamini-Hochberg FDR** correction.
+
+## Key statistics
+
+| Metric | Value |
+|--------|-------|
+| Canonical compound nodes | 59,571 |
+| Compounds with resolved structure | 31,200 |
+| Name-only (orphan) nodes | 28,371 |
+| Total synonym entries | 338,730 |
+| Compounds covered by enrichment libraries | 8,591 |
+| Enrichment libraries | 21 |
+| Enrichment terms | 36,996 |
+| Benchmark match rate — LINCS `cmap_name` baseline | 58.1% (306/527) |
+| Benchmark match rate — SynDRA | 71.9% (379/527) |
+| Benchmark improvement | +13.9 pp |
 
 ## Installation
 
@@ -57,26 +100,13 @@ RDKit is required for the structural steps (`pip install rdkit`).
 ## Usage
 
 ```bash
-make build       # rebuild the synonym map from raw sources in synonyms/input/
-make benchmark   # SynDRA vs LINCS-baseline match rate on the 527-drug library
-make validate    # offline structure-based validation of the merge
-make enhance     # produce parent-augmented table + BRD consolidation map
-make reproduce   # all of the above, in order
-make app         # run the interactive web app locally
+make build-new       # build canonical compounds/xrefs/synonyms -> outputs/
+make benchmark-new   # recall benchmark: structure-anchored pipeline
+make enrich          # enrichment coverage report + statin control
+make build-web       # generate web app data files (syndra_data.json + enrichment_data.json)
+make reproduce-new   # full pipeline: build -> benchmark -> enrichment -> web data
+make app-new         # run the Shiny app locally (Lookup + Enrichment tabs)
 ```
-
-Or call scripts directly from `synonyms/scripts/`:
-
-```bash
-python build_synonym_db.py
-python benchmark_matching.py
-python syndra_structural_validation.py
-python syndra_enhance.py
-```
-
-The reusable structural core is `parent_inchikey(smiles, connectivity_only=True)`
-in `syndra_structural_validation.py` — pass `connectivity_only=False` to preserve
-stereochemistry (see [Limitations](#limitations)).
 
 ## Repository structure
 
@@ -88,25 +118,35 @@ SynDRA/
 ├── DATA_SOURCES.md                 # provenance, versions, and licenses of inputs
 ├── requirements.txt
 ├── Makefile
-├── SynDRA figure.png
+├── index.html                      # static web portal (search + enrichment)
+├── build/                          # build pipeline modules
+│   ├── build_all.py                # master build script (phases 2-6)
+│   ├── hub.py                      # canonical compound hub
+│   ├── compounds.py                # phase 2: structure nodes
+│   ├── xrefs.py                    # phase 3: cross-references
+│   ├── synonyms_build.py           # phase 4+5: synonyms + orphans
+│   ├── drugcentral.py              # phase 4+5: DrugCentral integration
+│   ├── licensing.py                # phase 6: dual outputs
+│   ├── normalize.py                # name normalization
+│   └── structure.py                # SMILES/InChIKey standardization (RDKit)
+├── build_webapp_data.py            # generate syndra_data.json
+├── build_enrichment_data.py        # generate enrichment_data.json
+├── benchmark/                      # recall and gold-standard benchmarks
+├── enrichment/                     # ORA enrichment pipeline
+├── app/                            # Shiny web app
 └── synonyms/
-    ├── input/                      # raw source files (see DATA_SOURCES.md)
-    └── scripts/
-        ├── build_synonym_db.py             # build pipeline (raw sources -> merged map)
-        ├── benchmark_matching.py           # 527-drug benchmark
-        ├── syndra_structural_validation.py # structure-based validation
-        ├── syndra_enhance.py               # parent-aug + consolidation
-        ├── app.py                          # Shiny web app
-        └── data/                           # released outputs
+    └── input/                      # raw source files (see DATA_SOURCES.md)
 ```
 
 ## Outputs
 
 | File | Description |
 |------|-------------|
-| `merged_200K_drug_synonyms.csv` | Harmonized synonym → BRD/TTD/PubChem mapping |
-| `merged_synonyms_parent_augmented.csv` | Above + `parent_inchikey`, junk synonyms removed, ambiguous synonyms flagged |
-| `brd_parent_consolidation.csv` | `parent_inchikey` → set of BRD IDs that are the same parent compound |
+| `outputs/syndra_redistributable_compounds.parquet` | Canonical compound nodes (syndra_id, InChIKey, SMILES, preferred name) |
+| `outputs/syndra_redistributable_synonyms.parquet` | Synonym table (syndra_id → raw name, normalized name, source) |
+| `outputs/syndra_redistributable_xrefs.parquet` | Cross-reference table (syndra_id → external ID type + value) |
+| `syndra_data.json` | Web app compound index (search + compound cards) |
+| `enrichment_data.json` | Client-side enrichment data (21 libraries, integer-indexed) |
 
 ## Data sources
 
@@ -114,35 +154,18 @@ All inputs, with download URLs, release versions, dates, and license terms, are
 documented in **[DATA_SOURCES.md](DATA_SOURCES.md)**. Please confirm redistribution
 terms for your use before reusing the merged table.
 
-## Validation
-
-Run `make validate` and `make benchmark` to regenerate.
-
-| Metric | Value |
-|--------|-------|
-| Unique synonyms | 199,375 |
-| Unique BROAD IDs | 33,821 |
-| Unique TTD IDs | 3,127 |
-| Unique PubChem CIDs | 1,111 |
-| Synonym-level ambiguity (synonym → >1 BRD) | 0 |
-| BRD IDs with a resolved parent structure | 33,515 (85% of catalog) |
-| Unique parent compounds | 11,685 |
-| Catalog entries that are salt/form/stereo duplicates | ~75% |
-| Junk synonyms removed (numeric / ≤2 char) | 2,734 |
-| Benchmark match rate — LINCS `cmap_name` baseline | 58.1% (306/527) |
-| Benchmark match rate — SynDRA | 71.9% (379/527) |
-| Benchmark improvement | +13.9 pp |
-
 ## Limitations
 
-- **BROAD-centric.** Rows without a BRD ID are dropped, so standalone TTD/PubChem
-  coverage is intentionally reduced in favor of L1000 linkage.
-- **Stereochemistry.** The default parent key uses the InChIKey connectivity block,
-  which collapses enantiomers and other stereoisomers. This is usually desirable for
-  repurposing but not always (e.g. thalidomide enantiomers differ in activity). Use
-  `connectivity_only=False` for a stereo-preserving key.
-- **Structure coverage.** ~15% of catalog compounds lack a usable SMILES and are not
-  structurally validated.
+- **Stereochemistry.** The default parent key uses the full InChIKey (including
+  stereochemistry layers). Enantiomers and diastereomers are kept distinct by
+  default, but salts and solvates are collapsed. Adjust `structure.py` if your
+  use case requires connectivity-only collapsing.
+- **Orphan coverage.** ~48% of nodes lack a resolved structure (biologics,
+  mixtures, proprietary compounds). These nodes carry synonyms and xrefs but
+  cannot be validated structurally.
+- **Enrichment library coverage.** Libraries are pre-built and static. Novel
+  compounds added through orphan nodes will not appear in enrichment results
+  unless the library GMT files are updated and `build_enrichment_data.py` is rerun.
 
 ## Citing SynDRA
 

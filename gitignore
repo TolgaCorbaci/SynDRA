@@ -20,3 +20,8 @@ venv/
 
 # Data dumps
 synonyms/input/Drugcentral/drugcentral.dump.11012023.sql
+
+# Ignore build artifacts but keep .py files
+build/__pycache__/
+build/*.pyc
+# If you have other junk like logs or temp files, add them here

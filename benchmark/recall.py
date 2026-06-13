@@ -5,8 +5,7 @@ Phase 8: Recall lift benchmark.
 
 Compares fraction of 527-drug benchmark library resolved under:
   (a) Naive string match (LINCS cmap_name field only)
-  (b) Old BRD-centric SynDRA (merged_200K_drug_synonyms.csv)
-  (c) New structure-anchored SynDRA (syndra_redistributable synonyms)
+  (b) Structure-anchored SynDRA (syndra_redistributable synonyms)
 
 Run from project root:
   python benchmark/recall.py
@@ -14,7 +13,6 @@ Run from project root:
 
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 
@@ -31,7 +29,6 @@ OUTPUT = _ROOT / "outputs"
 
 BENCHMARK_PATH = INPUT / "File_2_Drugname_library_527D.txt"
 LINCS_PATH = INPUT / "compoundinfo_beta.txt"
-OLD_SYNDRA_PATH = _ROOT / "synonyms" / "scripts" / "data" / "merged_200K_drug_synonyms.csv"
 NEW_SYNONYMS_PATH = OUTPUT / "syndra_redistributable_synonyms.parquet"
 
 
@@ -72,18 +69,6 @@ def recall_naive(df_bench: pd.DataFrame, lincs_path: str) -> tuple[int, list[str
     return _matched_count(df_bench, lincs_norms)
 
 
-def recall_old_syndra(df_bench: pd.DataFrame, syndra_path: str) -> tuple[int, list[str]]:
-    """Method (b): old BRD-centric SynDRA synonym map."""
-    if not os.path.exists(syndra_path):
-        print(f"  [old SynDRA] not found: {syndra_path}")
-        return 0, list(df_bench["drug"])
-
-    df = pd.read_csv(syndra_path, dtype=str).fillna("")
-    syn_col = "synonyms" if "synonyms" in df.columns else df.columns[0]
-    old_norms = {normalize_name(s) for s in df[syn_col].tolist() if s}
-    return _matched_count(df_bench, old_norms)
-
-
 def recall_new_syndra(df_bench: pd.DataFrame, synonyms_path: str) -> tuple[int, list[str]]:
     """Method (c): new structure-anchored SynDRA (syndra_id-keyed synonyms)."""
     path = Path(synonyms_path)
@@ -111,15 +96,12 @@ def main():
     print(f"Benchmark set: {N} drugs")
 
     n_naive, miss_naive = recall_naive(df_bench, str(LINCS_PATH))
-    n_old, miss_old = recall_old_syndra(df_bench, str(OLD_SYNDRA_PATH))
     n_new, miss_new = recall_new_syndra(df_bench, str(NEW_SYNONYMS_PATH))
 
     print("\n=== Recall Results ===")
-    print(f"  (a) Naive (LINCS cmap_name):          {n_naive}/{N} = {n_naive/N:.1%}")
-    print(f"  (b) Old BRD-centric SynDRA:            {n_old}/{N} = {n_old/N:.1%}")
-    print(f"  (c) New structure-anchored SynDRA:     {n_new}/{N} = {n_new/N:.1%}")
-    print(f"\n  Lift (c) vs (a): {n_new - n_naive:+d} drugs ({(n_new-n_naive)/N:+.1%})")
-    print(f"  Lift (c) vs (b): {n_new - n_old:+d} drugs ({(n_new-n_old)/N:+.1%})")
+    print(f"  (a) Naive (LINCS cmap_name):      {n_naive}/{N} = {n_naive/N:.1%}")
+    print(f"  (b) SynDRA:                        {n_new}/{N} = {n_new/N:.1%}")
+    print(f"\n  Lift (b) vs (a): {n_new - n_naive:+d} drugs ({(n_new-n_naive)/N:+.1%})")
 
     if miss_new:
         print(f"\n  Still unresolved ({len(miss_new)}):")

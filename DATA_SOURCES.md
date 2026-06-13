@@ -14,21 +14,13 @@ before publishing it. (Editors and reviewers routinely check this.)
 
 ## Reproducing the build
 
-The build notebook (`synonyms/scripts/create_synonym_database.ipynb`) currently
-references the raw TTD and PRISM files. These raw inputs are **not all
-committed** to the repository. To make the build reproducible, either:
-
-1. **Commit the raw inputs** under `synonyms/input/<source>/` (only if licenses
-   permit), or
-2. **Document exact retrieval** here so a third party can fetch the same versions,
-   and have the notebook read from `synonyms/input/<source>/`.
-
-Replace any absolute paths (e.g. `/Users/...`, `/data/work/tolga/...`) in the
-notebooks with repository-relative paths before release.
+Raw source files belong under `synonyms/input/<source>/`. The DrugCentral SQL
+dump is excluded from git (listed in `.gitignore`) due to file size. All other
+inputs should be placed at the paths shown above before running `make build-new`.
 
 ## Frozen snapshot
 
 For the paper, deposit the exact input snapshot **and** the released outputs
-(`merged_200K_drug_synonyms.csv`, `merged_synonyms_parent_augmented.csv`,
-`brd_parent_consolidation.csv`) to Zenodo to obtain a versioned DOI. Record that
-DOI in `README.md` and `CITATION.cff`.
+(`syndra_redistributable_compounds.parquet`, `syndra_redistributable_synonyms.parquet`,
+`syndra_redistributable_xrefs.parquet`) to Zenodo to obtain a versioned DOI.
+Record that DOI in `README.md` and `CITATION.cff`.

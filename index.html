@@ -71,12 +71,12 @@ h1.head em{font-style:normal;color:var(--teal);position:relative;white-space:now
 
 /* search */
 .search{position:relative;max-width:660px;margin:0 auto}
-.search-box{display:flex;align-items:center;background:var(--surface);border:1.5px solid var(--line);
-  border-radius:14px;box-shadow:var(--sh);padding:6px 6px 6px 18px;transition:border-color .15s,box-shadow .15s}
+.search-box{display:flex;align-items:flex-end;background:var(--surface);border:1.5px solid var(--line);
+  border-radius:14px;box-shadow:var(--sh);padding:8px 8px 8px 18px;transition:border-color .15s,box-shadow .15s}
 .search-box:focus-within{border-color:var(--teal);box-shadow:0 0 0 4px rgba(14,156,146,.12),var(--sh)}
-.search-box svg{flex:none;color:var(--muted)}
+.search-box svg{flex:none;color:var(--muted);margin-bottom:10px}
 #q{flex:1;border:0;outline:0;background:transparent;font-family:var(--sans);font-size:17px;
-  color:var(--ink);padding:12px 12px}
+  color:var(--ink);padding:10px 12px;resize:none;overflow:hidden;min-height:44px;line-height:1.5}
 #q::placeholder{color:#9aa6b8}
 .btn-go{flex:none;border:0;background:var(--teal);color:#fff;font-family:var(--sans);font-weight:600;
   font-size:15px;padding:12px 22px;border-radius:10px;cursor:pointer;transition:background .15s}
@@ -254,7 +254,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     </a>
     <div class="nav-links">
       <a href="#how">How it works</a>
-      <a href="#enrich">Enrichment</a>
       <a href="#data">Data</a>
       <a href="#cite">Cite</a>
       <a class="nav-gh" href="https://github.com/hidelab/SynDRA" target="_blank" rel="noopener">
@@ -281,25 +280,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <div class="search">
       <div class="search-box">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Search a drug name, synonym, brand, BRD ID, or SynDRA ID…" aria-label="Search for a drug">
+        <textarea id="q" rows="1" autocomplete="off" spellcheck="false"
+          placeholder="Search a drug name, synonym, BRD ID — or paste a list of drugs for enrichment analysis…"
+          aria-label="Search for a drug or paste a drug list"></textarea>
         <button class="btn-go" id="go">Search</button>
-        <button class="btn-go" id="list-btn" style="margin-left:8px;background:#0A7A72">List</button>
       </div>
       <div class="ac" id="ac"></div>
-    </div>
-
-    <!-- List query panel -->
-    <div id="list-panel" style="display:none;max-width:720px;margin:18px auto 0">
-      <div style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--sh)">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-          <strong>Query a list of drugs</strong>
-          <button class="btn-ghost" id="list-close">Close</button>
-        </div>
-        <textarea id="list-ta" placeholder="Paste drug names, synonyms, or BRD IDs (one per line or comma-separated)" style="width:100%;height:120px;border:1px solid var(--line);border-radius:8px;padding:10px;font-family:var(--mono);font-size:14px"></textarea>
-        <div style="margin-top:10px;display:flex;gap:8px;justify-content:flex-end">
-          <button class="btn-ghost" id="list-clear">Clear</button>
-          <button class="btn-go" id="list-run">Run list</button>
-        </div>
+      <div id="q-hint" style="display:none;font-size:12.5px;color:var(--muted);margin-top:6px;text-align:right">
+        Multiple drugs detected — press <kbd style="font-size:11px;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 5px">Search</kbd> or <kbd style="font-size:11px;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 5px">Ctrl+↵</kbd> to run list + enrichment
       </div>
     </div>
 
@@ -351,6 +339,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       <h3>No match found</h3>
       <p id="nores-msg">The search term could not be resolved to any compound or synonym across the complete SynDRA registry. Please double-check the identifier format or spelling.</p>
     </div>
+
+    <!-- Inline enrichment — shown for multi-drug queries -->
+    <div id="enrich-inline" style="display:none;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+        <div>
+          <h2 style="font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(20px,2.8vw,28px);margin:0 0 4px">Enrichment Analysis</h2>
+          <div id="enrich-coverage" class="enrich-status"></div>
+        </div>
+        <div class="enrich-opts" style="margin:0">
+          <label>FDR ≤ <input type="number" id="enrich-fdr" value="0.05" min="0.001" max="1" step="0.001"></label>
+          <label>Min overlap ≥ <input type="number" id="enrich-k" value="2" min="1" max="50"></label>
+          <select id="enrich-lib-filter"><option value="">All libraries</option></select>
+          <button class="btn-ghost" id="enrich-rerun" style="padding:7px 14px">Re-run</button>
+          <button class="btn-ghost" id="enrich-export" style="padding:7px 14px">Export CSV</button>
+        </div>
+      </div>
+      <div id="enrich-msg" class="enrich-status" style="display:none"></div>
+      <div id="enrich-groups-container"></div>
+    </div>
   </div>
 </section>
 
@@ -360,42 +367,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <div class="stat"><div class="n" id="s-brd">—</div><div class="l">canonical compounds</div></div>
     <div class="stat"><div class="n" id="s-par">—</div><div class="l">resolved to structure</div></div>
     <div class="stat"><div class="n" id="s-orphan">—</div><div class="l">name-only entries retained</div></div>
-  </div>
-</section>
-
-<section class="section" id="enrich" style="border-top:1px solid var(--line)">
-  <div class="wrap">
-    <div class="kicker">Drug-Set Enrichment</div>
-    <h2>Find biological patterns in your drug list</h2>
-    <p class="lede">Paste any set of drug names — SynDRA resolves them through its synonym map and runs over-representation analysis (ORA) across 21 pharmacological libraries using the hypergeometric test with Benjamini–Hochberg FDR correction.</p>
-
-    <div class="card" style="margin-top:28px;max-width:680px">
-      <h3 style="margin:0 0 10px;font-size:15px">Drug list</h3>
-      <textarea id="enrich-ta" spellcheck="false"
-        placeholder="atorvastatin&#10;simvastatin&#10;rosuvastatin&#10;lovastatin&#10;pravastatin&#10;pitavastatin"
-        style="width:100%;height:126px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
-          font-family:var(--mono);font-size:13.5px;resize:vertical;outline:0;display:block"></textarea>
-      <div class="enrich-opts">
-        <label>FDR ≤ <input type="number" id="enrich-fdr" value="0.05" min="0.001" max="1" step="0.001"></label>
-        <label>Min overlap ≥ <input type="number" id="enrich-k" value="2" min="1" max="50"></label>
-        <select id="enrich-lib-filter"><option value="">All libraries</option></select>
-        <button class="btn-go" id="enrich-run" style="padding:9px 22px">Run enrichment</button>
-      </div>
-      <div id="enrich-msg" class="enrich-status" style="display:none"></div>
-    </div>
-
-    <div id="enrich-results-wrap" style="display:none;margin-top:20px">
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;gap:12px">
-          <div>
-            <strong id="enrich-res-title"></strong>
-            <div id="enrich-coverage" class="enrich-status"></div>
-          </div>
-          <button class="btn-ghost" id="enrich-export" style="flex:none">Export CSV</button>
-        </div>
-        <div id="enrich-groups-container"></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -534,16 +505,42 @@ function renderAc(items, v) {
 
 function closeAc() { acEl.classList.remove('open'); acItems = []; acSel = -1; }
 
-qEl.addEventListener('input', e => suggest(e.target.value));
+function _resizeQ() {
+  qEl.style.height = 'auto';
+  qEl.style.height = Math.min(qEl.scrollHeight, 220) + 'px';
+}
+
+qEl.addEventListener('input', e => {
+  _resizeQ();
+  const text = qEl.value;
+  const lines = text.split('\n').filter(s => s.trim());
+  const hint = $('#q-hint');
+  if (lines.length <= 1) {
+    hint.style.display = 'none';
+    suggest(text);
+  } else {
+    hint.style.display = 'block';
+    closeAc();
+  }
+});
+
 qEl.addEventListener('keydown', e => {
-  if (!acEl.classList.contains('open')) { if (e.key === 'Enter') runSearch(); return; }
-  if (e.key === 'ArrowDown') { e.preventDefault(); acSel = Math.min(acSel + 1, acItems.length - 1); paintSel(); }
-  else if (e.key === 'ArrowUp') { e.preventDefault(); acSel = Math.max(acSel - 1, 0); paintSel(); }
-  else if (e.key === 'Enter') {
-    e.preventDefault();
-    if (acSel >= 0) { const it = acItems[acSel]; qEl.value = (COMP[it.sid] || {}).name || ''; closeAc(); show(it.sid); }
-    else runSearch();
-  } else if (e.key === 'Escape') closeAc();
+  if (acEl.classList.contains('open')) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); acSel = Math.min(acSel + 1, acItems.length - 1); paintSel(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); acSel = Math.max(acSel - 1, 0); paintSel(); }
+    else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (acSel >= 0) { const it = acItems[acSel]; qEl.value = (COMP[it.sid]||{}).name||''; _resizeQ(); closeAc(); show(it.sid); }
+      else runSearch();
+    } else if (e.key === 'Escape') closeAc();
+    return;
+  }
+  if (e.key === 'Enter') {
+    const lines = qEl.value.split('\n').filter(s => s.trim());
+    // Single-line Enter or Ctrl/Cmd+Enter → run search; otherwise let textarea add newline
+    if (lines.length <= 1 && !e.shiftKey) { e.preventDefault(); runSearch(); }
+    else if (e.ctrlKey || e.metaKey) { e.preventDefault(); runSearch(); }
+  }
 });
 
 function paintSel() { acEl.querySelectorAll('.ac-item').forEach((el, i) => el.classList.toggle('sel', i === acSel)); }
@@ -552,14 +549,8 @@ document.addEventListener('click', e => { if (!e.target.closest('.search')) clos
 
 $('#go').onclick = runSearch;
 document.querySelectorAll('.chip').forEach(c => {
-  c.onclick = () => { qEl.value = c.dataset.q; closeAc(); runSearch(); };
+  c.onclick = () => { qEl.value = c.dataset.q; _resizeQ(); closeAc(); runSearch(); };
 });
-
-// List UI wiring
-$('#list-btn').onclick = () => { $('#list-panel').style.display = 'block'; $('#list-ta').focus(); };
-$('#list-close').onclick = () => { $('#list-panel').style.display = 'none'; };
-$('#list-clear').onclick = () => { $('#list-ta').value = ''; };
-$('#list-run').onclick = () => { processList($('#list-ta').value); };
 
 // Resolve a single query string to a syndra_id (or null)
 function resolveQuery(q) {
@@ -652,10 +643,19 @@ function processList(text) {
 }
 
 function runSearch() {
-  const raw = qEl.value.trim();
-  if (!raw) return;
-  const sid = resolveQuery(raw);
-  if (sid) show(sid); else noResult();
+  const text = qEl.value;
+  const lines = text.split('\n').map(s => s.trim()).filter(Boolean);
+  closeAc();
+  if (!lines.length) return;
+
+  if (lines.length === 1) {
+    $('#enrich-inline').style.display = 'none';
+    const sid = resolveQuery(lines[0]);
+    if (sid) show(sid); else noResult();
+  } else {
+    processList(text);
+    runEnrichment(text);
+  }
 }
 
 /* ---------- render a compound ---------- */
@@ -818,10 +818,13 @@ function scrollToEl(sel) {
 }
 
 function resetView() {
-  $('#results').classList.remove('show'); 
+  $('#results').classList.remove('show');
   $('#results').innerHTML = '';
-  $('#nores').classList.remove('show'); 
-  qEl.value = ''; 
+  $('#nores').classList.remove('show');
+  $('#enrich-inline').style.display = 'none';
+  $('#q-hint').style.display = 'none';
+  qEl.value = '';
+  qEl.style.height = 'auto';
   closeAc();
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
@@ -1008,19 +1011,23 @@ async function _loadEnrichData() {
   return ENRICH_PARSED;
 }
 
-async function runEnrichment() {
-  const btn = $('#enrich-run');
+let ENRICH_ALL_ROWS = [];  // all rows pre-FDR, for re-run on threshold change
+
+async function runEnrichment(inputText) {
   const msg = $('#enrich-msg');
+  const wrap = $('#enrich-inline');
   try {
-    btn.disabled = true;
+    wrap.style.display = 'block';
     msg.style.display = 'block';
-    msg.textContent = 'Resolving drug names…';
+    msg.textContent = 'Loading enrichment libraries…';
 
     const {drugs, drugIndex, libs} = await _loadEnrichData();
 
-    const lines = $('#enrich-ta').value.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
-    if (!lines.length) { msg.textContent = 'Enter at least one drug name.'; return; }
+    const text = inputText != null ? inputText : qEl.value;
+    const lines = text.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
+    if (!lines.length) { msg.textContent = 'No drug names found.'; return; }
 
+    msg.textContent = 'Resolving drug names…';
     const resolved = new Set();
     const unresolved = [];
     for (const name of lines) {
@@ -1033,7 +1040,6 @@ async function runEnrichment() {
     const minOver = parseInt($('#enrich-k').value) || 2;
     const libPick = $('#enrich-lib-filter').value;
 
-    // Map resolved syndra_ids to drug indices present in any library
     const qIdx = new Set();
     for (const sid of resolved) {
       const i = drugIndex[sid];
@@ -1050,12 +1056,10 @@ async function runEnrichment() {
     const libsToTest = libPick ? {[libPick]: libs[libPick]} : libs;
 
     for (const [libName, {universe, terms, N}] of Object.entries(libsToTest)) {
-      // K = query drugs that appear in this library
       const qInLib = [...qIdx].filter(i => universe.has(i));
       const K = qInLib.length;
       if (K === 0) continue;
       const qSet = new Set(qInLib);
-
       for (const [term, idx] of Object.entries(terms)) {
         const M = idx.length;
         let k = 0;
@@ -1067,16 +1071,16 @@ async function runEnrichment() {
 
     if (!rows.length) {
       msg.style.display = 'block';
-      msg.textContent = `No terms with overlap ≥ ${minOver}. Try lowering min overlap or adding more drugs.`;
-      $('#enrich-results-wrap').style.display = 'none';
+      msg.textContent = `No terms reached overlap ≥ ${minOver}. Try lowering min overlap or adding more drugs.`;
+      $('#enrich-groups-container').innerHTML = '';
       return;
     }
 
     const qvals = _bhFDR(rows.map(r => r.pval));
     rows.forEach((r, i) => r.qval = qvals[i]);
 
-    ENRICH_ROWS = rows.filter(r => r.qval <= minFDR);
-    ENRICH_ROWS.sort((a, b) => a.pval - b.pval);
+    ENRICH_ALL_ROWS = rows;  // save for re-run
+    ENRICH_ROWS = rows.filter(r => r.qval <= minFDR).sort((a, b) => a.pval - b.pval);
 
     const pct = Math.round(resolved.size / lines.length * 100);
     let covHtml = `${resolved.size}/${lines.length} names resolved (${pct}%)`;
@@ -1091,8 +1095,6 @@ async function runEnrichment() {
   } catch(e) {
     msg.textContent = 'Error: ' + e.message;
     console.error(e);
-  } finally {
-    btn.disabled = false;
   }
 }
 
@@ -1114,11 +1116,10 @@ function _makeEnrichRow(r) {
 }
 
 function _renderEnrich() {
-  const wrap = $('#enrich-results-wrap');
   const rows = ENRICH_ROWS;
 
   if (!rows.length) {
-    wrap.style.display = 'none';
+    $('#enrich-groups-container').innerHTML = '';
     $('#enrich-msg').style.display = 'block';
     $('#enrich-msg').textContent = 'No terms survived FDR filtering. Try raising the FDR threshold.';
     return;
@@ -1172,13 +1173,29 @@ function _renderEnrich() {
   }
 
   $('#enrich-groups-container').innerHTML = html;
-  $('#enrich-res-title').textContent = `${rows.length} enriched term${rows.length !== 1 ? 's' : ''} in ${Object.keys(byGroup).length} group${Object.keys(byGroup).length !== 1 ? 's' : ''}`;
 
-  wrap.style.display = 'block';
-  wrap.scrollIntoView({behavior: 'smooth', block: 'start'});
+  const nGroups = Object.keys(byGroup).length;
+  // Update the inline title via coverage area (no separate title element)
+  const covEl = $('#enrich-coverage');
+  const existingCov = covEl.innerHTML;
+  covEl.innerHTML = existingCov +
+    ` &middot; <strong>${rows.length} term${rows.length !== 1 ? 's' : ''}</strong> in ${nGroups} group${nGroups !== 1 ? 's' : ''}`;
+
+  scrollToEl('#enrich-inline');
 }
 
-$('#enrich-run').onclick = runEnrichment;
+// Re-run re-filters from saved rows (no re-fetch or re-compute)
+$('#enrich-rerun').onclick = () => {
+  if (!ENRICH_ALL_ROWS.length) return;
+  const minFDR  = parseFloat($('#enrich-fdr').value) || 0.05;
+  const minOver = parseInt($('#enrich-k').value) || 2;
+  const libPick = $('#enrich-lib-filter').value;
+  ENRICH_ROWS = ENRICH_ALL_ROWS
+    .filter(r => r.qval <= minFDR && r.k >= minOver && (!libPick || r.library === libPick))
+    .sort((a, b) => a.pval - b.pval);
+  $('#enrich-coverage').innerHTML = $('#enrich-coverage').innerHTML.replace(/ · <strong>.*?<\/strong>.*$/, '');
+  _renderEnrich();
+};
 
 $('#enrich-export').onclick = () => {
   if (!ENRICH_ROWS.length) return;

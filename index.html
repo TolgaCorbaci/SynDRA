@@ -217,16 +217,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .enrich-opts select{padding:5px 10px;border:1px solid var(--line);border-radius:6px;font-size:13px;outline:0;background:var(--surface)}
 .enrich-opts select:focus{border-color:var(--teal)}
 .enrich-table{width:100%;border-collapse:collapse;font-size:13.5px}
-.enrich-table th{text-align:left;padding:9px 12px;border-bottom:2px solid var(--line);font-weight:600;font-size:11.5px;
-  letter-spacing:.04em;text-transform:uppercase;color:var(--muted);white-space:nowrap;cursor:pointer;user-select:none}
-.enrich-table th:hover{color:var(--ink)}
-.enrich-table td{padding:8px 12px;border-bottom:1px solid var(--line-2);vertical-align:middle}
+.enrich-table th{text-align:left;padding:8px 12px;border-bottom:1.5px solid var(--line);font-weight:600;font-size:11px;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.enrich-table td{padding:7px 12px;border-bottom:1px solid var(--line-2);vertical-align:middle;font-size:13.5px}
 .enrich-table tr:last-child td{border-bottom:0}
 .enrich-table tbody tr:hover td{background:var(--teal-050)}
 .sig-h{color:#0A7A72;font-weight:600}
 .sig-m{color:#7a6200}
 .enrich-bar{display:inline-block;height:7px;background:var(--teal);border-radius:3px;margin-left:5px;vertical-align:middle;opacity:.55;min-width:2px}
 .enrich-status{font-size:13px;color:var(--muted);margin-top:8px}
+/* group cards */
+.eg{border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;margin-bottom:10px}
+.eg-hd{display:flex;align-items:center;gap:10px;padding:11px 16px;background:var(--bg);cursor:pointer;user-select:none}
+.eg-hd:hover{background:var(--teal-050)}
+.eg-icon{font-size:16px;flex:none}
+.eg-name{font-weight:600;font-size:14px;flex:1;color:var(--ink)}
+.eg-badge{font-size:11.5px;background:var(--teal-050);color:var(--teal-700);padding:3px 9px;border-radius:999px;font-weight:600;white-space:nowrap}
+.eg-chev{color:var(--muted);font-size:12px;transition:transform .18s;flex:none}
+.eg.closed .eg-chev{transform:rotate(-90deg)}
+.eg.closed .eg-body{display:none}
+.eg-body{border-top:1px solid var(--line)}
+.eg-foot{padding:7px 14px;text-align:center;border-top:1px solid var(--line-2);background:var(--bg)}
 </style>
 </head>
 <body>
@@ -382,21 +393,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
           </div>
           <button class="btn-ghost" id="enrich-export" style="flex:none">Export CSV</button>
         </div>
-        <div style="overflow-x:auto">
-          <table class="enrich-table">
-            <thead><tr>
-              <th data-col="library">Library</th>
-              <th data-col="term">Term</th>
-              <th data-col="k" title="Overlap / Term members">k / M</th>
-              <th data-col="pval">p-value</th>
-              <th data-col="qval">FDR q</th>
-            </tr></thead>
-            <tbody id="enrich-tbody"></tbody>
-          </table>
-        </div>
-        <div id="enrich-more-wrap" style="text-align:center;margin-top:12px;display:none">
-          <button class="btn-ghost" id="enrich-more">Show all</button>
-        </div>
+        <div id="enrich-groups-container"></div>
       </div>
     </div>
   </div>
@@ -896,7 +893,47 @@ function download(sid, c) {
    ============================================================ */
 let ENRICH_PARSED = null;
 let ENRICH_ROWS   = [];
-let ENRICH_SORT   = {col: 'pval', asc: true};
+
+// Library → display group
+const _LIB_GROUPS = {
+  Drug_Repurposing_Hub_Mechanism_of_Action: 'Targets & Mechanisms',
+  Drug_Repurposing_Hub_Target:              'Targets & Mechanisms',
+  DrugCentral_Target:                       'Targets & Mechanisms',
+  KinomeScan_Kinase:                        'Targets & Mechanisms',
+  STITCH_Target:                            'Targets & Mechanisms',
+  Geneshot_Associated:                      'Gene Associations',
+  L1000FWD_KEGG_Pathways_Up:               'Pathways',
+  L1000FWD_KEGG_Pathways_Down:             'Pathways',
+  L1000FWD_GO_Biological_Processes_Down:   'Pathways',
+  L1000FWD_GO_Cellular_Component_Up:       'Pathways',
+  L1000FWD_GO_Cellular_Component_Down:     'Pathways',
+  L1000FWD_GO_Molecular_Function_Up:       'Pathways',
+  L1000FWD_GO_Molecular_Function_Down:     'Pathways',
+  SIDER_Indications:                        'Side Effects & Indications',
+  SIDER_Side_Effects:                       'Side Effects & Indications',
+  L1000FWD_Predicted_Side_Effects:         'Side Effects & Indications',
+  PharmGKB_OFFSIDES_Side_Effects:          'Side Effects & Indications',
+  CREEDS_Signature_Up:                     'Transcriptional Signatures',
+  CREEDS_Signature_Down:                   'Transcriptional Signatures',
+  ATC:                                     'Classification & Pharmacogenomics',
+  PharmGKB_SNV:                            'Classification & Pharmacogenomics',
+};
+const _GROUP_ORDER = [
+  'Targets & Mechanisms',
+  'Gene Associations',
+  'Pathways',
+  'Side Effects & Indications',
+  'Transcriptional Signatures',
+  'Classification & Pharmacogenomics',
+];
+const _GROUP_ICONS = {
+  'Targets & Mechanisms':              '🎯',
+  'Gene Associations':                 '🧬',
+  'Pathways':                          '🔬',
+  'Side Effects & Indications':        '⚕',
+  'Transcriptional Signatures':        '📊',
+  'Classification & Pharmacogenomics': '🏷',
+};
 
 function _logBinom(n, k) {
   if (k < 0 || k > n) return -Infinity;
@@ -1063,10 +1100,22 @@ function _fmtP(p) {
   return p < 0.0005 ? p.toExponential(2) : p.toPrecision(3);
 }
 
+function _makeEnrichRow(r) {
+  const cls  = r.qval < 0.01 ? 'sig-h' : r.qval < 0.05 ? 'sig-m' : '';
+  const barW = Math.max(2, Math.round(r.k / r.K * 56));
+  const lib  = esc(r.library.replace(/_/g, ' '));
+  return `<tr>
+    <td style="color:var(--muted);font-size:11.5px;white-space:nowrap">${lib}</td>
+    <td style="font-weight:500">${esc(r.term)}</td>
+    <td style="white-space:nowrap;font-family:var(--mono)"><b>${r.k}</b><span style="color:var(--muted)">/${r.M}</span><span class="enrich-bar" style="width:${barW}px"></span></td>
+    <td class="mono">${_fmtP(r.pval)}</td>
+    <td class="mono ${cls}">${_fmtP(r.qval)}</td>
+  </tr>`;
+}
+
 function _renderEnrich() {
-  const wrap  = $('#enrich-results-wrap');
-  const tbody = $('#enrich-tbody');
-  const rows  = ENRICH_ROWS;
+  const wrap = $('#enrich-results-wrap');
+  const rows = ENRICH_ROWS;
 
   if (!rows.length) {
     wrap.style.display = 'none';
@@ -1075,31 +1124,55 @@ function _renderEnrich() {
     return;
   }
 
-  $('#enrich-res-title').textContent = `${rows.length} enriched term${rows.length !== 1 ? 's' : ''}`;
+  // Group rows by category
+  const byGroup = {};
+  for (const r of rows) {
+    const g = _LIB_GROUPS[r.library] || 'Other';
+    (byGroup[g] = byGroup[g] || []).push(r);
+  }
+  // Each group is already sorted by pval (ENRICH_ROWS sorted before calling)
 
-  function makeRow(r) {
-    const cls = r.qval < 0.01 ? 'sig-h' : r.qval < 0.05 ? 'sig-m' : '';
-    const barW = Math.max(2, Math.round(r.k / r.K * 56));
-    return `<tr>
-      <td style="color:var(--muted);font-size:12px;white-space:nowrap">${esc(r.library.replace(/_/g,' '))}</td>
-      <td style="font-weight:500">${esc(r.term)}</td>
-      <td style="white-space:nowrap;font-family:var(--mono)"><b>${r.k}</b><span style="color:var(--muted)">/${r.M}</span><span class="enrich-bar" style="width:${barW}px"></span></td>
-      <td class="mono">${_fmtP(r.pval)}</td>
-      <td class="mono ${cls}">${_fmtP(r.qval)}</td>
-    </tr>`;
+  const thead = `<thead><tr>
+    <th>Library</th><th>Term</th><th title="Overlap / Term size">k / M</th>
+    <th>p-value</th><th>FDR q</th>
+  </tr></thead>`;
+
+  const PER_GROUP = 8;
+  let html = '';
+
+  for (const gName of [..._GROUP_ORDER, 'Other']) {
+    const gRows = byGroup[gName];
+    if (!gRows || !gRows.length) continue;
+
+    const icon    = _GROUP_ICONS[gName] || '◆';
+    const visible = gRows.slice(0, PER_GROUP);
+    const hidden  = gRows.slice(PER_GROUP);
+    const gId     = gName.replace(/[^a-z]/gi, '-');
+
+    html += `<div class="eg" id="eg-${gId}">
+      <div class="eg-hd" onclick="this.closest('.eg').classList.toggle('closed')">
+        <span class="eg-icon">${icon}</span>
+        <span class="eg-name">${esc(gName)}</span>
+        <span class="eg-badge">${gRows.length} term${gRows.length !== 1 ? 's' : ''}</span>
+        <span class="eg-chev">▾</span>
+      </div>
+      <div class="eg-body">
+        <div style="overflow-x:auto">
+          <table class="enrich-table">${thead}
+            <tbody>${visible.map(_makeEnrichRow).join('')}</tbody>
+            ${hidden.length ? `<tbody id="eg-more-${gId}" style="display:none">${hidden.map(_makeEnrichRow).join('')}</tbody>` : ''}
+          </table>
+        </div>
+        ${hidden.length ? `<div class="eg-foot"><button class="btn-ghost" onclick="
+          var b=document.getElementById('eg-more-${gId}');
+          b.style.display='';this.closest('.eg-foot').style.display='none'
+        ">Show ${hidden.length} more</button></div>` : ''}
+      </div>
+    </div>`;
   }
 
-  const PAGE = 50;
-  tbody.innerHTML = rows.slice(0, PAGE).map(makeRow).join('');
-  const moreWrap = $('#enrich-more-wrap');
-  if (rows.length > PAGE) {
-    moreWrap.style.display = 'block';
-    const moreBtn = $('#enrich-more');
-    moreBtn.textContent = `Show all ${rows.length} terms`;
-    moreBtn.onclick = () => { tbody.innerHTML = rows.map(makeRow).join(''); moreWrap.style.display = 'none'; };
-  } else {
-    moreWrap.style.display = 'none';
-  }
+  $('#enrich-groups-container').innerHTML = html;
+  $('#enrich-res-title').textContent = `${rows.length} enriched term${rows.length !== 1 ? 's' : ''} in ${Object.keys(byGroup).length} group${Object.keys(byGroup).length !== 1 ? 's' : ''}`;
 
   wrap.style.display = 'block';
   wrap.scrollIntoView({behavior: 'smooth', block: 'start'});
@@ -1118,20 +1191,6 @@ $('#enrich-export').onclick = () => {
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
   a.download = 'syndra_enrichment.csv'; a.click(); URL.revokeObjectURL(a.href);
 };
-
-// Column header sort
-document.querySelector('.enrich-table thead').addEventListener('click', e => {
-  const th = e.target.closest('th[data-col]');
-  if (!th || !ENRICH_ROWS.length) return;
-  const col = th.dataset.col;
-  if (ENRICH_SORT.col === col) ENRICH_SORT.asc = !ENRICH_SORT.asc;
-  else { ENRICH_SORT.col = col; ENRICH_SORT.asc = (col === 'pval' || col === 'qval'); }
-  ENRICH_ROWS.sort((a, b) => {
-    const cmp = typeof a[col] === 'string' ? a[col].localeCompare(b[col]) : a[col] - b[col];
-    return ENRICH_SORT.asc ? cmp : -cmp;
-  });
-  _renderEnrich();
-});
 
 // Show other compounds sharing the same target or MOA
 function showByTag(tagType, tagValue) {

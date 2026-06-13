@@ -12,30 +12,11 @@ venv/
 .vscode/
 .idea/
 
-# Local lock (commit deliberately if you want exact pins)
-# requirements-lock.txt
-
-# Large/intermediate data — keep only released, versioned outputs
-*.tmp
-
-# Data dumps
-synonyms/input/Drugcentral/drugcentral.dump.11012023.sql
-
-# Ignore build artifacts but keep .py files
-build/__pycache__/
-build/*.pyc
-# If you have other junk like logs or temp files, add them here
-
-# Large Data
+# Large input data (download separately; see DATA_SOURCES.md)
 synonyms/input/Drugcentral/
-
 synonyms/input/repurposing_hub_annotation.txt
 
-# Data files
-synonyms/input/Drugcentral/drugcentral.dump.11012023.sql
-synonyms/input/repurposing_hub_annotation.txt
-
-# Python/OS
-__pycache__/
-*.pyc
-.DS_Store
+# Generated PubChem synonym cache (rebuilt by build_all.py on first run)
+synonyms/input/pubchem_synonyms.tsv
+synonyms/input/pubchem_synonyms_supplement.tsv
+synonyms/input/.DS_Store

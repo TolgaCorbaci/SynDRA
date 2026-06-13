@@ -23,13 +23,14 @@ _WS_RE = re.compile(r"\s+")
 def normalize_name(name: str) -> str:
     """Normalize one drug name/synonym to its match key.
 
-    lowercase + Unicode NFKC fold + collapse internal whitespace + strip.
-    Deliberately minimal and deterministic; no fuzzy logic.
+    lowercase + Unicode NFKC fold + treat hyphens as spaces + collapse whitespace.
+    Hyphen↔space equivalence ensures "tubastatin-a" == "tubastatin a", etc.
     """
     if name is None:
         return ""
     s = unicodedata.normalize("NFKC", str(name))
     s = s.strip().lower()
+    s = s.replace("-", " ")
     s = _WS_RE.sub(" ", s)
     return s
 
@@ -61,6 +62,11 @@ if __name__ == "__main__":
     assert normalize_name("  Aspirin ") == "aspirin"
     assert normalize_name("ACETYLSALICYLIC   ACID") == "acetylsalicylic acid"
     assert normalize_name(None) == ""
+    # Hyphen-space equivalence
+    assert normalize_name("Tubastatin A") == "tubastatin a"
+    assert normalize_name("tubastatin-a") == "tubastatin a"
+    assert normalize_name("VER 155008") == "ver 155008"
+    assert normalize_name("VER-155008") == "ver 155008"
     assert split_synonyms("1,1'-hexamethylenebis[5-(4-chlorophenyl)biguanide]") == \
         ["1,1'-hexamethylenebis[5-(4-chlorophenyl)biguanide]"]
     assert split_synonyms("aspirin; ASA | acetylsalicylic acid") == \

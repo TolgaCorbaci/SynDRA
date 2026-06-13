@@ -47,6 +47,8 @@ whitespace-stripped before matching. Sources are integrated in dependency order:
 | Therapeutic Targets Database (TTD) | drug names + synonyms | academic |
 | PRISM Repurposing | drug names + PubChem synonyms | DepMap terms |
 | DrugCentral | INN/synonym table + identifier xrefs | CC BY-SA 4.0 |
+| DrugBank Open Vocabulary | names + InChIKey-anchored synonyms | CC BY-NC 4.0 (full build only) |
+| PubChem (REST API) | synonyms fetched by InChIKey | CC0 |
 
 Compounds that cannot be resolved to a structure (no usable SMILES or InChIKey
 across any source) are retained as **orphan nodes** rather than dropped. This
@@ -75,16 +77,16 @@ probability, computed in log-space to avoid overflow) with
 
 | Metric | Value |
 |--------|-------|
-| Canonical compound nodes | 59,571 |
-| Compounds with resolved structure | 31,200 |
-| Name-only (orphan) nodes | 28,371 |
-| Total synonym entries | 338,730 |
+| Canonical compound nodes | 67,406 |
+| Compounds with resolved SMILES structure | 31,200 |
+| Nodes without SMILES (IK-only or name-only) | 36,206 |
+| Total synonym entries (redistributable) | 991,701 |
 | Compounds covered by enrichment libraries | 8,591 |
 | Enrichment libraries | 21 |
 | Enrichment terms | 36,996 |
-| Benchmark match rate — LINCS `cmap_name` baseline | 58.1% (306/527) |
-| Benchmark match rate — SynDRA | 71.9% (379/527) |
-| Benchmark improvement | +13.9 pp |
+| Benchmark match rate — LINCS `cmap_name` baseline | 60.2% (317/527) |
+| Benchmark match rate — SynDRA | 92.4% (487/527) |
+| Benchmark improvement | +32.3 pp |
 
 ## Installation
 
@@ -126,8 +128,10 @@ SynDRA/
 │   ├── xrefs.py                    # phase 3: cross-references
 │   ├── synonyms_build.py           # phase 4+5: synonyms + orphans
 │   ├── drugcentral.py              # phase 4+5: DrugCentral integration
+│   ├── drugbank_vocab.py           # phase 4+5: DrugBank Open Vocabulary
+│   ├── pubchem.py                  # phase 4+5: PubChem synonym cache
 │   ├── licensing.py                # phase 6: dual outputs
-│   ├── normalize.py                # name normalization
+│   ├── normalize.py                # name normalization (hyphen=space)
 │   └── structure.py                # SMILES/InChIKey standardization (RDKit)
 ├── build_webapp_data.py            # generate syndra_data.json
 ├── build_enrichment_data.py        # generate enrichment_data.json

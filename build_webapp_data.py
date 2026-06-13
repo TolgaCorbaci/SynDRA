@@ -128,11 +128,19 @@ def main():
     synonyms_df  = _load("syndra_redistributable_synonyms")
 
     # ------------------------------------------------------------------
-    # Build synonym index early — needed to resolve RepHub pert_inames
+    # Build synonym index early — needed to resolve RepHub pert_inames.
+    # PubChem is excluded from the web search index (it adds ~700K catalog
+    # numbers that inflate the JSON without improving drug-name search);
+    # PubChem synonyms still live in the redistributable parquets.
     # ------------------------------------------------------------------
+    _WEB_INDEX_SOURCES = {"lincs_2020", "ttd", "prism", "drugcentral",
+                          "drugbank", "repurposing_hub"}
     print("  Building synonym index …")
     syn_index: dict[str, str] = {}
     for _, row in synonyms_df.iterrows():
+        src  = str(row.get("source", ""))
+        if src not in _WEB_INDEX_SOURCES:
+            continue
         sid  = _clean(str(row.get("syndra_id", "")))
         norm = _clean(str(row.get("synonym_norm", "")))
         if sid and norm and norm not in syn_index:

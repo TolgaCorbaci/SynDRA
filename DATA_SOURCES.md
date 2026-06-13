@@ -11,13 +11,16 @@ before publishing it. (Editors and reviewers routinely check this.)
 | **PRISM Repurposing** | `PRISM_drug_synonyms.csv` | https://github.com/broadinstitute/prism_repurposing | _add_ | _add_ | Broad / DepMap terms — **verify** |
 | **LINCS 2020 (CMap)** | `compoundinfo_beta.txt` | https://clue.io/releases/data-dashboard | _add (e.g. 2020 beta)_ | _add_ | clue.io / LINCS data-use terms — **verify (commonly CC-BY)** |
 | **DrugCentral** | `drugcentral.dump.*.sql` | https://drugcentral.org | _add_ | _add_ | CC BY-SA 4.0 |
+| **DrugBank Open Vocabulary** | `drugbank vocabulary.csv` | https://go.drugbank.com/releases/latest#open-data | 2021 | _add_ | CC BY-NC 4.0 — **excluded from redistributable outputs** |
+| **PubChem** | `pubchem_synonyms.tsv` *(generated)* | https://pubchem.ncbi.nlm.nih.gov | PUG REST API | _add_ | CC0 (public domain) |
 | **Drug Repurposing Hub** | `repurposing_hub_annotation.txt` | https://repo-hub.broadinstitute.org | _add (e.g. 2025-08-18)_ | _add_ | Non-commercial use only — cite Corsello *et al.* Nat Med 2017 |
 
 ## Reproducing the build
 
-Raw source files belong under `synonyms/input/`. The DrugCentral SQL dump is
-excluded from git (listed in `.gitignore`) due to file size. All other inputs
-should be placed at the paths listed above before running `make build-new`.
+Raw source files belong under `synonyms/input/`. The DrugCentral SQL dump and
+Repurposing Hub annotation file are excluded from git (see `.gitignore`) due to
+size or license constraints. The PubChem synonym cache (`pubchem_synonyms.tsv`)
+is generated automatically by `build_all.py` on first run (requires internet).
 
 The Repurposing Hub annotation file is optional: place it at
 `synonyms/input/repurposing_hub_annotation.txt` and run `make build-web` to

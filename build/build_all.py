@@ -25,17 +25,21 @@ import xrefs as ph3
 import synonyms_build as ph45
 import licensing as ph6
 import drugcentral as dc
+import drugbank_vocab as dbv
+import pubchem as pc
 
 # ---------------------------------------------------------------------------
 # Input paths (all relative to project root)
 # ---------------------------------------------------------------------------
 INPUT = os.path.join(_ROOT_DIR, "synonyms", "input")
 
-LINCS_PATH = os.path.join(INPUT, "compoundinfo_beta.txt")
-TTD_PATH = os.path.join(INPUT, "P1-04-Drug_synonyms.txt")
-PRISM_PATH = os.path.join(INPUT, "PRISM_drug_synonyms.csv")
-REPHUB_PATH = os.path.join(INPUT, "repurposing_samples.txt")   # optional; skip if absent
-DC_PATH = os.path.join(INPUT, "Drugcentral", "drugcentral.dump.11012023.sql")
+LINCS_PATH    = os.path.join(INPUT, "compoundinfo_beta.txt")
+TTD_PATH      = os.path.join(INPUT, "P1-04-Drug_synonyms.txt")
+PRISM_PATH    = os.path.join(INPUT, "PRISM_drug_synonyms.csv")
+REPHUB_PATH   = os.path.join(INPUT, "repurposing_samples.txt")   # optional; skip if absent
+DC_PATH       = os.path.join(INPUT, "Drugcentral", "drugcentral.dump.11012023.sql")
+DRUGBANK_PATH = os.path.join(INPUT, "Drugbank", "drugbank vocabulary.csv")
+PC_CACHE_PATH = os.path.join(INPUT, "pubchem_synonyms.tsv")
 
 OUTPUT_DIR = os.path.join(_ROOT_DIR, "outputs")
 
@@ -87,7 +91,28 @@ def main():
     print("\n--- Phase 4+5: DrugCentral ---")
     n_dc_orphans = dc.add_drugcentral(hub, DC_PATH)
 
-    total_orphans = n_ttd_orphans + n_prism_orphans + n_dc_orphans
+    # ------------------------------------------------------------------
+    # Phase 4+5: DrugBank Open Vocabulary
+    # ------------------------------------------------------------------
+    print("\n--- Phase 4+5: DrugBank vocabulary ---")
+    if os.path.exists(DRUGBANK_PATH):
+        n_db_orphans = dbv.add_drugbank_vocab(hub, DRUGBANK_PATH)
+    else:
+        print(f"  DrugBank vocab not found, skipping: {DRUGBANK_PATH}")
+        n_db_orphans = 0
+
+    # ------------------------------------------------------------------
+    # Phase 4+5: PubChem synonyms (from pre-fetched cache)
+    # If cache is absent, fetch it now from PubChem API (requires internet).
+    # ------------------------------------------------------------------
+    print("\n--- Phase 4+5: PubChem synonyms ---")
+    if not os.path.exists(PC_CACHE_PATH):
+        print("  PubChem cache absent — fetching from API (one-time, ~3 min) …")
+        all_iks = [c.inchikey for c in hub._compounds.values() if c.inchikey]
+        pc.fetch_pubchem_cache(all_iks, PC_CACHE_PATH)
+    pc.add_pubchem(hub, PC_CACHE_PATH)
+
+    total_orphans = n_ttd_orphans + n_prism_orphans + n_dc_orphans + n_db_orphans
     print(f"\n[Phase 5 summary]  orphan nodes created={total_orphans}"
           " (old pipeline would have dropped these)")
 

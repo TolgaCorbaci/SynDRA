@@ -68,6 +68,20 @@ def _load(stem):
     raise FileNotFoundError(f"Not found: {p} or {c}. Run build/build_all.py first.")
 
 
+def _dedup_pipe(value: str | None) -> str | None:
+    """Deduplicate pipe-separated values while preserving order."""
+    if not value:
+        return value
+    seen: set[str] = set()
+    parts: list[str] = []
+    for p in value.split("|"):
+        p = p.strip()
+        if p and p not in seen:
+            seen.add(p)
+            parts.append(p)
+    return " | ".join(parts) if parts else None
+
+
 def _load_rephub(filepath: Path, syn_index: dict[str, str]) -> dict[str, dict]:
     """Parse Repurposing Hub drug annotation file (! header lines, then TSV).
 
@@ -98,10 +112,10 @@ def _load_rephub(filepath: Path, syn_index: dict[str, str]) -> dict[str, dict]:
             if sid not in sid_to_rephub:
                 sid_to_rephub[sid] = {
                     "clinical_phase": _clean(row.get("clinical_phase", "")),
-                    "disease_area":   _clean(row.get("disease_area", "")),
-                    "indication":     _clean(row.get("indication", "")),
-                    "rephub_moa":     _clean(row.get("moa", "")),
-                    "rephub_target":  _clean(row.get("target", "")),
+                    "disease_area":   _dedup_pipe(_clean(row.get("disease_area", ""))),
+                    "indication":     _dedup_pipe(_clean(row.get("indication", ""))),
+                    "rephub_moa":     _dedup_pipe(_clean(row.get("moa", ""))),
+                    "rephub_target":  _dedup_pipe(_clean(row.get("target", ""))),
                 }
 
     return sid_to_rephub, unresolved

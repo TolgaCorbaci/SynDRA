@@ -16,7 +16,8 @@ venv/
 synonyms/input/Drugcentral/
 synonyms/input/repurposing_hub_annotation.txt
 
-# Generated PubChem synonym cache (rebuilt by build_all.py on first run)
+# Generated synonym caches (fetched from public APIs; rebuild via build_all.py)
 synonyms/input/pubchem_synonyms.tsv
 synonyms/input/pubchem_synonyms_supplement.tsv
+synonyms/input/chembl_synonyms.tsv
 synonyms/input/.DS_Store

@@ -134,7 +134,7 @@ def main():
     # PubChem synonyms still live in the redistributable parquets.
     # ------------------------------------------------------------------
     _WEB_INDEX_SOURCES = {"lincs_2020", "ttd", "prism", "drugcentral",
-                          "drugbank", "repurposing_hub"}
+                          "drugbank", "repurposing_hub", "chembl"}
     print("  Building synonym index …")
     syn_index: dict[str, str] = {}
     for _, row in synonyms_df.iterrows():

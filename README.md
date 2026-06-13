@@ -49,6 +49,7 @@ whitespace-stripped before matching. Sources are integrated in dependency order:
 | DrugCentral | INN/synonym table + identifier xrefs | CC BY-SA 4.0 |
 | DrugBank Open Vocabulary | names + InChIKey-anchored synonyms | CC BY-NC 4.0 (full build only) |
 | PubChem (REST API) | synonyms fetched by InChIKey | CC0 |
+| ChEMBL (REST API) | synonyms + preferred names by InChIKey | CC BY-SA 4.0 |
 
 Compounds that cannot be resolved to a structure (no usable SMILES or InChIKey
 across any source) are retained as **orphan nodes** rather than dropped. This
@@ -77,16 +78,16 @@ probability, computed in log-space to avoid overflow) with
 
 | Metric | Value |
 |--------|-------|
-| Canonical compound nodes | 67,406 |
+| Canonical compound nodes | 67,436 |
 | Compounds with resolved SMILES structure | 31,200 |
-| Nodes without SMILES (IK-only or name-only) | 36,206 |
-| Total synonym entries (redistributable) | 991,701 |
+| Nodes without SMILES (IK-only or name-only) | 36,236 |
+| Total synonym entries (redistributable) | 991,759 |
 | Compounds covered by enrichment libraries | 8,591 |
 | Enrichment libraries | 21 |
 | Enrichment terms | 36,996 |
 | Benchmark match rate — LINCS `cmap_name` baseline | 60.2% (317/527) |
-| Benchmark match rate — SynDRA | 92.4% (487/527) |
-| Benchmark improvement | +32.3 pp |
+| Benchmark match rate — SynDRA | 95.4% (503/527) |
+| Benchmark improvement | +35.3 pp |
 
 ## Installation
 
@@ -130,6 +131,7 @@ SynDRA/
 │   ├── drugcentral.py              # phase 4+5: DrugCentral integration
 │   ├── drugbank_vocab.py           # phase 4+5: DrugBank Open Vocabulary
 │   ├── pubchem.py                  # phase 4+5: PubChem synonym cache
+│   ├── chembl.py                   # phase 4+5: ChEMBL synonym cache
 │   ├── licensing.py                # phase 6: dual outputs
 │   ├── normalize.py                # name normalization (hyphen=space)
 │   └── structure.py                # SMILES/InChIKey standardization (RDKit)

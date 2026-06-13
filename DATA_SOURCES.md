@@ -13,14 +13,17 @@ before publishing it. (Editors and reviewers routinely check this.)
 | **DrugCentral** | `drugcentral.dump.*.sql` | https://drugcentral.org | _add_ | _add_ | CC BY-SA 4.0 |
 | **DrugBank Open Vocabulary** | `drugbank vocabulary.csv` | https://go.drugbank.com/releases/latest#open-data | 2021 | _add_ | CC BY-NC 4.0 — **excluded from redistributable outputs** |
 | **PubChem** | `pubchem_synonyms.tsv` *(generated)* | https://pubchem.ncbi.nlm.nih.gov | PUG REST API | _add_ | CC0 (public domain) |
+| **ChEMBL** | `chembl_synonyms.tsv` *(generated)* | https://www.ebi.ac.uk/chembl | REST API (latest) | _add_ | CC BY-SA 4.0 |
 | **Drug Repurposing Hub** | `repurposing_hub_annotation.txt` | https://repo-hub.broadinstitute.org | _add (e.g. 2025-08-18)_ | _add_ | Non-commercial use only — cite Corsello *et al.* Nat Med 2017 |
 
 ## Reproducing the build
 
 Raw source files belong under `synonyms/input/`. The DrugCentral SQL dump and
 Repurposing Hub annotation file are excluded from git (see `.gitignore`) due to
-size or license constraints. The PubChem synonym cache (`pubchem_synonyms.tsv`)
-is generated automatically by `build_all.py` on first run (requires internet).
+size or license constraints. The PubChem synonym cache (`pubchem_synonyms.tsv`) is generated automatically by
+`build_all.py` on first run (requires internet). The ChEMBL synonym cache
+(`chembl_synonyms.tsv`) is populated by targeted per-IK lookups; run
+`build/chembl.py` directly to expand coverage beyond the pre-seeded entries.
 
 The Repurposing Hub annotation file is optional: place it at
 `synonyms/input/repurposing_hub_annotation.txt` and run `make build-web` to

@@ -27,6 +27,7 @@ import licensing as ph6
 import drugcentral as dc
 import drugbank_vocab as dbv
 import pubchem as pc
+import chembl as ch
 
 # ---------------------------------------------------------------------------
 # Input paths (all relative to project root)
@@ -38,8 +39,9 @@ TTD_PATH      = os.path.join(INPUT, "P1-04-Drug_synonyms.txt")
 PRISM_PATH    = os.path.join(INPUT, "PRISM_drug_synonyms.csv")
 REPHUB_PATH   = os.path.join(INPUT, "repurposing_samples.txt")   # optional; skip if absent
 DC_PATH       = os.path.join(INPUT, "Drugcentral", "drugcentral.dump.11012023.sql")
-DRUGBANK_PATH = os.path.join(INPUT, "Drugbank", "drugbank vocabulary.csv")
-PC_CACHE_PATH = os.path.join(INPUT, "pubchem_synonyms.tsv")
+DRUGBANK_PATH  = os.path.join(INPUT, "Drugbank", "drugbank vocabulary.csv")
+PC_CACHE_PATH  = os.path.join(INPUT, "pubchem_synonyms.tsv")
+CH_CACHE_PATH  = os.path.join(INPUT, "chembl_synonyms.tsv")
 
 OUTPUT_DIR = os.path.join(_ROOT_DIR, "outputs")
 
@@ -111,6 +113,15 @@ def main():
         all_iks = [c.inchikey for c in hub._compounds.values() if c.inchikey]
         pc.fetch_pubchem_cache(all_iks, PC_CACHE_PATH)
     pc.add_pubchem(hub, PC_CACHE_PATH)
+
+    # ------------------------------------------------------------------
+    # Phase 4+5: ChEMBL synonyms (from pre-fetched cache)
+    # Cache is built with fetch_chembl_cache(); auto-fetch is skipped here
+    # because the full fetch (~31K IKs, one req each) takes ~2 h.
+    # Run:  python -c "from build.chembl import fetch_chembl_cache; ..."
+    # ------------------------------------------------------------------
+    print("\n--- Phase 4+5: ChEMBL synonyms ---")
+    ch.add_chembl(hub, CH_CACHE_PATH)
 
     total_orphans = n_ttd_orphans + n_prism_orphans + n_dc_orphans + n_db_orphans
     print(f"\n[Phase 5 summary]  orphan nodes created={total_orphans}"

@@ -1,0 +1,274 @@
+CDK18		palbociclib	azd-4547	pha-793887	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+RPS6KA6		tanzisertib	palbociclib	azd-4547	sorafenib	tamatinib	pha-793887	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	cm-4307	crizotinib	dinaciclib	azd-7762	mln8054	
+MARK2		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	pha-793887	dabrafenib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+CILK1		palbociclib	azd-4547	pha-793887	alvocidib	dinaciclib	at-7519	
+DYRK1A		palbociclib	seliciclib	pha-793887	dinaciclib	baricitinib	alectinib	azd-7762	
+CLK2		tanzisertib	palbociclib	azd-4547	momelotinib	pictilisib	tamatinib	seliciclib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+DSTYK		palbociclib	crizotinib	ibrutinib	momelotinib	seliciclib	pha-793887	dabrafenib	dinaciclib	vemurafenib	lestaurtinib	azd-7762	lapatinib	
+RPS6KA3		palbociclib	crizotinib	azd-4547	seliciclib	pha-793887	dabrafenib	dinaciclib	baricitinib	alectinib	azd-7762	mln8054	
+CSNK1A1		palbociclib	seliciclib	pha-793887	dinaciclib	baricitinib	alectinib	azd-7762	
+STK33		palbociclib	azd-4547	sorafenib	tamatinib	pha-793887	baricitinib	alectinib	cm-4307	crizotinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+SBK1		palbociclib	crizotinib	azd-4547	momelotinib	pha-793887	baricitinib	azd-7762	
+CDKL5		palbociclib	sns-032	crizotinib	pha-793887	alvocidib	dabrafenib	dinaciclib	at-7519	lestaurtinib	
+CLK3		tamatinib	seliciclib	pha-793887	dabrafenib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	mln8054	
+CLK4		palbociclib	azd-4547	momelotinib	tamatinib	seliciclib	pha-793887	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	osimertinib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	dactolisib	
+NLK		tanzisertib	cm-4307	sorafenib	pha-793887	dabrafenib	
+TAOK1		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	pha-793887	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	cm-4307	crizotinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+MAPK7		palbociclib	crizotinib	azd-4547	momelotinib	pha-793887	dabrafenib	dinaciclib	infigratinib	
+STK24		palbociclib	crizotinib	azd-4547	pha-793887	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	azd-7762	
+CDK5		palbociclib	cm-4307	sorafenib	seliciclib	pha-793887	dabrafenib	dinaciclib	
+PHKG1		palbociclib	azd-4547	tamatinib	osimertinib	pha-793887	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	lestaurtinib	azd-7762	
+CSF1R		palbociclib	azd-4547	masitinib	momelotinib	sorafenib	tamatinib	seliciclib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	foretinib	motesanib	dasatinib	cm-4307	crizotinib	pazopanib	osimertinib	quizartinib	dabrafenib	dinaciclib	azd-7762	mln8054	
+DCLK3		palbociclib	azd-4547	momelotinib	tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	alectinib	crizotinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+PAK3		palbociclib	azd-4547	sorafenib	tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	cm-4307	crizotinib	ibrutinib	osimertinib	dabrafenib	dinaciclib	azd-7762	
+DYRK1B		palbociclib	tamatinib	osimertinib	seliciclib	pha-793887	dabrafenib	dinaciclib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+CDK2		palbociclib	cm-4307	sorafenib	tamatinib	seliciclib	pha-793887	dabrafenib	dinaciclib	
+CDK14		palbociclib	cm-4307	sorafenib	pha-793887	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+STK35		cm-4307	crizotinib	ibrutinib	azd-4547	sorafenib	tamatinib	pha-793887	bosutinib	azd-7762	
+STK3		crizotinib	azd-4547	tamatinib	pha-793887	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	mln8054	
+PAK4		azd-4547	tamatinib	seliciclib	pha-793887	dabrafenib	dinaciclib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+ULK2		palbociclib	crizotinib	azd-4547	tamatinib	pha-793887	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+CDKL3		cm-4307	azd-4547	sorafenib	pha-793887	dinaciclib	
+CLK1		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	seliciclib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	cm-4307	osimertinib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	dactolisib	
+CDKL2		palbociclib	azd-4547	sorafenib	tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	infigratinib	cm-4307	crizotinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	dactolisib	
+EPHA3		azd-4547	sorafenib	tamatinib	pha-793887	baricitinib	vemurafenib	foretinib	dasatinib	cm-4307	crizotinib	dabrafenib	bosutinib	azd-7762	mln8054	
+MARK3		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	pha-793887	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+ABL1		tanzisertib	palbociclib	masitinib	tamatinib	pha-793887	imatinib	baricitinib	vemurafenib	infigratinib	foretinib	crizotinib	vandetanib	mln8054	azd-4547	momelotinib	sorafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	alectinib	nilotinib	dasatinib	cm-4307	ibrutinib	osimertinib	dabrafenib	bosutinib	azd-7762	
+STK25		palbociclib	azd-4547	tamatinib	pha-793887	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+CDK9		palbociclib	azd-4547	pha-793887	alvocidib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	at-7519	
+GSK3A		palbociclib	tamatinib	pha-793887	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+DCLK1		palbociclib	crizotinib	azd-4547	tamatinib	pha-793887	dabrafenib	baricitinib	azd-7762	
+PAK1		azd-4547	tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+GSK3B		enzastaurin	pha-793887	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+CDK7		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	seliciclib	pha-793887	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	foretinib	cm-4307	crizotinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	at-7519	azd-7762	
+PAK6		tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+CDK4		palbociclib	crizotinib	azd-4547	momelotinib	pha-793887	alvocidib	dabrafenib	dinaciclib	infigratinib	
+MAPK15		palbociclib	momelotinib	sorafenib	tamatinib	seliciclib	pha-793887	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	cm-4307	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+NUAK2		palbociclib	azd-4547	momelotinib	tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	crizotinib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+PAK5		gsk-690693	palbociclib	crizotinib	azd-4547	tamatinib	seliciclib	pha-793887	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+MELK		palbociclib	crizotinib	azd-4547	tamatinib	pha-793887	dabrafenib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+GRK7		palbociclib	crizotinib	pha-793887	baricitinib	lestaurtinib	azd-7762	mln8054	
+STK39		palbociclib	azd-4547	momelotinib	pha-793887	dinaciclib	baricitinib	alectinib	azd-7762	
+TAOK3		palbociclib	cm-4307	crizotinib	azd-4547	sorafenib	pha-793887	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	infigratinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+DMPK		crizotinib	momelotinib	tamatinib	pha-793887	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+STK26		palbociclib	crizotinib	azd-4547	pha-793887	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+DCLK2		palbociclib	crizotinib	azd-4547	tamatinib	pha-793887	dabrafenib	dinaciclib	baricitinib	azd-7762	
+CDK13		palbociclib	crizotinib	pha-793887	dabrafenib	dinaciclib	at-7519	
+CDK15		palbociclib	cm-4307	sorafenib	pha-793887	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+RPS6KA2		palbociclib	crizotinib	azd-4547	tamatinib	pha-793887	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+CDK17		palbociclib	cm-4307	azd-4547	sorafenib	tamatinib	pha-793887	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	at-7519	
+ULK1		palbociclib	azd-4547	momelotinib	tamatinib	pha-793887	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	crizotinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+CDK16		palbociclib	sns-032	azd-4547	momelotinib	pha-793887	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	at-7519	
+PHKG2		palbociclib	azd-4547	momelotinib	tamatinib	seliciclib	pha-793887	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	alectinib	crizotinib	osimertinib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+NEK2		palbociclib	azd-4547	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	infigratinib	
+SGK1		momelotinib	osimertinib	dabrafenib	dinaciclib	baricitinib	
+RIPK2		tanzisertib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	lapatinib	canertinib	cm-4307	crizotinib	ibrutinib	osimertinib	vandetanib	dabrafenib	azd-7762	
+EIF2AK4		palbociclib	azd-4547	momelotinib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	infigratinib	lestaurtinib	azd-7762	
+DAPK3		palbociclib	azd-4547	fedratinib	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+SLK		palbociclib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	alectinib	foretinib	lapatinib	cm-4307	crizotinib	osimertinib	dabrafenib	bosutinib	azd-7762	
+MAP3K3		palbociclib	crizotinib	azd-4547	tamatinib	dabrafenib	baricitinib	infigratinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+HIPK1		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	seliciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	cm-4307	osimertinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+FGR		dasatinib	crizotinib	ibrutinib	azd-4547	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	alectinib	bosutinib	azd-7762	mln8054	
+BMPR2		palbociclib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	azd-7762	
+AAK1		palbociclib	azd-4547	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	crizotinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+LYN		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	infigratinib	alectinib	foretinib	dasatinib	cm-4307	crizotinib	ibrutinib	dabrafenib	bosutinib	azd-7762	mln8054	
+CAMK1		palbociclib	crizotinib	azd-4547	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+NTRK1		palbociclib	azd-4547	sorafenib	tamatinib	baricitinib	alectinib	foretinib	cm-4307	crizotinib	dabrafenib	lestaurtinib	azd-7762	mln8054	
+PRKAB1		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	cm-4307	crizotinib	dabrafenib	dinaciclib	azd-7762	mln8054	
+TYK2		palbociclib	azd-4547	momelotinib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	tofacitinib	crizotinib	dabrafenib	ruxolitinib	azd-7762	
+KIT		palbociclib	azd-4547	masitinib	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	alectinib	foretinib	motesanib	dasatinib	cm-4307	crizotinib	ibrutinib	pazopanib	osimertinib	quizartinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+LCK		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	alectinib	foretinib	lapatinib	dasatinib	canertinib	cm-4307	crizotinib	ibrutinib	dabrafenib	bosutinib	azd-7762	mln8054	
+AURKC		azd-4547	momelotinib	tamatinib	pd-0325901	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	crizotinib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	mln8054	
+STK16		palbociclib	azd-4547	fedratinib	momelotinib	tamatinib	seliciclib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	mln8054	
+MKNK2		palbociclib	momelotinib	sorafenib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	foretinib	cm-4307	crizotinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+PIK3C2B		crizotinib	zstk-474	pictilisib	dabrafenib	azd-6482	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	azd-7762	dactolisib	lapatinib	
+SLC12A7		azd-4547	dabrafenib	dinaciclib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+MKNK1		canertinib	cm-4307	sorafenib	tamatinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	lapatinib	
+AURKB		palbociclib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	lapatinib	cm-4307	crizotinib	dabrafenib	azd-7762	mln8054	
+LIMK2		tanzisertib	crizotinib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	
+TESK1		crizotinib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	azd-7762	
+FLT3		palbociclib	azd-4547	fedratinib	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	alectinib	foretinib	cm-4307	crizotinib	ibrutinib	osimertinib	quizartinib	dabrafenib	azd-6482	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	dactolisib	
+FYN		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	dasatinib	cm-4307	crizotinib	ibrutinib	dabrafenib	azd-7762	mln8054	
+STK38L		dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	infigratinib	azd-7762	
+RPS6KA1		palbociclib	azd-4547	tamatinib	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	azd-7762	mln8054	
+NEK6		crizotinib	momelotinib	tamatinib	dabrafenib	baricitinib	
+ACVR1B		crizotinib	momelotinib	tamatinib	dabrafenib	azd-7762	
+NTRK2		palbociclib	cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	dabrafenib	baricitinib	azd-7762	foretinib	mln8054	
+CSNK1A1L		seliciclib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+COQ8B		crizotinib	momelotinib	tamatinib	dabrafenib	dinaciclib	
+MAPK10		tanzisertib	palbociclib	momelotinib	tamatinib	seliciclib	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+PTK6		dasatinib	ibrutinib	tamatinib	osimertinib	pd-0325901	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	azd-7762	foretinib	
+STK36		tanzisertib	cm-4307	sorafenib	tamatinib	dabrafenib	dinaciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	
+DAPK2		palbociclib	azd-4547	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+TGFBR2		cm-4307	azd-4547	sorafenib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	azd-7762	
+CAMK1D		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	osimertinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	infigratinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+EGFR		tanzisertib	palbociclib	azd-4547	erlotinib	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	gefitinib	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	lapatinib	canertinib	cm-4307	ibrutinib	osimertinib	vandetanib	dabrafenib	lestaurtinib	azd-7762	mln8054	
+BRAF		cm-4307	crizotinib	ibrutinib	zstk-474	sorafenib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	
+ERN1		tanzisertib	palbociclib	crizotinib	dabrafenib	baricitinib	lestaurtinib	azd-7762	
+TNNI3K		cm-4307	crizotinib	sorafenib	tamatinib	dabrafenib	baricitinib	azd-7762	
+RPS6KB1		palbociclib	crizotinib	azd-4547	dabrafenib	baricitinib	azd-7762	
+MAP3K4		crizotinib	azd-4547	tamatinib	dabrafenib	infigratinib	azd-7762	mln8054	
+HIPK3		palbociclib	cm-4307	momelotinib	sorafenib	osimertinib	pd-0325901	dabrafenib	dinaciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	azd-7762	
+HIPK4		palbociclib	momelotinib	sorafenib	seliciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	foretinib	cm-4307	crizotinib	osimertinib	dabrafenib	dinaciclib	azd-7762	mln8054	
+MAP3K19		tanzisertib	palbociclib	azd-4547	momelotinib	sorafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	foretinib	cm-4307	crizotinib	osimertinib	dabrafenib	lestaurtinib	azd-7762	dactolisib	
+PLK4		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	foretinib	cm-4307	crizotinib	ibrutinib	osimertinib	dabrafenib	lestaurtinib	azd-7762	mln8054	
+TNIK		palbociclib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	infigratinib	alectinib	cm-4307	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+EPHA1		dasatinib	cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	dabrafenib	azd-7762	foretinib	mln8054	
+LIMK1		tanzisertib	cm-4307	crizotinib	ibrutinib	sorafenib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	
+RET		palbociclib	azd-4547	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	alectinib	foretinib	cm-4307	crizotinib	ibrutinib	quizartinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+JAK2		palbociclib	azd-4547	fedratinib	momelotinib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	tofacitinib	crizotinib	dabrafenib	ruxolitinib	lestaurtinib	azd-7762	dactolisib	
+SRC		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	dasatinib	cm-4307	crizotinib	ibrutinib	dabrafenib	bosutinib	azd-7762	mln8054	
+BMX		dasatinib	crizotinib	ibrutinib	tamatinib	osimertinib	dabrafenib	azd-7762	mln8054	
+DDR2		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	infigratinib	foretinib	dasatinib	cm-4307	crizotinib	dabrafenib	azd-7762	mln8054	
+RIOK3		crizotinib	azd-4547	momelotinib	tamatinib	osimertinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+TIE1		azd-4547	1-(5-tert-butyl-2-p-tolyl-2h-pyrazol-3-yl)-3-[4-(2-morpholin-4-yl-ethoxy)-naphthalen-1-yl]-urea	sorafenib	tamatinib	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	foretinib	cm-4307	crizotinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+STK10		palbociclib	azd-4547	sorafenib	tamatinib	vemurafenib	infigratinib	alectinib	foretinib	lapatinib	cm-4307	crizotinib	ibrutinib	osimertinib	dabrafenib	bosutinib	lestaurtinib	azd-7762	mln8054	
+ACVR2B		crizotinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	azd-7762	
+JAK1		momelotinib	sorafenib	tamatinib	baricitinib	vemurafenib	tofacitinib	cm-4307	crizotinib	dabrafenib	ruxolitinib	lestaurtinib	azd-7762	dactolisib	
+TTK		palbociclib	momelotinib	sorafenib	tamatinib	seliciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	alectinib	cm-4307	crizotinib	dabrafenib	dinaciclib	lestaurtinib	azd-7762	
+NR2C2		palbociclib	cm-4307	crizotinib	azd-4547	momelotinib	sorafenib	tamatinib	dabrafenib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+CDK8		cm-4307	sorafenib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+CAMK1G		palbociclib	azd-4547	momelotinib	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+MAP3K9		azd-4547	momelotinib	tamatinib	osimertinib	dabrafenib	lestaurtinib	azd-7762	
+HIPK2		palbociclib	cm-4307	azd-4547	momelotinib	sorafenib	osimertinib	dabrafenib	dinaciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	azd-7762	
+ACVR1		crizotinib	azd-4547	momelotinib	dabrafenib	baricitinib	azd-7762	
+GAK		tanzisertib	palbociclib	erlotinib	fedratinib	momelotinib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	alectinib	dasatinib	canertinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	bosutinib	lestaurtinib	azd-7762	mln8054	
+SRMS		palbociclib	ibrutinib	tamatinib	osimertinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	azd-7762	
+HCK		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	alectinib	dasatinib	cm-4307	crizotinib	ibrutinib	dabrafenib	bosutinib	azd-7762	mln8054	
+RIOK1		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	osimertinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+BMPR1B		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	azd-7762	mln8054	
+BLK		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	alectinib	foretinib	lapatinib	dasatinib	canertinib	cm-4307	crizotinib	ibrutinib	osimertinib	dabrafenib	bosutinib	azd-7762	mln8054	
+ERBB3		tanzisertib	ibrutinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	bosutinib	azd-7762	lapatinib	
+CHEK2		azd-4547	osimertinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	alectinib	azd-7762	
+DDR1		tanzisertib	azd-4547	1-(5-tert-butyl-2-p-tolyl-2h-pyrazol-3-yl)-3-[4-(2-morpholin-4-yl-ethoxy)-naphthalen-1-yl]-urea	masitinib	sorafenib	tamatinib	pd-0325901	imatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	infigratinib	foretinib	nilotinib	dasatinib	cm-4307	crizotinib	dabrafenib	azd-7762	mln8054	
+MET		palbociclib	crizotinib	azd-4547	tamatinib	seliciclib	dabrafenib	dinaciclib	vemurafenib	sgx-523	azd-7762	foretinib	mln8054	
+FLT4		motesanib	cm-4307	ibrutinib	azd-4547	momelotinib	sorafenib	tamatinib	dabrafenib	infigratinib	azd-7762	foretinib	mln8054	
+IKBKE		palbociclib	azd-4547	momelotinib	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+CDK19		cm-4307	sorafenib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+ERBB2		canertinib	ibrutinib	osimertinib	dabrafenib	azd-7762	lapatinib	
+EPHA8		dasatinib	cm-4307	crizotinib	sorafenib	tamatinib	dabrafenib	bosutinib	azd-7762	foretinib	
+PIP5K1C		palbociclib	ibrutinib	azd-4547	dabrafenib	vemurafenib	azd-7762	mln8054	
+AURKA		crizotinib	ibrutinib	azd-4547	momelotinib	tamatinib	dabrafenib	baricitinib	azd-7762	mln8054	
+EPHB6		tanzisertib	azd-4547	sorafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	foretinib	dasatinib	cm-4307	crizotinib	ibrutinib	osimertinib	dabrafenib	azd-6482	azd-7762	mln8054	
+CIT		palbociclib	momelotinib	sorafenib	tamatinib	baricitinib	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	lapatinib	cm-4307	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+DAPK1		palbociclib	azd-4547	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+TXK		dasatinib	canertinib	crizotinib	ibrutinib	azd-4547	tamatinib	osimertinib	dabrafenib	azd-7762	mln8054	
+CSNK1E		tanzisertib	palbociclib	ibrutinib	azd-4547	seliciclib	dabrafenib	dinaciclib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+MARK4		crizotinib	azd-4547	momelotinib	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+RAF1		cm-4307	sorafenib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	lapatinib	
+TNK2		azd-4547	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	alectinib	dasatinib	crizotinib	ibrutinib	osimertinib	dabrafenib	lestaurtinib	azd-7762	mln8054	
+SIK1		dasatinib	crizotinib	azd-4547	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	azd-7762	mln8054	
+NTRK3		palbociclib	cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	dabrafenib	baricitinib	azd-7762	foretinib	
+MAP3K20		motesanib	cm-4307	ibrutinib	azd-4547	sorafenib	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	azd-7762	
+ABL2		azd-4547	sorafenib	tamatinib	imatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	dasatinib	cm-4307	crizotinib	ibrutinib	dabrafenib	bosutinib	azd-7762	mln8054	
+JAK3		palbociclib	azd-4547	momelotinib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	infigratinib	tofacitinib	crizotinib	ibrutinib	osimertinib	dabrafenib	ruxolitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+CSNK2A1		palbociclib	tamatinib	seliciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+TNK1		azd-4547	momelotinib	sorafenib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	alectinib	cm-4307	crizotinib	osimertinib	dabrafenib	lestaurtinib	azd-7762	mln8054	
+NEK9		crizotinib	momelotinib	tamatinib	dabrafenib	baricitinib	
+TAOK2		palbociclib	cm-4307	crizotinib	azd-4547	sorafenib	dabrafenib	dinaciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	infigratinib	azd-7762	
+MINK1		palbociclib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	alectinib	cm-4307	crizotinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	bosutinib	lestaurtinib	azd-7762	
+TEC		ibrutinib	azd-4547	tamatinib	osimertinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	azd-7762	mln8054	
+MAPK8		tanzisertib	palbociclib	momelotinib	tamatinib	osimertinib	dabrafenib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	azd-7762	
+NEK7		crizotinib	momelotinib	tamatinib	dabrafenib	baricitinib	
+NEK1		azd-4547	momelotinib	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+FRK		azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	alectinib	foretinib	dasatinib	cm-4307	crizotinib	ibrutinib	dabrafenib	bosutinib	azd-7762	
+AXL		palbociclib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	alectinib	foretinib	lapatinib	cm-4307	crizotinib	osimertinib	dabrafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+ITK		crizotinib	ibrutinib	azd-4547	tamatinib	dabrafenib	alectinib	azd-7762	
+TEK		cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	dabrafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	azd-7762	foretinib	mln8054	
+SIK2		tanzisertib	dasatinib	crizotinib	azd-4547	momelotinib	tamatinib	dabrafenib	baricitinib	azd-7762	mln8054	
+SRPK1		crizotinib	azd-4547	momelotinib	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+PIK3C2G		palbociclib	crizotinib	pictilisib	pd-0325901	dabrafenib	azd-6482	dactolisib	mln8054	
+ANKK1		crizotinib	azd-4547	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+BTK		dasatinib	palbociclib	crizotinib	ibrutinib	azd-4547	tamatinib	osimertinib	dabrafenib	bosutinib	azd-7762	mln8054	
+CSK		dasatinib	crizotinib	ibrutinib	azd-4547	tamatinib	dabrafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	azd-7762	mln8054	
+ULK3		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	dabrafenib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	vemurafenib	lestaurtinib	azd-7762	
+CAMKK2		palbociclib	crizotinib	azd-4547	osimertinib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+INSR		crizotinib	azd-4547	tamatinib	osimertinib	dinaciclib	alectinib	azd-7762	
+CSNK1D		palbociclib	seliciclib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+TLK1		tanzisertib	palbociclib	tamatinib	dinaciclib	baricitinib	azd-7762	
+OSR1		dinaciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	azd-7762	
+DYRK2		palbociclib	crizotinib	azd-4547	osimertinib	dinaciclib	baricitinib	azd-7762	
+TLK2		tamatinib	dinaciclib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+RIOK2		tamatinib	osimertinib	seliciclib	dinaciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+CAMK2B		palbociclib	azd-4547	momelotinib	tamatinib	osimertinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+IKBKB		crizotinib	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+CSNK2A2		palbociclib	momelotinib	tamatinib	osimertinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+PIM1		2,6-dihydroanthra/1,9-cd/pyrazol-6-one	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+MAP4K5		palbociclib	cm-4307	crizotinib	azd-4547	sorafenib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	infigratinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	bosutinib	azd-7762	foretinib	
+MYLK3		palbociclib	cm-4307	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+STK17B		azd-4547	momelotinib	tamatinib	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	lestaurtinib	azd-7762	mln8054	
+PKN2		palbociclib	crizotinib	momelotinib	tamatinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+SRPK3		palbociclib	crizotinib	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+MAP4K2		crizotinib	azd-4547	momelotinib	tamatinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	bosutinib	lestaurtinib	azd-7762	dactolisib	
+SRPK2		crizotinib	momelotinib	tamatinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+ROCK2		palbociclib	crizotinib	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+PKN1		crizotinib	azd-4547	tamatinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+CHUK		momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+BMP2K		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+MYLK		palbociclib	azd-4547	osimertinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+PIP4K2B		palbociclib	crizotinib	azd-4547	tamatinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+MYLK4		palbociclib	momelotinib	tamatinib	osimertinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	
+STK17A		azd-4547	momelotinib	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	alectinib	cm-4307	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	mln8054	
+PIP5K1A		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	osimertinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	
+PAK2		azd-4547	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+LATS2		palbociclib	tamatinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	lestaurtinib	azd-7762	
+RPS6KA4		palbociclib	crizotinib	tamatinib	osimertinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	lapatinib	
+MERTK		tanzisertib	palbociclib	azd-4547	sorafenib	tamatinib	baricitinib	alectinib	foretinib	cm-4307	crizotinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+MAP4K4		palbociclib	cm-4307	crizotinib	azd-4547	sorafenib	osimertinib	vemurafenib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	bosutinib	azd-7762	
+CAMK2G		palbociclib	azd-4547	momelotinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	
+IRAK3		palbociclib	crizotinib	momelotinib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	azd-7762	mln8054	
+PIM3		2,6-dihydroanthra/1,9-cd/pyrazol-6-one	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	azd-7762	mln8054	
+CAMK2A		palbociclib	azd-4547	momelotinib	tamatinib	osimertinib	baricitinib	(2s)-1-(1h-indol-3-yl)-3-{[5-(3-methyl-1h-indazol-5-yl)pyridin-3-yl]oxy}propan-2-amine	alectinib	lestaurtinib	azd-7762	
+TBK1		palbociclib	crizotinib	azd-4547	momelotinib	baricitinib	azd-7762	
+PTK2		crizotinib	azd-4547	tamatinib	osimertinib	alectinib	azd-7762	mln8054	
+MATK		palbociclib	ibrutinib	azd-4547	baricitinib	azd-7762	
+ZAP70		crizotinib	azd-4547	tamatinib	osimertinib	azd-7762	
+NUAK1		palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	osimertinib	lestaurtinib	azd-7762	dactolisib	
+PLK2		palbociclib	azd-4547	baricitinib	azd-7762	mln8054	
+MUSK		cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	azd-7762	
+FGFR3		cm-4307	crizotinib	ibrutinib	azd-4547	sorafenib	tamatinib	infigratinib	azd-7762	mln8054	
+ROS1		crizotinib	azd-4547	tamatinib	osimertinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	azd-7762	mln8054	
+FGFR2		cm-4307	crizotinib	ibrutinib	azd-4547	sorafenib	tamatinib	baricitinib	infigratinib	azd-7762	mln8054	
+TSSK1B		palbociclib	crizotinib	azd-4547	tamatinib	osimertinib	baricitinib	alectinib	azd-7762	
+EPHB1		dasatinib	cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	alectinib	azd-7762	mln8054	
+MYLK2		palbociclib	cm-4307	azd-4547	momelotinib	sorafenib	tamatinib	osimertinib	vemurafenib	
+EPHA2		dasatinib	cm-4307	crizotinib	azd-4547	sorafenib	tamatinib	azd-7762	foretinib	mln8054	
+FES		crizotinib	azd-4547	tamatinib	vemurafenib	alectinib	azd-7762	
+IGF1R		crizotinib	azd-4547	tamatinib	osimertinib	azd-7762	
+ALK		palbociclib	crizotinib	azd-4547	tamatinib	osimertinib	seliciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	azd-7762	mln8054	
+SYK		crizotinib	azd-4547	momelotinib	tamatinib	baricitinib	lestaurtinib	azd-7762	
+LTK		crizotinib	azd-4547	tamatinib	osimertinib	seliciclib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	azd-7762	dactolisib	
+MAP3K15		palbociclib	azd-4547	baricitinib	lestaurtinib	azd-7762	
+CHEK1		palbociclib	azd-4547	tamatinib	lestaurtinib	azd-7762	
+MARK1		palbociclib	crizotinib	azd-4547	tamatinib	baricitinib	azd-7762	
+FGFR1		cm-4307	crizotinib	ibrutinib	azd-4547	sorafenib	tamatinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	vemurafenib	infigratinib	azd-7762	mln8054	
+MYO3A		azd-4547	osimertinib	pd-0325901	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	azd-7762	
+INSRR		crizotinib	azd-4547	tamatinib	osimertinib	alectinib	azd-7762	
+FGFR4		azd-4547	tamatinib	baricitinib	infigratinib	azd-7762	
+MST1		crizotinib	azd-4547	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	vemurafenib	lestaurtinib	azd-7762	
+FER		palbociclib	crizotinib	azd-4547	tamatinib	osimertinib	alectinib	azd-7762	mln8054	
+IRAK1		tanzisertib	palbociclib	crizotinib	azd-4547	momelotinib	tamatinib	baricitinib	alectinib	lestaurtinib	azd-7762	
+EIF2AK2		palbociclib	crizotinib	momelotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+PIK3CD		palbociclib	zstk-474	momelotinib	pictilisib	tamatinib	osimertinib	pd-0325901	azd-6482	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	dactolisib	
+RPS6KA5		palbociclib	momelotinib	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	infigratinib	azd-7762	
+ROCK1		palbociclib	crizotinib	momelotinib	baricitinib	azd-7762	
+LRRK2		palbociclib	momelotinib	osimertinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	baricitinib	alectinib	lestaurtinib	azd-7762	
+PIK3CA		palbociclib	canertinib	crizotinib	zstk-474	pictilisib	pd-0325901	azd-6482	baricitinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	azd-7762	dactolisib	mln8054	
+PLK3		palbociclib	momelotinib	tamatinib	baricitinib	azd-7762	mln8054	
+PIK3CG		palbociclib	zstk-474	momelotinib	pictilisib	azd-6482	baricitinib	vemurafenib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	dactolisib	
+NEK5		palbociclib	momelotinib	tamatinib	baricitinib	mln8054	
+PTK2B		palbociclib	crizotinib	tamatinib	osimertinib	alectinib	azd-7762	mln8054	
+PLK1		palbociclib	zstk-474	tamatinib	osimertinib	baricitinib	azd-7762	
+GRK4		palbociclib	crizotinib	momelotinib	baricitinib	azd-7762	
+PIK3CB		palbociclib	zstk-474	pictilisib	azd-6482	dactolisib	
+EPHB2		dasatinib	cm-4307	crizotinib	sorafenib	alectinib	bosutinib	azd-7762	foretinib	mln8054	
+EPHA4		dasatinib	cm-4307	crizotinib	sorafenib	tamatinib	azd-7762	foretinib	mln8054	
+EPHB4		dasatinib	cm-4307	crizotinib	sorafenib	tamatinib	bosutinib	azd-7762	mln8054	
+EPHA5		dasatinib	cm-4307	crizotinib	sorafenib	tamatinib	azd-7762	foretinib	mln8054	
+EPHA7		cm-4307	crizotinib	sorafenib	tamatinib	azd-7762	foretinib	mln8054	
+PDPK1		tamatinib	baricitinib	lestaurtinib	azd-7762	mln8054	
+TYRO3		crizotinib	ibrutinib	tamatinib	azd-7762	foretinib	mln8054	
+EPHA6		cm-4307	crizotinib	sorafenib	tamatinib	azd-7762	foretinib	mln8054	
+RIPK4		crizotinib	tamatinib	2,6-dihydroanthra/1,9-cd/pyrazol-6-one	baricitinib	azd-7762	
+ERBB4		canertinib	ibrutinib	tamatinib	osimertinib	(2s)-1,3-benzothiazol-2-yl{2-[(2-pyridin-3-ylethyl)amino]pyrimidin-4-yl}ethanenitrile	azd-7762	lapatinib	
+MYO3B		cm-4307	sorafenib	osimertinib	n-{3-[(5-chloro-1h-pyrrolo[2,3-b]pyridin-3-yl)carbonyl]-2,4-difluorophenyl}propane-1-sulfonamide	azd-7762	

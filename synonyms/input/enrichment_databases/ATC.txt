@@ -1,0 +1,308 @@
+B01AE		melagatran	ximelagatran	bivalirudin	dabigatran etexilate	argatroban	
+L02AE		bicalutamide	triptorelin	goserelin	histrelin	leuprolide	
+J01XX		linezolid	xibornol	methenamine	nitroxoline	spectinomycin	daptomycin	mandelic acid	tedizolid	fosfomycin	bacitracin	clofoctol	
+S01XA		acetylcysteine	lifitegrast	vitamin a	ascorbic acid	inosine	ethylmorphine	dexpanthenol	guaiazulen	sirolimus	edetate sodium	cysteamine	riboflavin	nandrolone	potassium iodide	cyclosporine	
+H01CB		somatostatin	vapreotide	lanreotide	pasireotide	octreotide	
+A11HA		nicotinamide	pantothenic acid	pyridoxine	biotin	pyridoxal phosphate	dexpanthenol	inositol	riboflavin	pantethine	
+A16AA		glycine betaine	ademetionine	cysteamine	levocarnitine	carglumic acid	l-glutamine	
+A11GB		calcium carbonate	ascorbic acid	calcium	calcium chloride	calcium phosphate	calcium citrate	calcium acetate	
+A05BA		glycyrrhizic acid	ornithine	tidiacic arginine	epomediol	arginine glutamate	citiolone	
+V03AB		acetylcysteine	physostigmine	methionine	prednisolone	sugammadex	4-dimethylaminophenol	potassium permanganate	pralidoxime	naloxone	dimercaprol	amyl nitrite	fomepizole	nitrous acid	glutathione	cupric sulfate	ethanol	hydroxocobalamin	obidoxime	methylene blue	phentolamine	promethazine	nalorphine	prussian blue	flumazenil	potassium iodide	
+D05AX		calcipotriol	calcitriol	tazarotene	fumaric acid	tacalcitol	
+A11CC		calcitriol	ergocalciferol	calcifediol	cholecalciferol	alfacalcidol	dihydrotachysterol	
+N06AX		gepirone	mirtazapine	desvenlafaxine	oxitriptan	vortioxetine	trazodone	nomifensine	tianeptine	agomelatine	mianserin	venlafaxine	oxaflozane	nefazodone	bifemelane	viloxazine	duloxetine	pivagabine	medifoxamine	bupropion	reboxetine	milnacipran	minaprine	tryptophan	vilazodone	
+D10AD		isotretinoin	vitamin a	adapalene	motretinide	tretinoin	trifarotene	
+R01AX		vitamin a	ritiometan	mupirocin	framycetin	hexamidine	ipratropium	hyaluronic acid	
+J04AM		amithiozone	isoniazid	pyridoxine	ethambutol	pyrazinamide	rifampicin	trimethoprim	sulfamethoxazole	streptomycin	
+A16AX		anethole trithione	phenylbutyric acid	eliglustat	glycerol phenylbutyrate	triethylenetetramine	nitisinone	uridine triacetate	miglustat	zinc acetate	benzoic acid	lipoic acid	migalastat	telotristat	sapropterin	
+M05BB		alendronic acid	calcium	cholecalciferol	etidronic acid	risedronic acid	zoledronic acid	alfacalcidol	ibandronate	
+C10AA		cerivastatin	fluvastatin	pitavastatin	pravastatin	simvastatin	lovastatin	rosuvastatin	atorvastatin	
+C10BA		ezetimibe	pravastatin	simvastatin	lovastatin	fenofibrate	niacin	rosuvastatin	atorvastatin	
+C10BX		lisinopril	ramipril	pravastatin	acetylsalicylic acid	amlodipine	simvastatin	valsartan	rosuvastatin	atorvastatin	indapamide	perindopril	
+N06AB		fluoxetine	paroxetine	zimelidine	alaproclate	citalopram	escitalopram	etoperidone	fluvoxamine	sertraline	
+C09DX		nebivolol	sacubitril	hydrochlorothiazide	olmesartan	amlodipine	aliskiren	valsartan	candesartan	
+C09DA		telmisartan	irbesartan	losartan	olmesartan	eprosartan	fimasartan	valsartan	azilsartan medoxomil	candesartan	
+C09CA		telmisartan	irbesartan	losartan	olmesartan	eprosartan	fimasartan	valsartan	azilsartan medoxomil	candesartan	tasosartan	
+C09DB		telmisartan	irbesartan	losartan	olmesartan	amlodipine	valsartan	candesartan	lercanidipine	
+C09BX		ramipril	hydrochlorothiazide	amlodipine	bisoprolol	indapamide	perindopril	
+C09BB		felodipine	lisinopril	manidipine	nitrendipine	ramipril	enalapril	verapamil	amlodipine	delapril	trandolapril	perindopril	lercanidipine	
+C09BA		lisinopril	quinapril	ramipril	captopril	moexipril	enalapril	zofenopril	benazepril	cilazapril	delapril	fosinopril	perindopril	
+C09AA		temocapril	moexipril	enalapril	zofenopril	benazepril	cilazapril	fosinopril	perindopril	lisinopril	quinapril	ramipril	captopril	imidapril	delapril	spirapril	trandolapril	
+L01XX		irinotecan	eribulin	masoprocol	altretamine	ixazomib	mitotane	niraparib	vismodegib	venetoclax	hydroxyurea	plitidepsin	rucaparib	olaparib	copanlisib	tiazofurine	anagrelide	amsacrine	estramustine	carfilzomib	epacadostat	vosaroxin	arsenic trioxide	belinostat	vorinostat	celecoxib	enasidenib	miltefosine	tretinoin	lonidamine	sonidegib	panobinostat	bexarotene	idelalisib	omacetaxine mepesuccinate	pentostatin	alitretinoin	romidepsin	mitoguazone	bortezomib	talazoparib	topotecan	
+R01AD		fluticasone	fluticasone furoate	dexamethasone	ciclesonide	tixocortol	prednisolone	betamethasone	triamcinolone	hydrocortisone	budesonide	beclomethasone dipropionate	mometasone	flunisolide	
+R03BA		fluticasone	fluticasone furoate	betamethasone	triamcinolone	ciclesonide	budesonide	beclomethasone dipropionate	mometasone	flunisolide	
+M03BX		baclofen	tizanidine	fenyramidol	pridinol	tolperisone	cyclobenzaprine	mephenesin	tetrazepam	thiocolchicoside	eperisone	
+N06BA		methylphenidate	pemoline	metamfetamine	modafinil	dexmethylphenidate	amphetamine	lisdexamfetamine	fencamfamin	atomoxetine	dextroamphetamine	fenethylline	armodafinil	fenozolone	
+V04CG		histamine	methylene blue	caffeine	betazole	benzoic acid	pentagastrin	
+N05BA		adinazolam	alprazolam	pinazepam	camazepam	oxazepam	diazepam	ethyl loflazepate	bentazepam	prazepam	etizolam	lorazepam	chlordiazepoxide	halazepam	ketazolam	medazepam	bromazepam	fludiazepam	clobazam	tofisopam	clotiazepam	cloxazolam	nordazepam	
+C07AB		epanolol	landiolol	betaxolol	practolol	nebivolol	metoprolol	atenolol	acebutolol	celiprolol	talinolol	esatenolol	bevantolol	bisoprolol	esmolol	
+N05CM		apronalide	triclofos	dexmedetomidine	carbromal	ethchlorvynol	hexapropymate	methylpentynol	clomethiazole	suvorexant	methaqualone	propiomazine	niaprazine	scopolamine	valnoctamide	bromisoval	
+A08AA		etilamfetamine	diethylpropion	naltrexone	clobenzorex	cathine	sibutramine	ephedrine	mazindol	lorcaserin	dexfenfluramine	phentermine	mefenorex	bupropion	fenfluramine	
+N02AJ		acetaminophen	codeine	dexketoprofen	dihydrocodeine	acetylsalicylic acid	ibuprofen	oxycodone	tramadol	
+N02AX		tapentadol	tilidine	dezocine	tramadol	meptazinol	
+J05AB		brivudine	valaciclovir	acyclovir	vidarabine	cidofovir	ganciclovir	valganciclovir	idoxuridine	famciclovir	penciclovir	
+S01AD		acyclovir	trifluridine	vidarabine	ganciclovir	idoxuridine	famciclovir	
+S01ED		betaxolol	timolol	carteolol	befunolol	levobunolol	metipranolol	
+J01RA		cefuroxime	amikacin	norfloxacin	oleandomycin	secnidazole	tinidazole	cefepime	azithromycin	spiramycin	ofloxacin	fluconazole	levofloxacin	metronidazole	tetracycline	ornidazole	ciprofloxacin	
+J02AC		isavuconazole	voriconazole	posaconazole	fluconazole	itraconazole	
+D01AC		luliconazole	fenticonazole	flutrimazole	clotrimazole	miconazole	sulconazole	bifonazole	eberconazole	fluconazole	isoconazole	sertaconazole	chlormidazole	efinaconazole	oxiconazole	ketoconazole	omoconazole	econazole	thiabendazole	tioconazole	
+J01FA		roxithromycin	rokitamycin	oleandomycin	dirithromycin	telithromycin	azithromycin	josamycin	clarithromycin	troleandomycin	spiramycin	solithromycin	flurithromycin	erythromycin	midecamycin	
+D10AF		nadifloxacin	erythromycin	chloramphenicol	clindamycin	meclocycline	sulfacetamide	
+S01AA		cefuroxime	fusidic acid	oxytetracycline	amikacin	chlortetracycline	rifamycin	framycetin	polymyxin b	kanamycin	netilmicin	azidamfenicol	azithromycin	tobramycin	benzylpenicillin	natamycin	dihydrostreptomycin	erythromycin	chloramphenicol	gentamicin	tetracycline	ampicillin	micronomicin	
+R03DA		dyphylline	theobromine	proxyphylline	theophylline	oxtriphylline	aminophylline	bamifylline	bromotheophylline	bufylline	caffeine	doxofylline	acefylline	etamiphylline	pentoxifylline	mercaptopurine	
+G01AE		cyclothiazide	mafenide	sulfamethazine	chlorthalidone	vemurafenib	sildenafil	sulfadiazine	torasemide	sulfacetamide	sulfanilamide	sulfadimethoxine	acetazolamide	hydrochlorothiazide	sulfamerazine	sulfamethoxazole	sulfametopyrazine	sulfathiazole	zonisamide	meticrane	sulfatolamide	tamsulosin	diclofenamide	phthalylsulfathiazole	celecoxib	sulfamethizole	cyclopenthiazide	sulfacytine	sulfapyridine	bendroflumethiazide	glymidine	rosuvastatin	piretanide	silver sulfadiazine	acetyl sulfisoxazole	chlorothiazide	trichlormethiazide	sulfadoxine	diazoxide	hydroflumethiazide	quinethazone	sumatriptan	darunavir	benzthiazide	probenecid	polythiazide	bumetanide	sulfaphenazole	indapamide	metolazone	simeprevir	sulfisoxazole	bosentan	methyclothiazide	sulfameter	furosemide	sulfasalazine	
+G04BE		tadalafil	udenafil	alprostadil	moxisylyte	avanafil	apomorphine	sildenafil	papaverine	yohimbine	vardenafil	
+C01BD		ibutilide	amiodarone	bretylium	dronedarone	bunaftine	dofetilide	tedisamil	
+P01BF		amodiaquine	lumefantrine	artenimol	pyronaridine	pyrimethamine	artemether	artesunate	mefloquine	piperaquine	
+C02LA		methoserpidine	bietaserpine	deserpidine	reserpine	rescinnamine	
+C02AA		methoserpidine	bietaserpine	deserpidine	reserpine	rescinnamine	
+B01AC		selexipag	prasugrel	cloricromen	ticagrelor	tirofiban	treprostinil	carbaspirin calcium	cilostazol	clopidogrel	iloprost	acetylsalicylic acid	cangrelor	indobufen	beraprost	dipyridamole	triflusal	aloxiprin	ditazole	epoprostenol	picotamide	ticlopidine	vorapaxar	
+G04BD		flavoxate	propiverine	solifenacin	mirabegron	emepronium	darifenacin	tolterodine	trospium	oxybutynin	desfesoterodine	fesoterodine	meladrazine	terodiline	
+C01CA		gepefrine	methoxamine	epinephrine	theodrenaline	mephentermine	ephedrine	arbutamine	ibopamine	synephrine	prenalterol	dopamine	dopexamine	cafedrine	octopamine	norepinephrine	etilefrine	midodrine	dimetofrine	norfenefrine	metaraminol	phenylephrine	dobutamine	amezinium metilsulfate	droxidopa	fenoldopam	isoprenaline	
+A02BD		amoxicillin	omeprazole	pantoprazole	esomeprazole	tinidazole	levofloxacin	metronidazole	tetracycline	clarithromycin	lansoprazole	
+A02BC		omeprazole	pantoprazole	dexrabeprazole	dexlansoprazole	esomeprazole	lansoprazole	rabeprazole	
+N02CC		rizatriptan	frovatriptan	naratriptan	eletriptan	sumatriptan	zolmitriptan	almotriptan	
+C02CC		debrisoquine	guanoclor	guanethidine	guanoxabenz	bethanidine	guanoxan	guanazodine	
+S01AE		gatifloxacin	ofloxacin	norfloxacin	besifloxacin	levofloxacin	lomefloxacin	ciprofloxacin	moxifloxacin	
+J01MA		gatifloxacin	temafloxacin	sitafloxacin	pefloxacin	trovafloxacin	norfloxacin	grepafloxacin	prulifloxacin	enoxacin	fleroxacin	ofloxacin	pazufloxacin	garenoxacin	sparfloxacin	gemifloxacin	levofloxacin	lomefloxacin	ciprofloxacin	moxifloxacin	rufloxacin	delafloxacin	
+A03AB		diphemanil	propantheline	timepidium	penthienate	otilonium	tridihexethyl	fenpiverinium	oxyphenonium	emetonium iodide	hexocyclium	poldine	isopropamide	prifinium	benzilone	tiemonium iodide	mepenzolate	glycopyrronium	methantheline	bevonium	pipenzolate	
+J05AE		fosamprenavir	amprenavir	nelfinavir	atazanavir	ritonavir	tipranavir	saquinavir	indinavir	darunavir	
+A10BD		dapagliflozin	empagliflozin	ertugliflozin	linagliptin	acarbose	repaglinide	metformin	saxagliptin	glimepiride	sitagliptin	pioglitazone	vildagliptin	alogliptin	canagliflozin	gemigliptin	rosiglitazone	phenformin	evogliptin	
+A10BB		glyburide	acetohexamide	gliquidone	gliclazide	tolbutamide	glimepiride	chlorpropamide	glisoxepide	glibornuride	metahexamide	carbutamide	glipizide	tolazamide	
+D07AC		fluticasone	diflorasone	fluocinonide	difluocortolone	flurandrenolide	difluprednate	hydrocortisone aceponate	amcinonide	betamethasone	budesonide	methylprednisolone aceponate	prednicarbate	fluclorolone	ulobetasol	beclomethasone dipropionate	desoximetasone	fluocinolone acetonide	halometasone	mometasone	fluocortolone	
+V08CA		gadobenic acid	ferric ammonium citrate	gadoxetic acid	gadoversetamide	gadobutrol	gadodiamide	gadopentetic acid	gadoteridol	mangafodipir	gadofosveset trisodium	gadoteric acid	
+N01AB		chloroform	isoflurane	enflurane	desflurane	sevoflurane	halothane	trichloroethylene	
+J01DC		cefotetan	cefotiam	cefuroxime	cefoxitin	cefonicid	loracarbef	cefamandole	cefbuperazone	cefmetazole	ceforanide	cefprozil	cefaclor	flomoxef	cefminox	
+N03AX		perampanel	lamotrigine	sulthiame	carisbamate	phenacemide	brivaracetam	pheneturide	felbamate	topiramate	lacosamide	gabapentin	beclamide	cannabidiol	pregabalin	zonisamide	ezogabine	levetiracetam	stiripentol	
+N05CD		loprazolam	temazepam	brotizolam	triazolam	estazolam	flurazepam	flunitrazepam	nitrazepam	lormetazepam	midazolam	quazepam	cinolazepam	doxefazepam	
+C03AA		bendroflumethiazide	cyclothiazide	hydroflumethiazide	polythiazide	hydrochlorothiazide	methyclothiazide	chlorothiazide	cyclopenthiazide	mebutizide	trichlormethiazide	
+C03AB		bendroflumethiazide	potassium	cyclothiazide	hydroflumethiazide	polythiazide	hydrochlorothiazide	methyclothiazide	chlorothiazide	cyclopenthiazide	trichlormethiazide	
+J05AG		nevirapine	delavirdine	etravirine	doravirine	efavirenz	rilpivirine	
+J05AR		elvitegravir	bictegravir	zidovudine	stavudine	emtricitabine	dolutegravir	raltegravir	lopinavir	tenofovir disoproxil	cobicistat	doravirine	rilpivirine	nevirapine	atazanavir	ritonavir	lamivudine	abacavir	tenofovir alafenamide	darunavir	efavirenz	
+G01AF		fenticonazole	flutrimazole	tinidazole	clotrimazole	miconazole	azanidazole	isoconazole	sertaconazole	oxiconazole	ketoconazole	omoconazole	propenidazole	metronidazole	butoconazole	econazole	ornidazole	tioconazole	
+D07AB		dexamethasone	clobetasone	fluperolone	hydrocortisone probutate	desonide	fluocortin	triamcinolone	clocortolone	alclometasone	fluorometholone	fluprednidene	hydrocortisone butyrate	flumethasone	
+S01BA		cortisone	dexamethasone	formocortal	clobetasone	desonide	rimexolone	prednisolone	betamethasone	triamcinolone	medrysone	alclometasone	fluorometholone	hydrocortisone	loteprednol	fluocinolone acetonide	
+N05CB		amobarbital	butalbital	phenobarbital	pentobarbital	thiamylal	thiopental	secobarbital	methohexital	methylphenobarbital	primidone	
+L04AA		ozanimod	everolimus	cladribine	fingolimod	leflunomide	mycophenolic acid	sirolimus	teriflunomide	apremilast	baricitinib	gusperimus	tofacitinib	
+L01BB		cladribine	tioguanine	clofarabine	mercaptopurine	fludarabine	nelarabine	
+C01EB		acadesine	tiracizine	camphor	ibuprofen	trimetazidine	indomethacin	adenosine	fosfructose	regadenoson	ivabradine	phosphocreatine	ranolazine	creatinolfosfate	ubidecarenone	meldonium	
+N05AE		molindone	oxypertine	ziprasidone	lurasidone	sertindole	
+N04BC		piribedil	ropinirole	bromocriptine	rotigotine	cabergoline	pramipexole	apomorphine	pergolide	
+G02CB		bromocriptine	lisuride	quinagolide	cabergoline	terguride	metergoline	
+D06BB		inosine	imiquimod	acyclovir	edoxudine	docosanol	tromantadine	ibacitabine	idoxuridine	podofilox	penciclovir	
+D10AX		dapsone	azelaic acid	aluminum oxide	resorcinol	aluminum chloride	
+N03AB		ethotoin	mephenytoin	neocitrullamon	phenytoin	fosphenytoin	
+J01AA		oxytetracycline	chlortetracycline	tigecycline	eravacycline	penimepicycline	metacycline	clomocycline	doxycycline	lymecycline	demeclocycline	minocycline	omadacycline	rolitetracycline	sarecycline	tetracycline	
+A01AB		hydrogen peroxide	domiphen	chlortetracycline	perboric acid	tibezonium iodide	oxyquinoline	amphotericin b	clotrimazole	miconazole	doxycycline	benzoxonium	natamycin	minocycline	hexetidine	metronidazole	tetracycline	chlorhexidine	
+G03CC		estriol	estrone	bazedoxifene	diethylstilbestrol	dienestrol	methallenestril	
+V03AE		iron sucrose	sodium zirconium cyclosilicate	calcium acetate	lanthanum carbonate	magnesium carbonate	tetraferric tricitrate decahydrate	sevelamer	
+J01EB		sulfisoxazole	sulfamethazine	sulfamethizole	sulfathiazole	sulfaisodimidine	sulfapyridine	sulfathiourea	sulfanilamide	
+D06BA		mafenide	silver sulfadiazine	sulfamerazine	sulfamethizole	sulfathiazole	sulfanilamide	
+J04AB		rifabutin	capreomycin	rifampicin	rifamycin	rifapentine	cycloserine	
+L01AD		carmustine	fotemustine	streptozocin	nimustine	uracil mustard	lomustine	ranimustine	
+S01AB		sulfisoxazole	sulfaphenazole	sulfamethizole	sulfacetamide	sulfadicramide	
+C07FB		felodipine	nifedipine	nebivolol	metoprolol	atenolol	amlodipine	bisoprolol	
+C07FX		metoprolol	propranolol	ivabradine	carvedilol	acetylsalicylic acid	sotalol	bisoprolol	
+C07BB		nebivolol	metoprolol	atenolol	acebutolol	bevantolol	bisoprolol	
+B01AA		phenindione	ethyl biscoumacetate	tioclomarol	dicoumarol	diphenadione	warfarin	phenprocoumon	clorindione	fluindione	acenocoumarol	
+J01DD		cefodizime	ceftazidime	cefdinir	cefditoren	cefmenoxime	cefsulodin	cefcapene	cefpodoxime	ceftibuten	latamoxef	cefotaxime	cefoperazone	cefixime	cefpiramide	cefetamet	ceftriaxone	ceftizoxime	
+G03CA		chlorotrianisene	estriol	estrone	ethinylestradiol	estradiol	
+C08CA		felodipine	manidipine	nifedipine	lacidipine	clevidipine	nimodipine	barnidipine	amlodipine	cilnidipine	isradipine	nisoldipine	nitrendipine	nicardipine	nilvadipine	benidipine	lercanidipine	
+V08AA		iocarmic acid	iodamide	iothalamic acid	diatrizoate	ioxitalamic acid	ioglicic acid	acetrizoic acid	diodone	methiodal	metrizoic acid	
+R03DB		dyphylline	proxyphylline	theophylline	etamiphylline	oxtriphylline	aminophylline	
+C01BA		ajmaline	disopyramide	procainamide	quinidine	sparteine	prajmaline	lorajmine	hydroquinidine	
+S01HA		cinchocaine	procaine	oxybuprocaine	proparacaine	tetracaine	cocaine	lidocaine	
+D04AB		benzocaine	cinchocaine	oxybuprocaine	tetracaine	quinisocaine	lidocaine	pramocaine	
+N01BB		cinchocaine	ropivacaine	levobupivacaine	bupivacaine	prilocaine	butanilicaine	etidocaine	lidocaine	mepivacaine	articaine	
+C05AD		benzocaine	cinchocaine	procaine	tetracaine	oxetacaine	lidocaine	pramocaine	
+M05BA		alendronic acid	tiludronic acid	clodronic acid	etidronic acid	risedronic acid	zoledronic acid	pamidronic acid	ibandronate	
+D04AA		tripelennamine	bamipine	thonzylamine	tolpropamine	thenalidine	chloropyramine	chlorphenoxamine	mepyramine	pheniramine	isothipendyl	promethazine	dimetindene	clemastine	diphenhydramine	
+R06AA		diphenylpyraline	carbinoxamine	doxylamine	bromodiphenhydramine	clemastine	trimethobenzamide	chlorphenoxamine	diphenhydramine	
+S01EE		latanoprost	unoprostone	bimatoprost	travoprost	tafluprost	
+L01AA		melphalan	ifosfamide	mechlorethamine	cyclophosphamide	trofosfamide	chlorambucil	bendamustine	prednimustine	
+N01AX		esketamine	nitrous oxide	propofol	sodium oxybate	xenon	ketamine	propanidid	etomidate	alfaxalone	
+G03AC		megestrol acetate	norethisterone	quingestanol	etonogestrel	lynestrenol	norgestrienone	medroxyprogesterone acetate	desogestrel	drospirenone	levonorgestrel	
+A07DA		loperamide	morphine	difenoxin	diphenoxylate	eluxadoline	loperamide oxide	
+N02AA		morphine	codeine	hydromorphone	nicomorphine	dihydrocodeine	naltrexone	oxycodone	naloxone	
+J05AF		zidovudine	stavudine	emtricitabine	entecavir	telbivudine	adefovir dipivoxil	tenofovir disoproxil	clevudine	didanosine	lamivudine	abacavir	tenofovir alafenamide	zalcitabine	
+J01CR		pivampicillin	dicloxacillin	cyclacillin	flucloxacillin	sultamicillin	azlocillin	hetacillin	ticarcillin	meticillin	piperacillin	carindacillin	temocillin	pivmecillinam	ampicillin	oxacillin	amoxicillin	nafcillin	phenoxymethylpenicillin	pheneticillin	benzylpenicilloyl polylysine	bacampicillin	benzylpenicillin	procaine benzylpenicillin	carbenicillin	cloxacillin	mezlocillin	
+J01CF		meticillin	nafcillin	dicloxacillin	cloxacillin	flucloxacillin	oxacillin	
+J01DH		cilastatin	imipenem	doripenem	biapenem	ertapenem	meropenem	vaborbactam	
+G03FB		megestrol acetate	norethisterone	trimegestone	lynestrenol	chlormadinone	desogestrel	dydrogesterone	nomegestrol	medrogestone	estradiol	levonorgestrel	norgestrel	
+G03AB		megestrol acetate	dienogest	norethisterone	ethinylestradiol	norgestimate	lynestrenol	chlormadinone	desogestrel	estradiol	gestodene	levonorgestrel	
+G03AA		quingestanol	ethinylestradiol	desogestrel	nomegestrol	gestodene	levonorgestrel	norgestrel	megestrol acetate	dienogest	norethisterone	etynodiol	norgestimate	lynestrenol	chlormadinone	drospirenone	norelgestromin	estradiol	
+N05CA		amobarbital	talbutal	heptabarbital	proxibarbal	vinylbital	barbital	secobarbital	methohexital	allobarbital	hexobarbital	reposal	pentobarbital	butobarbital	thiopental	aprobarbital	cyclobarbital	vinbarbital	
+L01CA		vinorelbine	vinblastine	vindesine	vincristine	vinflunine	vintafolide	
+C03EA		bendroflumethiazide	epitizide	hydrochlorothiazide	cyclopenthiazide	chlorthalidone	mebutizide	trichlormethiazide	metolazone	
+C03BB		clofenamide	clopamide	potassium	mefruside	quinethazone	chlorthalidone	
+C03BA		clofenamide	clopamide	clorexolone	mefruside	quinethazone	meticrane	xipamide	chlorthalidone	fenquizone	indapamide	metolazone	
+N03AG		valpromide	tiagabine	vigabatrin	valproic acid	progabide	
+L01XE		axitinib	olmutinib	sunitinib	palbociclib	erlotinib	masitinib	ponatinib	imatinib	ridaforolimus	gefitinib	vemurafenib	cabozantinib	ceritinib	cediranib	brigatinib	afatinib	crizotinib	pazopanib	binimetinib	temsirolimus	vandetanib	lorlatinib	rociletinib	sorafenib	dacomitinib	lenvatinib	regorafenib	cobimetinib	alectinib	lapatinib	nilotinib	trametinib	dasatinib	everolimus	ibrutinib	midostaurin	neratinib	osimertinib	abemaciclib	encorafenib	dabrafenib	nintedanib	ribociclib	ruxolitinib	tivozanib	bosutinib	icotinib	
+R05DA		codeine	pholcodine	hydrocodone	ethylmorphine	dimemorfan	acetyldihydrocodeine	normethadone	dextromethorphan	thebacon	noscapine	
+J01CA		amoxicillin	pivampicillin	azlocillin	amdinocillin	sulbenicillin	bacampicillin	hetacillin	ticarcillin	aspoxicillin	epicillin	talampicillin	piperacillin	carbenicillin	carindacillin	temocillin	pivmecillinam	ampicillin	mezlocillin	metampicillin	
+N06AA		amitriptyline	nortriptyline	opipramol	dibenzepin	melitracen	imipramine	imipramine oxide	amoxapine	quinupramine	maprotiline	trimipramine	desipramine	protriptyline	lofepramine	dimetacrine	iprindole	dosulepin	amineptine	clomipramine	doxepin	
+L01BC		carmofur	tegafur	floxuridine	gemcitabine	capecitabine	trifluridine	decitabine	fluorouracil	cytarabine	azacitidine	
+D07XB		triamcinolone	dexamethasone	fluorometholone	fluprednidene	flumethasone	
+C05AA		prednisolone	betamethasone	triamcinolone	dexamethasone	fluocinonide	fluorometholone	hydrocortisone	fluocinolone acetonide	fluocortolone	
+D07CB		triamcinolone	dexamethasone	fluorometholone	fluprednidene	flumethasone	
+S01CB		prednisolone	betamethasone	dexamethasone	fluorometholone	hydrocortisone	
+S01CA		prednisolone	betamethasone	dexamethasone	fluorometholone	hydrocortisone	clobetasone	fludrocortisone	methylprednisolone	fluocinolone acetonide	fluocortolone	
+A12AA		calcium carbonate	calcium glubionate anhydrous	calcium pangamate	calcium gluconate	calcium lactate	calcium chloride	calcium phosphate	calcium citrate	calcium levulinate	calcium glucoheptonate	
+M01AB		diclofenac	lonazolac	proglumetacin	oxametacin	bufexamac	etodolac	alclofenac	acemetacin	fentiazac	indomethacin	sulindac	bumadizone	ketorolac	zomepirac	aceclofenac	tolmetin	difenpiramide	
+S01BC		diclofenac	flurbiprofen	ketorolac	nepafenac	oxyphenbutazone	salicylic acid	bromfenac	indomethacin	bendazac	piroxicam	pranoprofen	
+M02AA		diclofenac	flurbiprofen	benzydamine	ibuprofen	nifenazone	etofenamate	fentiazac	ketoprofen	dexketoprofen	mofebutazone	niflumic acid	suxibuzone	aceclofenac	meclofenamic acid	phenylbutazone	bendazac	nimesulide	oxyphenbutazone	feprazone	bufexamac	indomethacin	piroxicam	naproxen	felbinac	tolmetin	rabeprazole	
+J04AK		amithiozone	ethambutol	pyrazinamide	delamanid	terizidone	bedaquiline	morinamide	
+R03BB		tiotropium	aclidinium	oxitropium	umeclidinium	glycopyrronium	ipratropium	
+R03AL		fluticasone furoate	tiotropium	aclidinium	umeclidinium	formoterol	ipratropium	olodaterol	salbutamol	indacaterol	glycopyrronium	fenoterol	vilanterol	beclomethasone dipropionate	
+N07BC		buprenorphine	levacetylmethadol	diamorphine	methadone	levomethadone	lofexidine	
+N02AC		dextromoramide	piritramide	dextropropoxyphene	methadone	bezitramide	
+N05AH		clothiapine	olanzapine	clozapine	loxapine	quetiapine	asenapine	
+S02AA		hydrogen peroxide	boric acid	rifamycin	polymyxin b	miconazole	ofloxacin	acetic acid	chloramphenicol	gentamicin	nitrofural	aluminium acetotartrate	tetracycline	chlorhexidine	ciprofloxacin	clioquinol	
+B05CA		cetylpyridinium	sulfamethizole	mandelic acid	nitrofural	taurolidine	chlorhexidine	noxytiolin	
+S01AX		propamidine	propanoic acid	sodium borate	bibrocathol	dibrompropamidine	nitrofural	resorcinol	hexamidine	chlorhexidine	picloxydine	
+D09AA		fusidic acid	benzododecinium	cetylpyridinium	framycetin	phenylmercuric nitrate	triclosan	aluminum chlorohydrate	nitrofural	iodoform	chlorhexidine	clioquinol	
+D11AH		alitretinoin	tacrolimus	cromoglicic acid	pimecrolimus	crisaborole	
+N04AA		dexetimide	procyclidine	biperiden	phenglutarimide	tropatepine	bornaprine	metixene	mazaticol	profenamine	trihexyphenidyl	
+R06AE		levocetirizine	buclizine	meclizine	cetirizine	cyclizine	oxatomide	chlorcyclizine	
+R06AX		tritoqualine	bamipine	mizolastine	epinastine	thenalidine	phenindamine	deptropine	quifenadine	rupatadine	sequifenadine	ebastine	pyrrobutamine	loratadine	antazoline	fexofenadine	azatadine	azelastine	ketotifen	acrivastine	desloratadine	terfenadine	cyproheptadine	pimethixene	triprolidine	astemizole	bilastine	mebhydrolin	
+G04CA		alfuzosin	terazosin	dutasteride	solifenacin	silodosin	tamsulosin	finasteride	
+D11AX		brimonidine	hydrogen peroxide	lithium succinate	diclofenac	ivermectin	calcium gluconate	magnesium sulfate	deoxycholic acid	aminobenzoic acid	gamolenic acid	oxaceprol	eflornithine	mequinol	monobenzone	minoxidil	pyrithione	tiratricol	finasteride	hydroquinone	
+G03DB		megestrol acetate	demegestone	dienogest	promegestone	chlormadinone	dydrogesterone	nomegestrol	medrogestone	
+G03FA		progesterone	dydrogesterone	levonorgestrel	norgestrel	hydroxyprogesterone	megestrol acetate	dienogest	norethisterone	norethynodrel	trimegestone	etynodiol	norgestimate	lynestrenol	drospirenone	estradiol	
+L02BG		anastrozole	exemestane	letrozole	formestane	aminoglutethimide	vorozole	
+J01EE		sulfamoxole	trimethoprim	sulfamerazine	sulfamethoxazole	sulfamethazine	sulfadiazine	
+A02BX		acetoxolone	sucralfate	carbenoxolone	proglumide	pirenzepine	methylmethionine chloride	troxipide	gefarnate	rebamipide	alginic acid	zolimidine	bismuth subnitrate	
+N05CX		meprobamate	methaqualone	emepronium	methylpentynol	clomethiazole	
+R06AD		isothipendyl	promethazine	thiethylperazine	alimemazine	mequitazine	thiazinam	methdilazine	hydroxyethylpromethazine	oxomemazine	
+C07AA		mepindolol	nadolol	timolol	penbutolol	tertatolol	cloranolol	bupranolol	bopindolol	pindolol	propranolol	alprenolol	sotalol	carteolol	oxprenolol	
+C07BA		nadolol	timolol	propranolol	sotalol	metipranolol	oxprenolol	
+A04AA		dolasetron	ondansetron	granisetron	palonosetron	tropisetron	
+V03AF		dexrazoxane	amifostine	coenzyme m	levoleucovorin	leucovorin	
+N06DA		tacrine	rivastigmine	memantine	ipidacrine	donepezil	galantamine	
+A03AA		dicyclomine	oxyphencyclimine	dihexyverine	mebeverine	difemerine	piperidolate	rociverine	camylofin	trimebutine	
+A03CA		diphemanil	isopropamide	propantheline	clidinium	oxyphencyclimine	otilonium	emepronium	glycopyrronium	bevonium	pipenzolate	
+L01DB		amrubicin	pixantrone	mitoxantrone	aclarubicin	epirubicin	valrubicin	idarubicin	pirarubicin	zorubicin	doxorubicin	daunorubicin	
+R01AB		naphazoline	tetryzoline	ephedrine	tuaminoheptane	xylometazoline	phenylephrine	oxymetazoline	
+R01AA		naphazoline	tetryzoline	tramazoline	cyclopentamine	tuaminoheptane	indanazoline	oxymetazoline	epinephrine	metizoline	ephedrine	fenoxazoline	xylometazoline	phenylephrine	tymazoline	
+S01GA		naphazoline	tetryzoline	xylometazoline	phenylephrine	oxymetazoline	synephrine	
+C01AA		deslanoside	metildigoxin	digoxin	acetyldigoxin	digitoxin	gitoformate	lanatoside c	acetyldigitoxin	
+N05AL		veralipride	amisulpride	tiapride	sultopride	remoxipride	sulpiride	
+D07CC		betamethasone	fluocinonide	flurandrenolide	beclomethasone dipropionate	fluocinolone acetonide	fluocortolone	
+R03AK		fluticasone	fluticasone furoate	formoterol	epinephrine	cromoglicic acid	salbutamol	budesonide	reproterol	vilanterol	salmeterol	beclomethasone dipropionate	mometasone	isoprenaline	
+A07EA		prednisolone	betamethasone	hydrocortisone	budesonide	beclomethasone dipropionate	prednisone	tixocortol	
+M03BA		carisoprodol	styramate	methocarbamol	phenprobamate	febarbamate	
+D01AA		natamycin	nystatin	griseofulvin	pyrrolnitrin	pecilocin	
+R06AB		brompheniramine	chlorpheniramine	dexbrompheniramine	dimetindene	talastine	dexchlorpheniramine	pheniramine	
+G01AX		protiofate	ciclopirox	inosine	octenidine	furazolidone	copper usnate	clodantoin	hexetidine	nifuratel	gentian violet cation	dapivirine	
+D01AE		flucytosine	selenium sulfide	undecylenic acid	chlorophetanol	salicylic acid	terbinafine	tolnaftate	sulbentine	ticlatone	butenafine	amorolfine	bromochlorosalicylanilide	ciclopirox	dimazole	tavaborole	haloprogin	ethyl hydroxybenzoate	tribromometacresol	chlorphenesin	tolciclate	gentian violet cation	naftifine	
+D06AX		fusidic acid	amikacin	virginiamycin	mupirocin	ozenoxacin	chloramphenicol	gentamicin	retapamulin	rifaximin	bacitracin	
+S01EB		carbamoylcholine	aceclidine	demecarium	paraoxon	acetylcholine	neostigmine	physostigmine	echothiophate	pilocarpine	
+J01CE		clometocillin	phenoxymethylpenicillin	procaine benzylpenicillin	pheneticillin	penamecillin	azidocillin	propicillin	benzylpenicillin	
+N05AA		chlorpromazine	acepromazine	cyamemazine	chlorproethazine	methotrimeprazine	promazine	triflupromazine	
+G02AD		dinoprostone	misoprostol	carboprost tromethamine	gemeprost	dinoprost	sulprostone	
+N05AB		dixyrazine	prochlorperazine	thiopropazate	butaperazine	perphenazine	thioproperazine	perazine	trifluoperazine	acetophenazine	fluphenazine	
+H02AB		cortisone	dexamethasone	methylprednisolone	cloprednol	deflazacort	rimexolone	prednisolone	betamethasone	triamcinolone	cortivazol	hydrocortisone	meprednisone	paramethasone	prednylidene	prednisone	fluocortolone	
+S03CA		prednisolone	betamethasone	dexamethasone	hydrocortisone	fludrocortisone	
+D07XC		betamethasone	difluocortolone	desoximetasone	mometasone	fluocortolone	
+S02BA		prednisolone	betamethasone	dexamethasone	hydrocortisone	fluocinolone acetonide	
+S03AA		polymyxin b	chloramphenicol	gentamicin	hexamidine	tetracycline	chlorhexidine	ciprofloxacin	
+G01AA		natamycin	pentamycin	nystatin	oxytetracycline	carfecillin	chloramphenicol	amphotericin b	candicidin	clindamycin	
+S01EA		apraclonidine	brimonidine	dipivefrin	clonidine	epinephrine	
+N05AD		benperidol	haloperidol	pipamperone	melperone	droperidol	fluanisone	moperone	bromperidol	trifluperidol	
+J01DB		cefazedone	cefroxadine	ceftezole	cefaloridine	cefazolin	cephalexin	cefradine	cefapirin	cefadroxil	cefalotin	cefacetrile	cefatrizine	
+C02CA		indoramin	doxazosin	trimazosin	prazosin	urapidil	
+M01AX		nabumetone	oxaceprol	diacerein	niflumic acid	benzydamine	nimesulide	feprazone	morniflumate	azapropazone	glucosamine	tenidap	proquazone	
+N03AA		barbexaclone	phenobarbital	metharbital	methylphenobarbital	primidone	
+M01AC		meloxicam	tenoxicam	lornoxicam	droxicam	piroxicam	
+A04AD		nabilone	aprepitant	cerium oxalate	chlorobutanol	rolapitant	metopimazine	casopitant	dronabinol	scopolamine	
+J01GB		bekanamycin	amikacin	ribostamycin	sisomicin	gentamicin	isepamicin	kanamycin	netilmicin	arbekacin	dibekacin	tobramycin	
+L04AX		pomalidomide	pirfenidone	thalidomide	lenalidomide	methotrexate	dimethyl fumarate	azathioprine	
+G03XC		bazedoxifene	ormeloxifene	raloxifene	lasofoxifene	ospemifene	
+M01AH		rofecoxib	polmacoxib	etoricoxib	valdecoxib	celecoxib	parecoxib	lumiracoxib	
+L02BB		bicalutamide	flutamide	nilutamide	apalutamide	enzalutamide	
+A02BA		famotidine	ranitidine	roxatidine acetate	nizatidine	lafutidine	cimetidine	niperotidine	
+J05AP		ribavirin	voxilaprevir	boceprevir	velpatasvir	ombitasvir	daclatasvir	elbasvir	asunaprevir	paritaprevir	simeprevir	faldaprevir	ledipasvir	sofosbuvir	ritonavir	pibrentasvir	telaprevir	grazoprevir	dasabuvir	glecaprevir	
+P01AX		quinacrine	phanquinone	emetine	chiniofon	tenonitrozole	dehydroemetine	atovaquone	fumagillin	nitazoxanide	trimetrexate	
+C10AX		probucol	tiadenol	ezetimibe	dextrothyroxine	lomitapide	meglutol	mipomersen	
+A07AA		natamycin	nystatin	fidaxomicin	polymyxin b	vancomycin	amphotericin b	kanamycin	paromomycin	rifaximin	colistin	streptomycin	
+N07XX		laquinimod	riluzole	xaliproden	edaravone	tetrabenazine	tirilazad	amifampridine	dextromethorphan	tafamidis	pitolisant	sodium oxybate	valbenazine	dalfampridine	
+P02CA		ciclobendazole	albendazole	mebendazole	flubendazole	fenbendazole	thiabendazole	
+G04BX		acetohydroxamic acid	dimethyl sulfoxide	dapoxetine	pentosan polysulfate	tiopronin	magnesium hydroxide	phenazopyridine	succinimide	phenyl salicylate	
+C02KX		tadalafil	ambrisentan	bosentan	macitentan	riociguat	sitaxentan	
+R07AB		almitrine	etamivan	mepixanox	bemegride	dimefline	doxapram	nikethamide	pentetrazol	
+M03AC		pancuronium	pipecuronium	mivacurium	hexafluronium	gallamine	rocuronium	cisatracurium	fazadinium bromide	doxacurium	vecuronium	
+S01FA		atropine	homatropine	cyclopentolate	tropicamide	methscopolamine	scopolamine	
+M01AE		flurbiprofen	dexibuprofen	esomeprazole	ibuproxam	alminoprofen	misoprostol	oxaprozin	ibuprofen	fenoprofen	ketoprofen	naproxen	pirprofen	dexketoprofen	fenbufen	naproxcinod	flunoxaprofen	benoxaprofen	indoprofen	suprofen	tiaprofenic acid	
+C02AC		moxonidine	guanfacine	rilmenidine	tolonidine	clonidine	
+N02CX		dimetotiazine	oxetorone	clonidine	pizotifen	iprazochrome	
+A06AD		magnesium peroxide	sodium tartrate	lactitol	magnesium oxide	magnesium citrate	magnesium sulfate	pentaerithrityl	mannitol	sorbitol	lactulose	magnesium carbonate	sodium sulfate	
+S02CA		prednisolone	triamcinolone	dexamethasone	hydrocortisone	fludrocortisone	fluocinolone acetonide	flumethasone	
+A03FA		itopride	cinitapride	metoclopramide	clebopride	domperidone	cisapride	bromopride	alizapride	
+A14AA		metenolone	stanozolol	oxandrolone	oxymetholone	prasterone	norethandrolone	quinbolone	stanolone	metandienone	
+C10AD		aluminium nicotinate	nicotinyl alcohol	acipimox	niacin	niceritrol	nicofuranose	
+C10AB		aluminium clofibrate	clofibrate	bezafibrate	gemfibrozil	ronifibrate	simfibrate	ciprofibrate	fenofibric acid	clofibride	fenofibrate	etofibrate	
+A10BH		sitagliptin	linagliptin	vildagliptin	alogliptin	gemigliptin	simvastatin	saxagliptin	rosuvastatin	evogliptin	
+B05XA		calcium chloride	magnesium sulfate	potassium lactate	magnesium phosphate	potassium chloride	sodium glycerophosphate	potassium acetate	ammonium chloride	sodium acetate	magnesium chloride	zinc chloride	sodium bicarbonate	hydrochloric acid	sodium chloride	
+A12CC		magnesium gluconate	magnesium lactate	magnesium orotate	magnesium oxide	magnesium citrate	magnesium sulfate	pidolic acid	magnesium chloride	magnesium levulinate	
+N07BB		naltrexone	disulfiram	nalmefene	acamprosate	calcium carbimide	
+J01ED		sulfamethoxypyridazine	sulfadimethoxine	sulfametomidine	sulfaperin	sulfamazone	sulfaphenazole	sulfamerazine	sulfameter	sulfametopyrazine	
+A01AD		benzydamine	acetylsalicylic acid	amlexanox	adrenalone	epinephrine	
+S01EC		dorzolamide	brinzolamide	acetazolamide	methazolamide	diclofenamide	
+N01AH		sufentanil	fentanyl	alfentanil	anileridine	remifentanil	phenoperidine	
+R01AC		nedocromil	olopatadine	levocabastine	azelastine	thonzylamine	spaglumic acid	antazoline	cromoglicic acid	
+S01GX		nedocromil	olopatadine	levocabastine	lodoxamide	azelastine	alcaftadine	ketotifen	emedastine	spaglumic acid	epinastine	cromoglicic acid	
+G03DC		norethisterone	allylestrenol	etynodiol	lynestrenol	methylestrenolone	
+N01BA		benzocaine	metabutethamine	procaine	tetracaine	chloroprocaine	
+C01DA		isosorbide mononitrate	propatyl nitrate	methylpropylpropanediol dinitrate	nitroglycerin	isosorbide dinitrate	pentaerythritol tetranitrate	tenitramine	erythrityl tetranitrate	trolnitrate	
+A10BX		nateglinide	benfluorex	repaglinide	mitiglinide	pramlintide	
+N05AX		prothipendyl	cariprazine	iloperidone	risperidone	mosapramine	pimavanserin	brexpiprazole	zotepine	aripiprazole	paliperidone	
+R05CB		acetylcysteine	letosteine	mannitol	carbocisteine	bromhexine	ambroxol	neltenexine	eprazinone	erdosteine	coenzyme m	domiodol	stepronin	sobrerol	
+N06AF		nialamide	iproclozide	iproniazid	phenelzine	isocarboxazid	tranylcypromine	
+J01MB		nemonoxacin	nalidixic acid	cinoxacin	piromidic acid	pipemidic acid	oxolinic acid	rosoxacin	flumequine	
+R06AC		histapyrrodine	tripelennamine	thonzylamine	methapyrilene	chloropyramine	mepyramine	
+M01AA		mofebutazone	oxyphenbutazone	rabeprazole	phenylbutazone	kebuzone	
+L01XD		temoporfin	efaproxiral	methyl aminolevulinate	aminolevulinic acid	padeliporfin	
+N02BA		morpholine	imidazole salicylate	salicylic acid	salsalate	carbaspirin calcium	guacetisal	acetylsalicylic acid	ethenzamide	salicylamide	benorilate	aloxiprin	diflunisal	choline salicylate	dipyrocetyl	
+R05DB		piperidione	zipeprol	nepinalone	fedrilate	cloperastine	dropropizine	dibunate	isoaminile	pipazethate	morclofone	benzonatate	clofedanol	meprotixol	bibenzonium	dimethoxanate	oxolamine	oxeladin	pentoxyverine	prenoxdiazine	droxypropine	clobutinol	tipepidine	benproperine	butamirate	levodropropizine	
+R03CC		carbuterol	tretoquinol	pirbuterol	terbutaline	tulobuterol	procaterol	ambroxol	salbutamol	clenbuterol	hexoprenaline	fenoterol	reproterol	bambuterol	
+R03AC		carbuterol	tretoquinol	pirbuterol	terbutaline	tulobuterol	formoterol	procaterol	olodaterol	salbutamol	clenbuterol	rimiterol	hexoprenaline	indacaterol	fenoterol	reproterol	salmeterol	bitolterol	
+R05CA		eucalyptol	antimony pentasulfide	guaifenesin	levoverbenone	potassium iodide	
+N05AF		zuclopenthixol	chlorprothixene	flupentixol	clopenthixol	thiothixene	
+R02AA		octenidine	cetylpyridinium	oxyquinoline	hexamidine	cetrimonium	benzethonium	ambazone	hexylresorcinol	chlorquinaldol	dequalinium	myristalkonium	phenol	chlorhexidine	dichlorobenzyl alcohol	
+D08AX		hydrogen peroxide	tosylchloramide	hypochlorite	potassium permanganate	ethanol	propyl alcohol	isopropyl alcohol	eosin	
+P01AB		azanidazole	nimorazole	secnidazole	tinidazole	propenidazole	metronidazole	ornidazole	
+C04AX		cinepazide	visnadine	cyclandelate	fasudil	vinburnine	vincamine	suloctidil	bencyclane	cetiedil	buflomedil	naftidrofuryl	moxisylyte	azapetine	phenoxybenzamine	butalamine	ifenprodil	
+M01CB		auranofin	sodium aurotiosulfate	aurotioprol	sodium aurothiomalate	aurothioglucose	
+R03DX		roflumilast	fenspiride	amlexanox	seratrodast	eprozinol	
+N02BG		nefopam	rimazolium	viminol	flupirtine	floctafenine	methoxyflurane	
+M04AB		probenecid	isobromindione	lesinurad	benzbromarone	sulfinpyrazone	
+A06AX		linaclotide	lubiprostone	plecanatide	glycerin	prucalopride	tegaserod	
+C01BC		ethacizine	propafenone	flecainide	encainide	lorcainide	
+A06AH		alvimopan	methylnaltrexone	naldemedine	naloxone	naloxegol	
+V08AB		iohexol	iobitridol	ioxilan	iopromide	iotrolan	iopamidol	ioxaglic acid	iopentol	ioversol	iodixanol	iomeprol	metrizamide	
+A02AA		magnesium peroxide	magnesium silicate	magnesium oxide	magnesium hydroxide	magnesium carbonate	
+N02BB		metamizole	propyphenazone	antipyrine	nifenazone	aminophenazone	
+N05CC		acetylglycinamide chloral hydrate	dichloralphenazone	chlorhexadol	chloral hydrate	paraldehyde	
+C05AX		tribenoside	zinc acetate	zinc ascorbate	zinc gluconate	ditiocarb zinc	zinc	zinc chloride	zinc dibutyldithiocarbamate	zinc picolinate	zinc citrate	zinc oxide	zinc sulfate	
+A03AX		isometheptene	fenoverine	valethamate	fenpiprane	phloroglucinol	trimethyldiphenylpropylamine	trepibutone	idanpramine	alverine	caroverine	pinaverium	chlorbenzoxamine	diisopromine	proxazole	
+A06AG		bisacodyl	dantron	glycerin	sorbitol	sodium lauryl sulfoacetate	
+C05CA		monoxerutin	troxerutin	diosmin	rutin	hidrosmin	
+D08AJ		octenidine	cetylpyridinium	didecyldimethylammonium	decamethoxine	cetrimonium	benzethonium	benzoxonium	
+D03AX		pantothenic acid	dexpanthenol	trolamine	hyaluronic acid	sodium chlorite	enoxolone	
+G01AC		broxyquinoline	chlorquinaldol	oxyquinoline	dequalinium	diiodohydroxyquinoline	clioquinol	
+D08AK		mercuric iodide	mercuric amidochloride	thimerosal	phenylmercuric borate	mercuric chloride	mercurochrome	
+N06BX		mebicar	pramiracetam	pipradrol	fipexide	meclofenoxate	prolintane	deanol	piracetam	nizofenone	pyritinol	aniracetam	citicoline	linopirdine	oxiracetam	acetylcarnitine	vinpocetine	phenibut	idebenone	pirisudanol	
+V08AC		iodipamide	iodoxamic acid	iocetamic acid	iotroxic acid	tyropanoic acid	iopanoic acid	iobenzamic acid	iopodic acid	ioglycamic acid	
+A06AB		bisoxatin	bisacodyl	dantron	phenolphthalein	picosulfuric acid	oxyphenisatin	
+C01DX		aminoethyl nitrate	hexobendine	benziodarone	oxyfedrine	imolamine	cinepazet	efloxate	heptaminol	linsidomine	dilazep	nicorandil	carbocromen	trapidil	etafenone	molsidomine	cloridarol	prenylamine	
+J05AX		inosine pranobex	elvitegravir	letermovir	moroxydine	dolutegravir	pleconaril	raltegravir	umifenovir	maraviroc	maribavir	
+L03AX		histamine	pidotimod	thymopentin	roquinimex	mifamurtide	plerixafor	cridanimod	
+B02BX		carbazochrome	fostamatinib	avatrombopag	etamsylate	lusutrombopag	eltrombopag	
+A10BK		dapagliflozin	empagliflozin	ertugliflozin	canagliflozin	ipragliflozin	
+P01BE		artemisinin	artenimol	artemotil	artemether	artesunate	
+V09IX		edotreotide gallium ga-68	fludeoxyglucose (18f)	fluciclovine (18f)	fluorodopa (18f)	fluoride ion f-18	iobenguane	
+A02AB		aluminium phosphate	aluminum hydroxide	aloglutamol	aluminium glycinate	aluminium acetoacetate	
+A03BB		cimetropium	methylatropine	fentonium	butylscopolamine	methscopolamine	
+B03AB		ferric maltol	iron sucrose	ferric sodium citrate	ferric hydroxide	sodium feredetate	
+P03BX		dimethyl carbate	dibutylsuccinate	diethyltoluamide	dimethylphthalate	etohexadiol	dibutylphthalate	
+B03AA		ferrous gluconate	ferrous succinate	ferrous fumarate	ferrous glycine sulfate	ferrous tartrate	ferrous ascorbate	ferrous aspartate	ferrous carbonate	ferrous chloride	

@@ -6,6 +6,12 @@ openpyxl>=3.1        # reading .xlsx inputs
 # Cheminformatics (structural validation / parent InChIKey)
 rdkit>=2023.9
 
+# Enrichment ORA (Fisher's exact + BH FDR)
+scipy>=1.10
+
+# Parquet I/O for dual-build outputs
+pyarrow>=12.0
+
 # Web app
 shiny>=0.6
 jinja2>=3.0

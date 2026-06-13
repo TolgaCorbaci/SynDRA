@@ -1,0 +1,554 @@
+rs4149056		goserelin	enalapril	sorafenib	idarubicin	repaglinide	cytidine	cm-4307	cerivastatin	docetaxel	epirubicin	erythromycin	cyclophosphamide	rosiglitazone	fenofibrate	doxorubicin	cytarabine	tamoxifen	
+rs1045642		nortriptyline	zidovudine	folic acid	losartan	esomeprazole	verapamil	idarubicin	modafinil	methylprednisolone	azithromycin	tramadol	lansoprazole	codeine	levamlodipine	prednisolone	dexlansoprazole	ondansetron	armodafinil	lamivudine	cabazitaxel	oseltamivir	dexverapamil	prednisone	omeprazole	probenecid	nelfinavir	voriconazole	silibinin	sorafenib	pyrazinamide	amlodipine	oxcarbazepine	cm-4307	ofloxacin	trabectedin	d-levofloxacin	daptomycin	levofloxacin	paliperidone	tamoxifen	
+rs1051266		irinotecan	(6r)-folinic acid	folic acid	capecitabine	hydroxychloroquine	imatinib	fluorouracil	prednisone	levoleucovorin	cyclosporine	leucovorin	
+rs1801133		prednisolone	vinorelbine	pemetrexed	gemcitabine	busulfan	pravastatin	disulfiram	vincristine	daunorubicin	azacitidine	cyclosporine	dactinomycin	
+rs717620		(6r)-folinic acid	diclofenac	voriconazole	sorafenib	tacrolimus	simvastatin	fluorouracil	lopinavir	cm-4307	atazanavir	ritonavir	erythromycin	trabectedin	oxaliplatin	efavirenz	levoleucovorin	cyclosporine	leucovorin	
+rs2273697		pemetrexed	epirubicin	imatinib	cyclophosphamide	fluorouracil	doxorubicin	ceftriaxone	cyclosporine	
+rs1800629		cm-4307	sorafenib	ethambutol	pyrazinamide	mycophenolate mofetil	carbamazepine	atorvastatin	cyclosporine	
+rs3814055		sunitinib	temsirolimus	sirolimus	flucloxacillin	methotrexate	carbamazepine	cyclosporine	
+rs35599367		paclitaxel	risperidone	dextromethadone	simvastatin	atorvastatin	levomethadone	everolimus	midazolam	erythromycin	fluticasone propionate	lovastatin	methadone	cyclosporine	
+rs4646437		sunitinib	voriconazole	dextromethadone	epirubicin	doxorubicin	methadone	levomethadone	cyclosporine	
+rs1805087		folic acid	epirubicin	hydroxychloroquine	cyclophosphamide	doxorubicin	vincristine	dactinomycin	
+rs45445694		irinotecan	betamethasone	dexamethasone	folic acid	hydroxychloroquine	raltitrexed	cytidine	etoposide	prednisone	azathioprine	cytarabine	daunorubicin	
+APOE E4		nicotine	rivastigmine	pravastatin	simvastatin	fenofibrate	galantamine	rosuvastatin	bupropion	
+SLCO1B1*15		paclitaxel	cerivastatin	pravastatin	simvastatin	lovastatin	methotrexate	rosuvastatin	
+HLA-DRB1*01:01:01		nevirapine	fluvastatin	pravastatin	simvastatin	rosuvastatin	efavirenz	atorvastatin	lumiracoxib	
+rs1799752		irbesartan	fluvastatin	bumetanide	enalapril	1-(3-mercapto-2-methyl-propionyl)-pyrrolidine-2-carboxylic acid	pravastatin	torasemide	atorvastatin	perindopril	fluoxetine	(s)-fluoxetine	captopril	hydrochlorothiazide	(r)-fluoxetine	acetylcholine	furosemide	sertraline	
+HLA-DRB1*04:06:01		fluvastatin	pravastatin	simvastatin	rosuvastatin	atorvastatin	
+SLCO1B1*1A		estrone sulfate	cerivastatin	fluvastatin	pravastatin	simvastatin	lovastatin	methotrexate	rosuvastatin	atorvastatin	
+rs16944		tiludronic acid	clodronic acid	pravastatin	etidronic acid	risedronic acid	
+SLCO1B1*1B		pravastatin	simvastatin	methotrexate	rosuvastatin	atorvastatin	
+APOE E2		1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	rivastigmine	pravastatin	simvastatin	donepezil	fenofibrate	galantamine	rosuvastatin	atorvastatin	
+SLCO1B1*5		paclitaxel	cerivastatin	pravastatin	simvastatin	lovastatin	methotrexate	rosuvastatin	atorvastatin	
+APOE E3		1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	rivastigmine	pravastatin	simvastatin	donepezil	fenofibrate	galantamine	rosuvastatin	atorvastatin	
+CYP2D6*37		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*48		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*50		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*54		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6 extensive metabolizers		mirtazapine	fluvoxamine	fluoxetine	paroxetine	venlafaxine	(s)-fluoxetine	metoprolol	(r)-fluoxetine	duloxetine	citalopram	escitalopram	esmirtazapine	clomipramine	sertraline	
+rs3892097		amitriptyline	nortriptyline	lamotrigine	imipramine	valproic acid	maprotiline	carbamazepine	fluvoxamine	codeine	paroxetine	(s)-fluoxetine	metoprolol	(r)-fluoxetine	clomipramine	doxepin	cidoxepin	phenytoin	trimipramine	desipramine	haloperidol	fluoxetine	valproate bismuth	citalopram	escitalopram	sertraline	primidone	
+CYP2D6*100		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*56		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*102		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*9		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	midomafetamine	desipramine	codeine	paroxetine	primaquine	venlafaxine	metoprolol	ondansetron	clomipramine	doxepin	
+CYP2D6*4xN		amitriptyline	cidoxepin	nortriptyline	imipramine	gefitinib	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*51		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*7		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	oxycodone	clomipramine	doxepin	
+CYP2D6*72		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*87		amitriptyline	nortriptyline	bufuralol	imipramine	gefitinib	fluvoxamine	dextromethorphan	codeine	paroxetine	ondansetron	clomipramine	doxepin	cidoxepin	risperidone	dextromethadone	trimipramine	atomoxetine	levomethadone	desipramine	venlafaxine	dapoxetine	citalopram	escitalopram	methadone	tamoxifen	
+CYP2D6*89		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	dextromethadone	imipramine	trimipramine	fluvoxamine	dextromethorphan	levomethadone	desipramine	codeine	paroxetine	venlafaxine	ondansetron	citalopram	escitalopram	methadone	clomipramine	doxepin	tamoxifen	
+CYP2D6*94		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	venlafaxine	tolterodine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*97		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	dextromethadone	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	levomethadone	desipramine	codeine	paroxetine	venlafaxine	dapoxetine	ondansetron	methadone	clomipramine	doxepin	tamoxifen	
+CYP2D6*98		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	dextromethadone	imipramine	gefitinib	trimipramine	fluvoxamine	dextromethorphan	levomethadone	desipramine	codeine	paroxetine	venlafaxine	dapoxetine	ondansetron	citalopram	escitalopram	methadone	clomipramine	doxepin	tamoxifen	
+CYP2D6*44		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*21		amitriptyline	cidoxepin	nortriptyline	flecainide	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	
+CYP2D6*52		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*60		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*6		mirtazapine	nortriptyline	imipramine	gefitinib	tramadol	fluvoxamine	dextromethorphan	codeine	debrisoquine	hydrocodone	ondansetron	donepezil	ciprofloxacin	doxepin	cidoxepin	1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	quetiapine	trimipramine	atomoxetine	midomafetamine	desipramine	haloperidol	primaquine	venlafaxine	citalopram	escitalopram	esmirtazapine	
+CYP2D6*17x2		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*107		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*41x2		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*58		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*45xN		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*19		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*2xN		amitriptyline	mirtazapine	nortriptyline	nicotine	imipramine	tramadol	fluvoxamine	mianserin	codeine	debrisoquine	hydrocodone	paroxetine	(s)-fluoxetine	(r)-fluoxetine	clomipramine	doxepin	cidoxepin	trimipramine	atomoxetine	desipramine	fluoxetine	venlafaxine	oxycodone	esmirtazapine	tamoxifen	
+CYP2D6*20		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	metoprolol	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*82		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*49		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*93		amitriptyline	nortriptyline	bufuralol	imipramine	gefitinib	fluvoxamine	dextromethorphan	codeine	paroxetine	tolterodine	ondansetron	clomipramine	doxepin	cidoxepin	risperidone	dextromethadone	trimipramine	atomoxetine	levomethadone	desipramine	venlafaxine	dapoxetine	citalopram	escitalopram	methadone	tamoxifen	
+CYP2D6*31		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	primaquine	metoprolol	ondansetron	clomipramine	doxepin	tamoxifen	
+rs6295		levomilnacipran	risperidone	metamfetamine	fluvoxamine	levmetamfetamine	sertraline	milnacipran	
+CYP2D6*64		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*65		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*3xN		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*84		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*36xN		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*74		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*70		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*42		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*33		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*27		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*36		amitriptyline	cidoxepin	nortriptyline	bufuralol	flecainide	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	
+CYP2D6*53		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*55		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*62		amitriptyline	cidoxepin	nortriptyline	(s)-propafenone	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	propafenone	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*95		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	dextromethadone	imipramine	gefitinib	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	levomethadone	desipramine	codeine	paroxetine	venlafaxine	tolterodine	dapoxetine	ondansetron	methadone	clomipramine	doxepin	tamoxifen	
+CYP2D6*24		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*34		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*25		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*63		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*35		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	
+CYP2D6*73		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*35xN		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*22		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*45		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	metoprolol	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*81		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*105		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*29		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	primaquine	metoprolol	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*39		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*40		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*57		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*90		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	dextromethadone	imipramine	gefitinib	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	levomethadone	desipramine	codeine	paroxetine	venlafaxine	ondansetron	citalopram	escitalopram	methadone	clomipramine	doxepin	tamoxifen	
+CYP2D6*91		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	venlafaxine	dapoxetine	ondansetron	citalopram	escitalopram	clomipramine	doxepin	tamoxifen	
+CYP2D6*61		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*10x2		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	
+CYP2D6*110		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*43		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*86		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*18		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*47		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*71		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*75		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*88		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	venlafaxine	dapoxetine	ondansetron	citalopram	escitalopram	clomipramine	doxepin	tamoxifen	
+CYP2D6*32		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*46		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	metoprolol	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*111		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*6xN		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*8		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*109		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*108		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*85		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*68		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*38		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*101		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*106		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*92		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	gefitinib	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	tolterodine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*114		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	gefitinib	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*96		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	gefitinib	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	tolterodine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*30		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+rs4680		sufentanil	nicotine	tolcapone	modafinil	entacapone	tramadol	fluvoxamine	haloperidol	paroxetine	armodafinil	oxycodone	remifentanil	sumatriptan	
+CYP2D6*104		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*113		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*15		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	debrisoquine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*103		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*99		amitriptyline	cidoxepin	nortriptyline	desvenlafaxine	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*28		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*12		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6 poor metabolizers		cidoxepin	vortioxetine	trimipramine	fluvoxamine	pimozide	desipramine	mianserin	hydrocodone	tolterodine	pridopidine	citalopram	escitalopram	clomipramine	doxepin	
+CYP2D6*83		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+rs10042486		levomilnacipran	paroxetine	amisulpride	risperidone	quetiapine	fluvoxamine	milnacipran	
+CYP2D6*9x2		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*26		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*69		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*13		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	dextromethorphan	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*29x2		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*23		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*59		amitriptyline	cidoxepin	nortriptyline	(s)-propafenone	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	propafenone	ondansetron	clomipramine	doxepin	tamoxifen	
+CYP2D6*11		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	
+CYP2D6*112		amitriptyline	cidoxepin	nortriptyline	imipramine	trimipramine	atomoxetine	fluvoxamine	desipramine	codeine	paroxetine	ondansetron	clomipramine	doxepin	tamoxifen	
+rs2235040		amitriptyline	paroxetine	venlafaxine	imatinib	citalopram	escitalopram	fluvoxamine	sertraline	
+rs37973		nedocromil	triamcinolone	budesonide	fluticasone propionate	flunisolide	
+rs4532		methylphenidate	lithium cation	lithium succinate	nicotine	lithium hydroxide	dexmethylphenidate	amphetamine	lithium citrate	lithium carbonate	dextroamphetamine	
+rs1057868		sunitinib	clobazam	nicotine	dextromethadone	midazolam	methadone	atorvastatin	levomethadone	
+CYP2B6*4		mirtazapine	nicotine	dextromethadone	esmirtazapine	methadone	efavirenz	bupropion	levomethadone	
+CYP2A6*1A		methoxsalen	caffeine	letrozole	nicotine	docetaxel	valproate bismuth	valproic acid	pilocarpine	
+rs3793790		1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	nicotine	rivastigmine	donepezil	galantamine	
+CYP2D6*4		methylphenidate	timolol	nicotine	clopenthixol	gefitinib	tramadol	dextromethorphan	atorvastatin	debrisoquine	hydrocodone	hydromorphone	tolterodine	ondansetron	donepezil	morphine	1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	zuclopenthixol	flecainide	vortioxetine	colchicine	dexmethylphenidate	quetiapine	trimipramine	atomoxetine	pimozide	midomafetamine	desipramine	promethazine	primaquine	ketorolac	
+CYP2B6*6		esketamine	mirtazapine	zidovudine	nicotine	isoniazid	stavudine	dextromethadone	pyrazinamide	levomethadone	nevirapine	ethambutol	ketamine	lamivudine	cyclophosphamide	esmirtazapine	methadone	sertraline	
+rs1800497		nicotine	prochlorperazine	valproate bismuth	disulfiram	quetiapine	valproic acid	aripiprazole	
+CYP2A6*4A		caffeine	letrozole	nicotine	docetaxel	valproate bismuth	valproic acid	pilocarpine	
+rs1799971		acetaminophen	sufentanil	hydrocodone	nicotine	tramadol	remifentanil	sumatriptan	naloxone	
+rs2075572		nicotine	dextromethadone	metamfetamine	diamorphine	methadone	levmetamfetamine	levomethadone	
+CYP2B6*1		esketamine	mirtazapine	zidovudine	nicotine	isoniazid	stavudine	dextromethadone	pyrazinamide	levomethadone	nevirapine	ethambutol	ketamine	busulfan	lamivudine	cyclophosphamide	esmirtazapine	methadone	bupropion	sertraline	
+CYP2D6*5		cidoxepin	methylphenidate	1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	timolol	nicotine	flecainide	imipramine	dexmethylphenidate	tramadol	trimipramine	atomoxetine	dextromethorphan	midomafetamine	desipramine	mianserin	haloperidol	debrisoquine	primaquine	tolterodine	ondansetron	lovastatin	donepezil	oxycodone	doxepin	
+rs7439366		flurbiprofen	dextromethadone	lorazepam	tarenflurbil	methadone	levomethadone	
+CYP2D6*1xN		cidoxepin	1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	nortriptyline	imipramine	granisetron	quetiapine	tramadol	trimipramine	atomoxetine	desipramine	mianserin	codeine	venlafaxine	dolasetron	donepezil	oxycodone	aripiprazole	clomipramine	doxepin	
+CYP2D6 extensive metabolizer genotype		perphenazine	flecainide	trazodone	tramadol	dextromethorphan	tamsulosin	
+CYP2D6*10		cidoxepin	methylphenidate	(s)-propafenone	bufuralol	imipramine	dexmethylphenidate	tramadol	trimipramine	dextromethorphan	midomafetamine	desipramine	mianserin	codeine	debrisoquine	primaquine	tolterodine	dapoxetine	propafenone	lovastatin	bepridil	doxepin	
+rs1128503		mitoxantrone	clopidogrel	modafinil	tramadol	codeine	ofloxacin	capecitabine	armodafinil	d-levofloxacin	oxaliplatin	rocuronium	sevoflurane	cabazitaxel	levofloxacin	efavirenz	
+CYP2D6*3		cidoxepin	1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	nortriptyline	zuclopenthixol	timolol	imipramine	clopenthixol	gefitinib	tramadol	trimipramine	atomoxetine	galantamine	dextromethorphan	midomafetamine	desipramine	debrisoquine	tolterodine	ondansetron	donepezil	doxepin	
+SLC22A1*1		morphine	proguanil	fenoterol	tramadol	sumatriptan	
+CYP2D6*17		amitriptyline	cidoxepin	nortriptyline	bufuralol	imipramine	tramadol	trimipramine	atomoxetine	dextromethorphan	desipramine	codeine	debrisoquine	primaquine	ondansetron	doxepin	
+CYP2D6 poor metabolizer		1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	timolol	risperidone	imipramine	tramadol	pimozide	desipramine	codeine	venlafaxine	metoprolol	citalopram	escitalopram	donepezil	aripiprazole	clomipramine	
+CYP2C9*3		nateglinide	diclofenac	zafirlukast	flurbiprofen	dexibuprofen	gliquidone	carbaspirin calcium	acetylsalicylic acid	ibuprofen	lesinurad	tolbutamide	pioglitazone	fluconazole	sulfamethoxazole	aloxiprin	tarenflurbil	doxepin	cidoxepin	voriconazole	glyburide	celecoxib	gliclazide	trimipramine	glimepiride	indomethacin	busulfan	glipizide	
+CYP2C9*2		flurbiprofen	diazepam	glyburide	propofol	celecoxib	gliquidone	gliclazide	tolbutamide	glimepiride	fluconazole	busulfan	sulfamethoxazole	glipizide	tarenflurbil	
+rs776746		nifedipine	docetaxel	erlotinib	fluconazole	ondansetron	sirolimus	imatinib	quetiapine	apixaban	cabazitaxel	lovastatin	vardenafil	
+CYP2C9*1		nateglinide	diclofenac	zafirlukast	flurbiprofen	dexibuprofen	gliquidone	carbaspirin calcium	acetylsalicylic acid	ibuprofen	lesinurad	tolbutamide	pioglitazone	fluconazole	aloxiprin	tarenflurbil	doxepin	cidoxepin	voriconazole	diazepam	glyburide	propofol	celecoxib	gliclazide	trimipramine	glimepiride	indomethacin	busulfan	glipizide	
+rs2032582		irinotecan	methylphenidate	lithium cation	zidovudine	dicloxacillin	verapamil	idarubicin	modafinil	azithromycin	codeine	levamlodipine	liothyronine i-131	ondansetron	lithium hydroxide	armodafinil	lamivudine	etoposide	cabazitaxel	lithium citrate	oseltamivir	dexverapamil	clomipramine	fexofenadine	lithium succinate	mitoxantrone	dexmethylphenidate	amlodipine	lithium carbonate	ofloxacin	nefazodone	capecitabine	epirubicin	trabectedin	d-levofloxacin	levofloxacin	doxorubicin	liothyronine	efavirenz	liotrix	
+rs118192122		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192168		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192178		caffeine	isoflurane	enflurane	desflurane	rocuronium	sevoflurane	halothane	succinylcholine	methoxyflurane	
+CYP1A2*1A		caffeine	flecainide	clopidogrel	quetiapine	clomipramine	
+rs118192175		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192167		calcium silicate	calcium pangamate	calcium gluconate	enflurane	calcium magnesium potassium carbonate chloride hydroxide	carbaspirin calcium	calcium levulinate	calcium ascorbate	succinylcholine	calcium carbimide	calcium glycerophosphate	calcium phosphate	calcium acetate	sevoflurane	methoxyflurane	calcium glubionate anhydrous	calcium lactate	calcium threonate	isoflurane	calcium chloride	edetate calcium disodium anhydrous	desflurane	calcium citrate	calcium carbonate	calcium cation	caffeine	calcium saccharate	calcium phosphate dihydrate	calcium sulfate	calcium glucoheptonate	halothane	
+rs193922832		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192172		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922818		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192176		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs121918592		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs1800559		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922753		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922816		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs28933397		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922802		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192161		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs112563513		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922747		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922770		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs121918594		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192177		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922878		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922772		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922809		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192162		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922803		caffeine	isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922807		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922748		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14387A>G		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.103T>C		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14545G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7063C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7522C>G		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14693T>C		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.488G>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192116		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1021G>C		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.742G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14497C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1589G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.6617C>G		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1565A>C		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.742G>C		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192124		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922768		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7300G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7372C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.6488G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7282G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1840C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7523G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7048G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.11969G>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1654C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7361G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs121918596		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs121918595		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922764		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs28933396		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7522C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7360C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1597C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs1801086		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs121918593		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1209C>G		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+CACNA1Sc.3257G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1201C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7304G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.130C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7373G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1598G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7007G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs63749869		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs144336148		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192170		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14477C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+CACNA1Sc.520C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7354C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs772226819		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.6487C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1841G>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.6502G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.6617C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14512C>G		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7039_7041delGAG or c.7042_7044delGAG		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.982C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs111888148		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922876		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922843		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs118192163		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.14582G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.1021G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.7124G>C		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.9310G>A		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+RYR1c.487C>T		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+rs193922762		isoflurane	enflurane	desflurane	sevoflurane	halothane	succinylcholine	methoxyflurane	
+CYP3A4*22		sunitinib	exemestane	midazolam	sildenafil	tamoxifen	
+CYP3A4*1		paclitaxel	sufentanil	sunitinib	buprenorphine	voriconazole	midazolam	sildenafil	atorvastatin	tamoxifen	
+rs699947		irinotecan	sunitinib	(6r)-folinic acid	cm-4307	enalapril	sorafenib	capecitabine	oxaliplatin	fluorouracil	sildenafil	levoleucovorin	leucovorin	
+rs2070744		sunitinib	cm-4307	enalapril	sorafenib	epirubicin	cyclophosphamide	fluorouracil	methotrexate	doxorubicin	sildenafil	atorvastatin	
+rs5443		nortriptyline	telmisartan	hydralazine	bumetanide	isosorbide dinitrate	(r)-atenolol	sildenafil	torasemide	sibutramine	atenolol	hydrochlorothiazide	furosemide	esatenolol	sumatriptan	
+rs1570360		irinotecan	cm-4307	docetaxel	sorafenib	cyclophosphamide	sildenafil	
+rs2276314		quinidine	ibutilide	quinine	sotalol	dofetilide	quinidine barbiturate	
+rs767531		quinidine	ibutilide	quinine	sotalol	dofetilide	quinidine barbiturate	
+HLA-DRB1*13:02:01		carbaspirin calcium	acetylsalicylic acid	aloxiprin	ticlopidine	allopurinol	
+CYP2C19*3		cidoxepin	nortriptyline	omeprazole	proguanil	voriconazole	phenytoin	diazepam	esomeprazole	clopidogrel	trimipramine	atorvastatin	brivaracetam	mephenytoin	pantoprazole	citalopram	escitalopram	efavirenz	bupropion	icotinib	sertraline	doxepin	
+rs5065		levamlodipine	bumetanide	2-chloro-5-[(1s)-1-hydroxy-3-oxo-2h-isoindol-1-yl]benzenesulfonamide	amlodipine	furosemide	chlorthalidone	torasemide	
+rs12248560		amitriptyline	omeprazole	prasugrel	esomeprazole	imipramine	fluorouracil	mephenytoin	epirubicin	citalopram	cyclophosphamide	escitalopram	doxorubicin	tamoxifen	
+CYP2C19*4		amitriptyline	cidoxepin	voriconazole	risperidone	imipramine	quetiapine	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*7		amitriptyline	cidoxepin	mephenytoin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*12		amitriptyline	cidoxepin	voriconazole	imipramine	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*30		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	dextromethadone	imipramine	trimipramine	levomethadone	mephenytoin	nebivolol	citalopram	escitalopram	methadone	clomipramine	sertraline	doxepin	
+CYP2C19*1		atorvastatin	brivaracetam	methylphenobarbital	labetalol	doxepin	cidoxepin	proguanil	nelfinavir	voriconazole	diazepam	risperidone	dextromethadone	clopidogrel	quetiapine	trimipramine	levomethadone	midomafetamine	thalidomide	citalopram	cyclophosphamide	escitalopram	methadone	efavirenz	icotinib	sertraline	
+CYP2C19*32		amitriptyline	cidoxepin	voriconazole	dextromethadone	imipramine	trimipramine	levomethadone	mephenytoin	nebivolol	fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	methadone	clomipramine	sertraline	doxepin	
+CYP2C19*25		amitriptyline	cidoxepin	mephenytoin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*14		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+rs11188072		mephenytoin	omeprazole	esomeprazole	imipramine	citalopram	escitalopram	
+rs1065852		phenytoin	dexpropranolol	lamotrigine	risperidone	valproic acid	carbamazepine	metoprolol	propranolol	valproate bismuth	citalopram	escitalopram	primidone	tamoxifen	
+CYP2C19*6		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	trimipramine	mephenytoin	nebivolol	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*31		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	dextromethadone	imipramine	trimipramine	levomethadone	mephenytoin	nebivolol	fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	methadone	clomipramine	sertraline	doxepin	
+CYP2C19*11		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2D6*2		cidoxepin	methylphenidate	morphine	nortriptyline	flecainide	carvedilol	imipramine	dexmethylphenidate	trimipramine	midomafetamine	desipramine	acetaminophen	codeine	venlafaxine	dapoxetine	citalopram	escitalopram	clomipramine	doxepin	
+CYP2C19*9		amitriptyline	cidoxepin	mephenytoin	voriconazole	imipramine	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*13		amitriptyline	cidoxepin	voriconazole	imipramine	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*17		cidoxepin	omeprazole	voriconazole	dexrabeprazole	esomeprazole	imipramine	clopidogrel	trimipramine	lansoprazole	midomafetamine	dexlansoprazole	citalopram	escitalopram	rabeprazole	sertraline	doxepin	
+CYP2C19*8		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	imipramine	carbaspirin calcium	clopidogrel	acetylsalicylic acid	trimipramine	mephenytoin	aloxiprin	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*29		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	dextromethadone	imipramine	trimipramine	levomethadone	mephenytoin	fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	methadone	clomipramine	sertraline	doxepin	
+CYP2C19*10		amitriptyline	cidoxepin	mephenytoin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*19		amitriptyline	cidoxepin	mephenytoin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*22		amitriptyline	cidoxepin	mephenytoin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*35		amitriptyline	cidoxepin	voriconazole	imipramine	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*26		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	imipramine	clopidogrel	trimipramine	mephenytoin	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*16		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	trimipramine	methylphenobarbital	mephenytoin	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*23		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	imipramine	clopidogrel	trimipramine	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*33		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	dextromethadone	imipramine	trimipramine	levomethadone	mephenytoin	nebivolol	citalopram	escitalopram	methadone	clomipramine	sertraline	doxepin	
+CYP2C19 extensive metabolizer		dexrabeprazole	dexlansoprazole	citalopram	escitalopram	lansoprazole	rabeprazole	
+CYP2C19*18		amitriptyline	cidoxepin	nebivolol	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+rs4244285		amitriptyline	cidoxepin	nelfinavir	phenytoin	leflunomide	etravirine	fluorouracil	valproic acid	venlafaxine	epirubicin	valproate bismuth	citalopram	escitalopram	doxorubicin	doxepin	
+CYP2C19*24		amitriptyline	cidoxepin	omeprazole	voriconazole	esomeprazole	imipramine	clopidogrel	trimipramine	mephenytoin	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*15		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*5		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	trimipramine	tolbutamide	mephenytoin	citalopram	escitalopram	clomipramine	sertraline	doxepin	
+CYP2C19*2		cidoxepin	proguanil	nelfinavir	voriconazole	diazepam	risperidone	clopidogrel	quetiapine	trimipramine	atorvastatin	brivaracetam	midomafetamine	methylphenobarbital	carisoprodol	mephenytoin	thalidomide	citalopram	cyclophosphamide	escitalopram	efavirenz	icotinib	labetalol	sertraline	doxepin	
+CYP2C19*28		amitriptyline	cidoxepin	voriconazole	imipramine	clopidogrel	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+CYP2C19*34		amitriptyline	cidoxepin	voriconazole	imipramine	citalopram	escitalopram	trimipramine	clomipramine	sertraline	doxepin	
+rs334558		fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	
+rs2227631		fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	
+rs10280101		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	
+rs4713916		mirtazapine	fluoxetine	paroxetine	venlafaxine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	esmirtazapine	
+rs2235067		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	
+rs4148740		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	carbamazepine	
+rs495794		fluoxetine	paroxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	sertraline	
+rs10248420		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	
+rs7787082		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	
+rs153549		fluoxetine	paroxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	sertraline	
+rs1799889		fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	
+rs11983225		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	
+rs4570625		fluoxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	
+CYP2C19 poor metabolizers		omeprazole	voriconazole	esomeprazole	imipramine	citalopram	escitalopram	trimipramine	atomoxetine	clomipramine	
+rs6265		methylphenidate	risperidone	dexmethylphenidate	metformin	citalopram	escitalopram	sumatriptan	
+rs153560		fluoxetine	paroxetine	(s)-fluoxetine	(r)-fluoxetine	citalopram	escitalopram	sertraline	
+rs12720067		amitriptyline	paroxetine	venlafaxine	citalopram	escitalopram	
+rs2740574		lumefantrine	phenytoin	atazanavir	lamotrigine	valproate bismuth	valproic acid	indinavir	carbamazepine	primidone	tamoxifen	
+CYP2D6*1		timolol	fluvastatin	(s)-propafenone	granisetron	simvastatin	clopenthixol	mianserin	berberine	acetaminophen	hydrocodone	ondansetron	donepezil	1-benzyl-4-[(5,6-dimethoxy-1-indanon-2-yl)methyl]piperidine	zuclopenthixol	phenytoin	vortioxetine	carvedilol	buspirone	colchicine	quetiapine	trimipramine	pimozide	midomafetamine	desipramine	propafenone	lovastatin	
+rs17238540		cerivastatin	simvastatin	lovastatin	rosuvastatin	atorvastatin	
+HLA-B*51:01:01		barbexaclone	nevirapine	phenobarbital	clindamycin	quinidine barbiturate	
+HLA-DQB1*06:09		nevirapine	lamotrigine	carbaspirin calcium	acetylsalicylic acid	aloxiprin	
+HLA-DRB1*15:01:01:01		amoxicillin	dapsone	clavulanic acid	nevirapine	flucloxacillin	lumiracoxib	
+HLA-C*08:01		ribavirin	nevirapine	carbamazepine	allopurinol	levovirin	
+rs762551		paroxetine	nevirapine	chlorpromazine	thioridazine	trifluoperazine	carbamazepine	fluphenazine	
+HLA-DQB1*06:02:01		amoxicillin	clavulanic acid	nevirapine	flucloxacillin	lumiracoxib	
+rs489693		haloperidol	amisulpride	ziprasidone	quetiapine	aripiprazole	paliperidone	
+G6PD A- 202A_376G		dapsone	dimercaprol	primaquine	glyburide	sitamaquine	tafenoquine	chloramphenicol	daunorubicin	nitrofurantoin	
+G6PD deficiency		dapsone	nalidixic acid	quinidine	quinine	phenazopyridine	nitrofurantoin	quinidine barbiturate	sulfanilamide	
+HLA-B*13:01:01		dapsone	barbexaclone	phenobarbital	trichloroethylene	carbamazepine	quinidine barbiturate	
+rs2606345		barbexaclone	phenobarbital	phenytoin	valproate bismuth	valproic acid	carbamazepine	quinidine barbiturate	
+HLA-A*02:01		amoxicillin	phenytoin	ampicillin	carbamazepine	bacampicillin	
+CYP2D6*41		cidoxepin	nortriptyline	phenytoin	imipramine	buspirone	quetiapine	gefitinib	trimipramine	atomoxetine	dextromethorphan	midomafetamine	desipramine	haloperidol	codeine	primaquine	ondansetron	aripiprazole	doxepin	
+rs2687116		phenytoin	lamotrigine	tacrolimus	valproate bismuth	valproic acid	carbamazepine	primidone	
+rs9332120		phenytoin	lamotrigine	valproate bismuth	valproic acid	carbamazepine	primidone	
+CYP2C9*13		diclofenac	zafirlukast	losartan	phenytoin	celecoxib	
+rs1544410		alendronic acid	calcium silicate	ribavirin	calcium pangamate	calcium gluconate	calcium magnesium potassium carbonate chloride hydroxide	carbaspirin calcium	calcium levulinate	raloxifene	calcium ascorbate	calcium carbimide	estrone sulfate	calcium glycerophosphate	calcium phosphate	calcium acetate	levovirin	calcium glubionate anhydrous	calcium lactate	calcium threonate	calcium chloride	edetate calcium disodium anhydrous	calcium citrate	calcium carbonate	calcium cation	calcium saccharate	midazolam	clodronic acid	calcium phosphate dihydrate	calcium sulfate	etidronic acid	calcium glucoheptonate	
+rs731236		calcium silicate	calcium glubionate anhydrous	calcium pangamate	calcium gluconate	calcium lactate	calcium threonate	calcium chloride	edetate calcium disodium anhydrous	calcium magnesium potassium carbonate chloride hydroxide	carbaspirin calcium	calcium citrate	calcium levulinate	calcium ascorbate	calcium carbimide	calcium carbonate	calcium cation	calcium glycerophosphate	calcium phosphate	calcium saccharate	clodronic acid	calcium phosphate dihydrate	calcium sulfate	calcium acetate	calcium glucoheptonate	
+rs4253778		metoprolol	atenolol	carvedilol	(r)-atenolol	esatenolol	fenofibrate	
+rs11313667		metoprolol	atenolol	hydrochlorothiazide	(r)-atenolol	esatenolol	
+rs201279313		metoprolol	atenolol	hydrochlorothiazide	(r)-atenolol	esatenolol	
+rs130058		lithium cation	lithium succinate	lithium carbonate	fluoxetine	liothyronine i-131	paroxetine	(s)-fluoxetine	nefazodone	lithium hydroxide	(r)-fluoxetine	lithium citrate	liothyronine	clomipramine	liotrix	
+rs1360780		lithium cation	lithium succinate	liothyronine i-131	nefazodone	lithium hydroxide	lithium citrate	liothyronine	clomipramine	liotrix	lithium carbonate	
+rs1800012		valproate bismuth	etidronic acid	zoledronic acid	valproic acid	pamidronic acid	
+rs7905446		desvenlafaxine	fluoxetine	paroxetine	venlafaxine	(s)-fluoxetine	(r)-fluoxetine	duloxetine	atomoxetine	
+CYP2C19 poor metabolizer genotype		venlafaxine	voriconazole	prasugrel	clopidogrel	midomafetamine	
+CYP2D6*14		amitriptyline	cidoxepin	nortriptyline	risperidone	bufuralol	imipramine	simvastatin	gefitinib	trimipramine	atomoxetine	dextromethorphan	desipramine	codeine	paroxetine	primaquine	ondansetron	clomipramine	doxepin	
+rs2229109		paclitaxel	prednisolone	amisulpride	vindesine	cytidine	methotrexate	valganciclovir	vincristine	prednisone	aripiprazole	bleomycin	cytarabine	
+rs11615		(6r)-folinic acid	epirubicin	etoposide	doxorubicin	bleomycin	levoleucovorin	leucovorin	
+GSTM1 null		paclitaxel	vinblastine	epirubicin	trimethoprim	sulfamethoxazole	cyclophosphamide	doxorubicin	azathioprine	bleomycin	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	
+GSTM1 non-null		paclitaxel	isoniazid	pyrazinamide	azathioprine	bleomycin	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	vinblastine	epirubicin	ethambutol	trimethoprim	sulfamethoxazole	cyclophosphamide	doxorubicin	streptomycin	
+SLC22A1*4		morphine	ranitidine	proguanil	fenoterol	sumatriptan	
+rs887829		morphine	acetaminophen	esketamine	oxazepam	risperidone	ondansetron	ketamine	
+SLC22A1*3		morphine	ranitidine	proguanil	fenoterol	sumatriptan	
+SLC22A1*5		morphine	ranitidine	proguanil	fenoterol	sumatriptan	
+rs2952768		morphine	buprenorphine	meperidine	fentanyl	pentazocine	
+SLC22A1*2		morphine	ranitidine	proguanil	fenoterol	sumatriptan	
+SLC22A1*6		morphine	ranitidine	proguanil	fenoterol	sumatriptan	
+HLA-C*06:02:01:01		amoxicillin	ribavirin	clavulanic acid	flucloxacillin	methotrexate	levovirin	
+HLA-DQB1*03:03:02:01		amoxicillin	clavulanic acid	carbaspirin calcium	flucloxacillin	acetylsalicylic acid	aloxiprin	carbamazepine	
+rs4291		lisinopril	levamlodipine	captopril	1-(3-mercapto-2-methyl-propionyl)-pyrrolidine-2-carboxylic acid	2-chloro-5-[(1s)-1-hydroxy-3-oxo-2h-isoindol-1-yl]benzenesulfonamide	carbaspirin calcium	acetylsalicylic acid	aloxiprin	amlodipine	chlorthalidone	
+rs200148		lisinopril	levamlodipine	2-chloro-5-[(1s)-1-hydroxy-3-oxo-2h-isoindol-1-yl]benzenesulfonamide	amlodipine	chlorthalidone	
+rs12143842		lisinopril	levamlodipine	2-chloro-5-[(1s)-1-hydroxy-3-oxo-2h-isoindol-1-yl]benzenesulfonamide	amlodipine	chlorthalidone	
+rs11122576		lisinopril	levamlodipine	2-chloro-5-[(1s)-1-hydroxy-3-oxo-2h-isoindol-1-yl]benzenesulfonamide	amlodipine	chlorthalidone	
+rs2769605		lithium cation	lithium succinate	lithium hydroxide	valproate bismuth	lithium citrate	valproic acid	lithium carbonate	
+rs1105879		carbaspirin calcium	valproate bismuth	acetylsalicylic acid	aloxiprin	valproic acid	
+rs1000940		lithium cation	lithium succinate	mirtazapine	risperidone	quetiapine	valproic acid	lithium carbonate	amisulpride	lithium hydroxide	valproate bismuth	lithium citrate	esmirtazapine	aripiprazole	paliperidone	
+rs3888190		lithium cation	lithium succinate	mirtazapine	risperidone	quetiapine	valproic acid	lithium carbonate	amisulpride	lithium hydroxide	valproate bismuth	lithium citrate	esmirtazapine	aripiprazole	paliperidone	
+rs4880		paclitaxel	valproate bismuth	cyclophosphamide	methotrexate	valproic acid	
+rs1805034		acetaminophen	diclofenac	carbaspirin calcium	acetylsalicylic acid	aloxiprin	
+rs2228246		acetaminophen	diclofenac	carbaspirin calcium	acetylsalicylic acid	aloxiprin	
+rs12746200		acetaminophen	diclofenac	carbaspirin calcium	acetylsalicylic acid	aloxiprin	
+CYP2D6 ultra-metabolizer phenotype		codeine	nortriptyline	risperidone	deutetrabenazine	tetrabenazine	
+GSTT1 non-null		isoniazid	ethambutol	pyrazinamide	imatinib	streptomycin	
+NAT2*6B		isoniazid	ethambutol	pyrazinamide	trimethoprim	sulfamethoxazole	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	
+NAT2*4		solithromycin	ethambutol	pyrazinamide	sulfamethazine	sulfapyridine	streptomycin	
+CYP3A5*1A		felodipine	paclitaxel	flecainide	nimodipine	dextromethadone	cilostazol	granisetron	itraconazole	carbamazepine	levomethadone	levoketoconazole	atazanavir	ritonavir	cyclophosphamide	ketoconazole	oxycodone	methadone	maraviroc	clomipramine	
+rs1463550071		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+SLC6A4 HTTLPR long form (L allele)		ribavirin	risperidone	dextromethadone	quetiapine	levomethadone	berberine	haloperidol	buprenorphine	ondansetron	methadone	bupropion	clomipramine	levovirin	
+SLC6A4 HTTLPR short form (S allele)		haloperidol	ribavirin	buprenorphine	risperidone	ondansetron	dextromethadone	quetiapine	methadone	bupropion	clomipramine	levomethadone	levovirin	
+rs2036657		dextromethadone	metamfetamine	methadone	levmetamfetamine	levomethadone	
+rs7668258		haloperidol	diclofenac	dextromethadone	methadone	ciprofloxacin	levomethadone	
+rs1349931378		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs200150287		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs2242480		haloperidol	dextromethadone	tacrolimus	methadone	levomethadone	
+rs7438135		buprenorphine	dextromethadone	mycophenolate mofetil	methadone	levomethadone	
+rs1267723490		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs2283265		methylphenidate	rasagiline	n-propargyl-1(s)-aminoindan	propofol	dextromethadone	dexmethylphenidate	disulfiram	methadone	levomethadone	
+rs778258371		fluoxetine	(s)-fluoxetine	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs138142612		fluoxetine	(s)-fluoxetine	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs770829708		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs118203756		fluoxetine	(s)-fluoxetine	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs764137538		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs550527959		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs200346442		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs1045280		dextromethadone	metamfetamine	methadone	levmetamfetamine	levomethadone	
+rs72552267		fluoxetine	(s)-fluoxetine	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs181297724		fluoxetine	(s)-fluoxetine	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs749678783		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	dextromethadone	(r)-fluoxetine	methadone	levomethadone	
+rs11124945		atenolol	verapamil	(r)-atenolol	dexverapamil	esatenolol	
+rs1137617		nitrendipine	atenolol	doxazosin	(r)-atenolol	esatenolol	bisoprolol	
+rs1024323		atenolol	verapamil	(r)-atenolol	dexverapamil	esatenolol	
+rs3213619		paclitaxel	atenolol	epirubicin	(r)-atenolol	cyclophosphamide	esatenolol	doxorubicin	
+rs12346562		atenolol	hydrochlorothiazide	(r)-atenolol	esatenolol	bisoprolol	
+rs1801058		atenolol	verapamil	(r)-atenolol	dexverapamil	esatenolol	
+rs2960306		atenolol	verapamil	(r)-atenolol	dexverapamil	esatenolol	
+rs11039149		atenolol	verapamil	(r)-atenolol	dexverapamil	esatenolol	
+rs763625282		mephenytoin	omeprazole	fluoxetine	(s)-fluoxetine	esomeprazole	(r)-fluoxetine	
+NAT2*5A		isoniazid	pyrazinamide	trimethoprim	sulfamethazine	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	
+rs1801253		diltiazem	digoxin	flecainide	verapamil	bucindolol	dexverapamil	spironolactone	isoprenaline	
+rs2298771		clobazam	etiracetam	lamotrigine	ethosuximide	levetiracetam	
+rs141059755		betamethasone	dexamethasone	tioguanine	epirubicin	cytidine	cyclophosphamide	methotrexate	doxorubicin	vincristine	prednisone	cytarabine	daunorubicin	
+rs117532069		betamethasone	dexamethasone	tioguanine	epirubicin	cytidine	cyclophosphamide	methotrexate	doxorubicin	vincristine	prednisone	cytarabine	daunorubicin	
+rs79085477		betamethasone	dexamethasone	tioguanine	epirubicin	cytidine	cyclophosphamide	methotrexate	doxorubicin	vincristine	prednisone	cytarabine	daunorubicin	
+rs3824662		(6r)-folinic acid	dexamethasone	tioguanine	cytidine	methotrexate	daunorubicin	betamethasone	epirubicin	mercaptopurine	cyclophosphamide	doxorubicin	vincristine	prednisone	cytarabine	levoleucovorin	leucovorin	
+rs80223967		betamethasone	dexamethasone	tioguanine	epirubicin	cytidine	cyclophosphamide	methotrexate	doxorubicin	vincristine	prednisone	cytarabine	daunorubicin	
+rs17021408		betamethasone	dexamethasone	tioguanine	epirubicin	cytidine	cyclophosphamide	methotrexate	doxorubicin	vincristine	prednisone	cytarabine	daunorubicin	
+rs1891059		betamethasone	dexamethasone	tioguanine	epirubicin	cytidine	cyclophosphamide	methotrexate	doxorubicin	vincristine	prednisone	cytarabine	daunorubicin	
+G6PD B (wildtype)		dimercaprol	glyburide	carbaspirin calcium	acetylsalicylic acid	nitrofurantoin	sulfadoxine	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	chloroquine	primaquine	trimethoprim	phenazopyridine	sulfamethoxazole	sulfametopyrazine	aloxiprin	chloramphenicol	mefloquine	ciprofloxacin	
+rs3745274		propofol	imatinib	mitotane	midomafetamine	levonorgestrel	norgestrel	
+rs3212986		paclitaxel	gemcitabine	epirubicin	granisetron	doxorubicin	palonosetron	
+ABCB1*2(PMID:11503014)		sunitinib	crizotinib	dexrazoxane	erlotinib	oxaliplatin	cytidine	simvastatin	atorvastatin	cytarabine	daunorubicin	
+ABCB1*1		sunitinib	dexrazoxane	cytidine	simvastatin	atorvastatin	cytarabine	daunorubicin	
+rs2238032		felodipine	nifedipine	levamlodipine	nitrendipine	losartan	amlodipine	
+rs10494366		nifedipine	levamlodipine	dolasetron	verapamil	granisetron	repaglinide	amlodipine	dexverapamil	
+rs1042713		pseudoephedrine	tiotropium	ephedrine	dexpropranolol	digoxin	propranolol	risperidone	phenylephrine	methacholine	spironolactone	isoprenaline	
+rs1799983		(6r)-folinic acid	sorafenib	carbaspirin calcium	acetylsalicylic acid	cytidine	methotrexate	daunorubicin	spironolactone	cm-4307	digoxin	hydrochlorothiazide	aloxiprin	vincristine	prednisone	cytarabine	levoleucovorin	leucovorin	
+CYP3A5*3A		felodipine	paclitaxel	flecainide	nimodipine	cilostazol	granisetron	itraconazole	carbamazepine	levoketoconazole	atazanavir	ritonavir	cyclophosphamide	ketoconazole	oxycodone	maraviroc	clomipramine	
+rs2306283		(6r)-folinic acid	cm-4307	sorafenib	capecitabine	mycophenolic acid	repaglinide	rocuronium	fluorouracil	levoleucovorin	leucovorin	
+rs1870377		carfilzomib	betamethasone	cm-4307	dexamethasone	sorafenib	lenalidomide	
+rs2305948		carfilzomib	betamethasone	cm-4307	dexamethasone	sorafenib	clopidogrel	lenalidomide	
+rs2231142		fluvastatin	dolutegravir	imatinib	simvastatin	apixaban	levoleucovorin	leucovorin	felodipine	(6r)-folinic acid	tenofovir	risperidone	sorafenib	nilotinib	dasatinib	cm-4307	ofloxacin	capecitabine	epirubicin	d-levofloxacin	cyclophosphamide	levofloxacin	doxorubicin	rosuvastatin	allopurinol	efavirenz	
+rs2231137		nilotinib	dasatinib	cm-4307	sorafenib	imatinib	
+rs833061		carfilzomib	sunitinib	betamethasone	cm-4307	dexamethasone	pemetrexed	sorafenib	lenalidomide	
+CYP2C8*3		amodiaquine	cerivastatin	dexibuprofen	montelukast	repaglinide	tacrolimus	simvastatin	ibuprofen	rosiglitazone	
+CYP2C8*1A		diclofenac	cerivastatin	dexibuprofen	montelukast	tacrolimus	ibuprofen	rosiglitazone	
+rs6280		methylphenidate	paroxetine	levodopa	dexpramipexole	metamfetamine	dexmethylphenidate	quetiapine	pramipexole	levmetamfetamine	
+rs2295490		methylphenidate	dexmethylphenidate	4-chloro-n-[(2s)-2-methyl-2,3-dihydro-1h-indol-1-yl]-3-sulfamoylbenzamide	indapamide	perindopril	
+rs760370		paclitaxel	ribavirin	gemcitabine	trifluridine	levovirin	
+CYP2C8*4		diclofenac	cerivastatin	dexibuprofen	epirubicin	montelukast	cyclophosphamide	ibuprofen	doxorubicin	
+NAT2*14A		isoniazid	trimethoprim	sulfamethoxazole	sulfamethazine	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	
+NAT2*14B		solithromycin	isoniazid	trimethoprim	sulfamethoxazole	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	
+NAT2*6A		solithromycin	clonazepam	trimethoprim	sulfamethazine	sulfapyridine	2,4-diamino-5-(3,4,5-trimethoxy-benzyl)-pyrimidin-1-ium	
+rs1801131		prednisolone	(6r)-folinic acid	pemetrexed	gemcitabine	benazepril	oxaliplatin	vincristine	daunorubicin	levoleucovorin	leucovorin	
+rs121434568		paclitaxel	docetaxel	erlotinib	gemcitabine	osimertinib	
+UGT1A1*6		nilotinib	betamethasone	dexamethasone	dolutegravir	etoposide	
+rs4135385		betamethasone	dexamethasone	thalidomide	cyclophosphamide	lenalidomide	
+rs1042522		capecitabine	epirubicin	oxaliplatin	fluorouracil	doxorubicin	
+rs1800566		4-methoxybenzenesulfinate	epirubicin	oxaliplatin	etoposide	fluorouracil	methotrexate	doxorubicin	
+rs4673		prednisolone	epirubicin	idarubicin	simvastatin	cyclophosphamide	doxorubicin	vincristine	prednisone	
+rs4646		paclitaxel	anastrozole	exemestane	letrozole	docetaxel	epirubicin	cyclophosphamide	fluorouracil	doxorubicin	tamoxifen	
+rs396991		prednisolone	epirubicin	cyclophosphamide	doxorubicin	vincristine	
+rs8187710		paclitaxel	epirubicin	trabectedin	cyclophosphamide	lopinavir	doxorubicin	rosuvastatin	
+rs3740066		(6r)-folinic acid	epirubicin	oxaliplatin	cyclophosphamide	fluorouracil	doxorubicin	rosuvastatin	vincristine	levoleucovorin	leucovorin	
+rs67376798		(6r)-folinic acid	docetaxel	epirubicin	oxaliplatin	doxorubicin	levoleucovorin	leucovorin	
+rs4402960		epirubicin	repaglinide	oxaliplatin	fluorouracil	doxorubicin	
+rs780094		epirubicin	oxaliplatin	fluorouracil	fenofibrate	doxorubicin	
+rs662		epirubicin	oxaliplatin	simvastatin	fluorouracil	doxorubicin	
+rs117412760		dextrothyroxine	propylthiouracil	methimazole	levothyroxine	liotrix	
+rs200245496		dextrothyroxine	propylthiouracil	methimazole	levothyroxine	liotrix	
+rs267606619		amikacin	framycetin	gentamicin	kanamycin	tobramycin	streptomycin	
+rs267606617		amikacin	framycetin	gentamicin	kanamycin	tobramycin	streptomycin	
+rs267606618		amikacin	framycetin	gentamicin	kanamycin	tobramycin	streptomycin	
+rs1805128		quinidine	quinine	amiodarone	sotalol	quinidine barbiturate	
+rs242941		fluoxetine	(s)-fluoxetine	(r)-fluoxetine	budesonide	fluticasone propionate	
+rs1415744		haloperidol	risperidone	chlorpromazine	quetiapine	trifluoperazine	
+rs12979860		simeprevir	faldaprevir	ledipasvir	boceprevir	sofosbuvir	ritonavir	velpatasvir	ombitasvir	daclatasvir	grazoprevir	deleobuvir	paritaprevir	
+rs6785049		sunitinib	ritonavir	temsirolimus	sirolimus	methotrexate	
+rs3917412		(6r)-folinic acid	capecitabine	oxaliplatin	fluorouracil	levoleucovorin	leucovorin	
+rs3136228		(6r)-folinic acid	oxaliplatin	fluorouracil	levoleucovorin	leucovorin	
+rs1799794		(6r)-folinic acid	oxaliplatin	fluorouracil	levoleucovorin	leucovorin	
+rs3212948		(6r)-folinic acid	oxaliplatin	fluorouracil	levoleucovorin	leucovorin	
+rs1885301		(6r)-folinic acid	oxaliplatin	fluorouracil	levoleucovorin	leucovorin	
+rs2074087		(6r)-folinic acid	oxaliplatin	fluorouracil	azathioprine	levoleucovorin	leucovorin	
+rs8667		hydrocortisone	cytidine	cyclophosphamide	methotrexate	vincristine	prednisone	cytarabine	daunorubicin	
+rs639174		mercaptopurine	cytidine	cyclophosphamide	methotrexate	vincristine	prednisone	cytarabine	daunorubicin	
+rs738409		prednisolone	mercaptopurine	cytidine	cyclophosphamide	vincristine	cytarabine	daunorubicin	
+rs6977967		hydrocortisone	cytidine	cyclophosphamide	methotrexate	vincristine	prednisone	cytarabine	daunorubicin	
+rs12402181		hydrocortisone	cytidine	cyclophosphamide	methotrexate	vincristine	prednisone	cytarabine	daunorubicin	
+rs4674470		hydrocortisone	cytidine	cyclophosphamide	methotrexate	vincristine	prednisone	cytarabine	daunorubicin	
+G6PD Mediterranean, Dallas, Panama' Sassari, Cagliari, Birmingham		primaquine	carbaspirin calcium	sulfametopyrazine	acetylsalicylic acid	aloxiprin	ciprofloxacin	daunorubicin	sulfadoxine	
+rs225440		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs861539		irinotecan	(6r)-folinic acid	docetaxel	fluorouracil	levoleucovorin	leucovorin	
+rs10937158		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs7699188		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs1127648		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs3749438		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs1056515		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs329007		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs11280056		pemetrexed	capecitabine	fluorouracil	methotrexate	azacitidine	
+rs2292997		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs2302273		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+rs2661280		irinotecan	(6r)-folinic acid	fluorouracil	levoleucovorin	leucovorin	
+HLA-DRB1*07:01:01:01		amoxicillin	clavulanic acid	mercaptopurine	carbamazepine	azathioprine	lapatinib	
+rs1057910		naproxen	diclofenac	losartan	dexibuprofen	simvastatin	ibuprofen	
+CYP2C8*2		amodiaquine	paclitaxel	pioglitazone	dexibuprofen	ibuprofen	
+rs2279238		aluminium nicotinate	verapamil	laropiprant	chromium nicotinate	dexverapamil	niacin	
+rs3025039		irinotecan	sunitinib	(6r)-folinic acid	capecitabine	levoleucovorin	leucovorin	
+rs10306114		latanoprost	carbaspirin calcium	clopidogrel	acetylsalicylic acid	aloxiprin	
+rs5186		nitrendipine	losartan	captopril	1-(3-mercapto-2-methyl-propionyl)-pyrrolidine-2-carboxylic acid	hydrochlorothiazide	atorvastatin	perindopril	
+rs2291075		mitoxantrone	cytidine	etoposide	cytarabine	daunorubicin	
+rs3737224		prasugrel	carbaspirin calcium	clopidogrel	acetylsalicylic acid	aloxiprin	
+rs3093135		ticagrelor	carbaspirin calcium	clopidogrel	acetylsalicylic acid	aloxiprin	
+rs41273215		prasugrel	carbaspirin calcium	clopidogrel	acetylsalicylic acid	aloxiprin	
+rs2234693		anastrozole	letrozole	leflunomide	metamfetamine	levmetamfetamine	
+rs2314339		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs3919583		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs59724122		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs7405404		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs8192440		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs1521470		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs62200793		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs209474		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs74795342		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs324899		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs6942227		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs16909440		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs2284017		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs79403677		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs1611255		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs6728642		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs1611259		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs75222709		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs1800532		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs78015114		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs1799913		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs61123830		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs2826494		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs7959663		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs16973410		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs2499984		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs11869731		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs79663003		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs66486766		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs2284018		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs140504		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs7588746		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs17026688		lithium cation	lithium succinate	lithium hydroxide	lithium citrate	lithium carbonate	
+rs1799945		n-(2-ferrocenylethyl)maleimide	iron	phenylferricrocin-iron	ferric oxide	ferricrocin-iron	iron azide hydrate	
+rs1800562		n-(2-ferrocenylethyl)maleimide	iron	phenylferricrocin-iron	ferric oxide	ferricrocin-iron	iron azide hydrate	
+rs113488022		trametinib	binimetinib	encorafenib	vemurafenib	cobimetinib	selumetinib	
+rs8099917		simeprevir	ledipasvir	sofosbuvir	telaprevir	daclatasvir	

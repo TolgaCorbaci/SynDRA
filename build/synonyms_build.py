@@ -4,7 +4,7 @@ synonyms_build.py
 Phase 4 + 5: Attach synonyms and handle orphan records.
 
 Phase 4 - Direct: synonyms attached to structure-bearing LINCS records.
-Phase 4 - Indirect: synonym-only sources (KatDB, TTD, PRISM) resolved into
+Phase 4 - Indirect: synonym-only sources (TTD, PRISM) resolved into
           existing nodes via shared xref or normalized name.
 Phase 5 - Orphans: unresolvable name-only records are KEPT as provisional nodes
           (not dropped), fixing the old BRD-centric drop behavior.
@@ -113,37 +113,6 @@ def add_lincs_synonyms(hub: CompoundHub, df_lincs: pd.DataFrame) -> None:
                 added += 1
 
     print(f"[Phase 4 / LINCS synonyms]  synonym rows added≈{added}")
-
-
-# ---------------------------------------------------------------------------
-# Phase 4: Indirect - KatDB
-# ---------------------------------------------------------------------------
-
-def add_katdb_synonyms(hub: CompoundHub, filepath: str) -> None:
-    """Link KatDB drug names to nodes via BRD xref. KatDB provides translated
-    WHO/ChEMBL names for BRD entries that may lack them in LINCS."""
-    if not os.path.exists(filepath):
-        print(f"[Phase 4 / KatDB] not found, skipping: {filepath}")
-        return
-
-    df = pd.read_csv(filepath, dtype=str).fillna("")
-    linked = orphaned = 0
-
-    for _, row in df.iterrows():
-        input_type = _clean(row.get("input_type", "")).upper()
-        input_name = _clean(row.get("input_name", ""))
-        target_name = _clean(row.get("target_name", ""))
-
-        # KatDB maps BRD -> translated name
-        if input_type == "BRD" and input_name:
-            sid = hub.resolve(xrefs=[("BRD", input_name)])
-            if sid and target_name and not _is_junk(target_name):
-                hub.add_synonym(sid, target_name, source="katdb", license="open")
-                linked += 1
-            elif sid is None:
-                orphaned += 1
-
-    print(f"[Phase 4 / KatDB]  linked={linked}  unlinked={orphaned}")
 
 
 # ---------------------------------------------------------------------------

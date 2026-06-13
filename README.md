@@ -18,7 +18,7 @@ Try SynDRA interactively: <https://tolgacorbaci.shinyapps.io/syndra/>
 
 ## What SynDRA does
 
-- Integrates drug synonyms from **KatDB**, **TTD**, **PRISM**, and **LINCS 2020**
+- Integrates drug synonyms from **TTD**, **PRISM**, **LINCS 2020**, and **DrugCentral**
 - Normalizes and deduplicates synonyms into a single mapping across
   **BRD IDs**, **TTD IDs**, and **PubChem CIDs**
 - Resolves each compound to a standardized **parent InChIKey** (salt/solvent

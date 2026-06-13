@@ -17,3 +17,6 @@ venv/
 
 # Large/intermediate data — keep only released, versioned outputs
 *.tmp
+
+# Data dumps
+synonyms/input/Drugcentral/drugcentral.dump.11012023.sql

@@ -2,7 +2,7 @@
 """
 build_synonym_db.py — reproducible SynDRA build pipeline.
 
-Integrates drug synonyms from four sources into a single
+Integrates drug synonyms from three sources into a single
     synonym -> {BROAD_drug_ID, TTD_drug_ID, PubChem_CID}
 mapping, then propagates identifiers across sources through shared synonyms and
 keeps the BROAD-anchored rows (LINCS/L1000 focus).
@@ -15,10 +15,9 @@ This replaces the exploratory `create_synonym_database.ipynb`:
   * no dead/commented exploratory cells
 
 Sources (see DATA_SOURCES.md for versions/licenses):
-  KatDB   L1000_BRD_name_translated_drug_list.csv   input_name -> BROAD_drug_ID
-  LINCS   compoundinfo_beta.txt                      pert_id    -> BROAD_drug_ID
-  TTD     P1-04-Drug_synonyms.txt                    TTD_drug_ID
-  PRISM   PRISM_drug_synonyms.csv                    PubChem_CID
+  LINCS   compoundinfo_beta.txt      pert_id    -> BROAD_drug_ID
+  TTD     P1-04-Drug_synonyms.txt    TTD_drug_ID
+  PRISM   PRISM_drug_synonyms.csv    PubChem_CID
 
 Usage:
     python build_synonym_db.py
@@ -36,14 +35,6 @@ def _norm(series):
     """Lower-case, strip, and blank-out empty/sentinel synonym strings."""
     s = series.astype("string").str.lower().str.strip()
     return s.replace({"": pd.NA, "nan": pd.NA, "none": pd.NA, "missing": pd.NA})
-
-
-def load_katdb(path):
-    df = pd.read_csv(path)
-    df = df.rename(columns={"input_name": "BROAD_drug_ID", "target_name": "synonyms"})
-    df["synonyms"] = _norm(df["synonyms"])
-    return (df[["BROAD_drug_ID", "synonyms"]]
-            .dropna(subset=["synonyms"]).drop_duplicates(subset=["synonyms"]))
 
 
 def load_lincs(path):
@@ -113,16 +104,14 @@ def iterative_groupwise_fill(df, group_keys, fill_columns, max_iter=10):
 
 def build(input_dir, output_path):
     input_dir = Path(input_dir)
-    katdb = load_katdb(input_dir / "L1000_BRD_name_translated_drug_list.csv")
     lincs = load_lincs(input_dir / "compoundinfo_beta.txt")
     ttd = load_ttd(input_dir / "P1-04-Drug_synonyms.txt")
     prism = load_prism(input_dir / "PRISM_drug_synonyms.csv")
-    print(f"Loaded synonyms  KatDB={len(katdb):,}  LINCS={len(lincs):,}  "
+    print(f"Loaded synonyms  LINCS={len(lincs):,}  "
           f"TTD={len(ttd):,}  PRISM={len(prism):,}")
 
-    # Anchor sources (BROAD-keyed) -> combine, then 3-way outer merge on synonym
-    broad = (pd.concat([katdb, lincs], ignore_index=True)
-               .drop_duplicates(subset=["synonyms"]))
+    # Anchor source (BROAD-keyed), then 3-way outer merge on synonym
+    broad = lincs.drop_duplicates(subset=["synonyms"])
     merged = reduce(lambda l, r: pd.merge(l, r, on="synonyms", how="outer"),
                     [broad, ttd, prism])
     merged["PubChem_CID"] = pd.to_numeric(merged["PubChem_CID"], errors="coerce")

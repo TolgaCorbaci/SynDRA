@@ -20,7 +20,7 @@ Intended build order (see SYNDRA_IMPLEMENTATION_GUIDE.md):
   Phase 6: export() / export_redistributable(...)                  -> outputs
 
 The real source-specific loaders (Repurposing Hub samples, TTD, merged_data,
-B3DB, DrugCentral, KatDB, PRISM synonyms, ...) are left to the agent; they just
+B3DB, DrugCentral, PRISM synonyms, ...) are left to the agent; they just
 call these methods. The hard, error-prone parts (dedup, linking, orphan keep,
 license split) live here so they're consistent across sources.
 """

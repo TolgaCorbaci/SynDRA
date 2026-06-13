@@ -7,15 +7,15 @@ before publishing it. (Editors and reviewers routinely check this.)
 
 | Source | File | URL | Version / release | Downloaded | License / terms |
 |--------|------|-----|-------------------|------------|-----------------|
-| **KatDB** (Kat Koler) | `L1000_BRD_name_translated_drug_list.csv` | internal / lab resource | _add_ | _add_ | Lab-internal — obtain permission + attribution before redistribution |
 | **Therapeutic Targets Database (TTD)** | `P1-04-Drug_synonyms.txt` | https://idrblab.org/ttd/ | _add (e.g. TTD 2024)_ | _add_ | Free for academic use — **verify redistribution terms** |
 | **PRISM Repurposing** | `PRISM_drug_synonyms.csv` | https://github.com/broadinstitute/prism_repurposing | _add_ | _add_ | Broad / DepMap terms — **verify** |
 | **LINCS 2020 (CMap)** | `compoundinfo_beta.txt` | https://clue.io/releases/data-dashboard | _add (e.g. 2020 beta)_ | _add_ | clue.io / LINCS data-use terms — **verify (commonly CC-BY)** |
+| **DrugCentral** | `drugcentral.dump.*.sql` | https://drugcentral.org | _add_ | _add_ | CC BY-SA 4.0 |
 
 ## Reproducing the build
 
 The build notebook (`synonyms/scripts/create_synonym_database.ipynb`) currently
-references the raw KatDB, TTD, and PRISM files. These raw inputs are **not all
+references the raw TTD and PRISM files. These raw inputs are **not all
 committed** to the repository. To make the build reproducible, either:
 
 1. **Commit the raw inputs** under `synonyms/input/<source>/` (only if licenses

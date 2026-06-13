@@ -24,6 +24,7 @@ import compounds as ph2
 import xrefs as ph3
 import synonyms_build as ph45
 import licensing as ph6
+import drugcentral as dc
 
 # ---------------------------------------------------------------------------
 # Input paths (all relative to project root)
@@ -33,8 +34,8 @@ INPUT = os.path.join(_ROOT_DIR, "synonyms", "input")
 LINCS_PATH = os.path.join(INPUT, "compoundinfo_beta.txt")
 TTD_PATH = os.path.join(INPUT, "P1-04-Drug_synonyms.txt")
 PRISM_PATH = os.path.join(INPUT, "PRISM_drug_synonyms.csv")
-KATDB_PATH = os.path.join(INPUT, "L1000_BRD_name_translated_drug_list.csv")
 REPHUB_PATH = os.path.join(INPUT, "repurposing_samples.txt")   # optional; skip if absent
+DC_PATH = os.path.join(INPUT, "Drugcentral", "drugcentral.dump.11012023.sql")
 
 OUTPUT_DIR = os.path.join(_ROOT_DIR, "outputs")
 
@@ -65,7 +66,6 @@ def main():
     # ------------------------------------------------------------------
     print("\n--- Phase 4+5: Synonyms + orphan handling ---")
     ph45.add_lincs_synonyms(hub, df_lincs)
-    ph45.add_katdb_synonyms(hub, KATDB_PATH)
 
     # Parse TTD (needed for both synonyms and xrefs)
     print("  Parsing TTD …")
@@ -80,7 +80,14 @@ def main():
     ph3.add_prism_xrefs(hub, PRISM_PATH)
     ph3.add_ttd_xrefs(hub, df_ttd)
 
-    total_orphans = n_ttd_orphans + n_prism_orphans
+    # ------------------------------------------------------------------
+    # Phase 4+5: DrugCentral (after other synonym phases so name-resolve
+    # benefits from the full synonym index before creating new orphans)
+    # ------------------------------------------------------------------
+    print("\n--- Phase 4+5: DrugCentral ---")
+    n_dc_orphans = dc.add_drugcentral(hub, DC_PATH)
+
+    total_orphans = n_ttd_orphans + n_prism_orphans + n_dc_orphans
     print(f"\n[Phase 5 summary]  orphan nodes created={total_orphans}"
           " (old pipeline would have dropped these)")
 

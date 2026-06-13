@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SynDRA — drug synonym harmonization for L1000 repurposing</title>
-<meta name="description" content="Resolve any drug name, synonym, or identifier to a single L1000 compound — and every BRD identifier that represents the same molecule.">
+<meta name="description" content="Resolve any drug name, synonym, or identifier to a canonical compound — with every structural variant, cross-reference, and L1000 BRD identifier that represents the same molecule.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -208,6 +208,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+/* ---------- enrichment ---------- */
+.enrich-opts{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0}
+.enrich-opts label{display:flex;align-items:center;gap:5px;font-size:13.5px;color:var(--ink-2)}
+.enrich-opts input[type=number]{width:65px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;font-size:13px;outline:0}
+.enrich-opts input[type=number]:focus{border-color:var(--teal)}
+.enrich-opts select{padding:5px 10px;border:1px solid var(--line);border-radius:6px;font-size:13px;outline:0;background:var(--surface)}
+.enrich-opts select:focus{border-color:var(--teal)}
+.enrich-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.enrich-table th{text-align:left;padding:9px 12px;border-bottom:2px solid var(--line);font-weight:600;font-size:11.5px;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--muted);white-space:nowrap;cursor:pointer;user-select:none}
+.enrich-table th:hover{color:var(--ink)}
+.enrich-table td{padding:8px 12px;border-bottom:1px solid var(--line-2);vertical-align:middle}
+.enrich-table tr:last-child td{border-bottom:0}
+.enrich-table tbody tr:hover td{background:var(--teal-050)}
+.sig-h{color:#0A7A72;font-weight:600}
+.sig-m{color:#7a6200}
+.enrich-bar{display:inline-block;height:7px;background:var(--teal);border-radius:3px;margin-left:5px;vertical-align:middle;opacity:.55;min-width:2px}
+.enrich-status{font-size:13px;color:var(--muted);margin-top:8px}
 </style>
 </head>
 <body>
@@ -224,6 +243,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     </a>
     <div class="nav-links">
       <a href="#how">How it works</a>
+      <a href="#enrich">Enrichment</a>
       <a href="#data">Data</a>
       <a href="#cite">Cite</a>
       <a class="nav-gh" href="https://github.com/hidelab/SynDRA" target="_blank" rel="noopener">
@@ -245,12 +265,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   <div class="wrap">
     <span class="eyebrow"><span class="dot"></span>L1000 · CMap drug repurposing</span>
     <h1 class="head">Many names.<br>One <em>molecule.</em></h1>
-    <p class="sub">A drug travels under dozens of names and identifiers. SynDRA resolves any of them to a single L1000 compound — and reveals every BRD identifier that represents the same molecule.</p>
+    <p class="sub">A drug travels under dozens of names and identifiers. SynDRA resolves any of them to a single canonical compound — and reveals every structural variant, cross-reference, and L1000 signature that represents the same molecule.</p>
 
     <div class="search">
       <div class="search-box">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Search a drug name, synonym, brand, or BRD ID…" aria-label="Search for a drug">
+        <input id="q" type="text" autocomplete="off" spellcheck="false" placeholder="Search a drug name, synonym, brand, BRD ID, or SynDRA ID…" aria-label="Search for a drug">
         <button class="btn-go" id="go">Search</button>
         <button class="btn-go" id="list-btn" style="margin-left:8px;background:#0A7A72">List</button>
       </div>
@@ -326,9 +346,59 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 <section class="stats" id="stats">
   <div class="wrap">
     <div class="stat"><div class="n" id="s-syn">—</div><div class="l">harmonized synonyms</div></div>
-    <div class="stat"><div class="n" id="s-brd">—</div><div class="l">L1000 BRD compounds</div></div>
-    <div class="stat"><div class="n" id="s-par">—</div><div class="l">unique parent molecules</div></div>
-    <div class="stat"><div class="n">~75<span class="u">%</span></div><div class="l">are salt / form duplicates</div></div>
+    <div class="stat"><div class="n" id="s-brd">—</div><div class="l">canonical compounds</div></div>
+    <div class="stat"><div class="n" id="s-par">—</div><div class="l">resolved to structure</div></div>
+    <div class="stat"><div class="n" id="s-orphan">—</div><div class="l">name-only entries retained</div></div>
+  </div>
+</section>
+
+<section class="section" id="enrich" style="border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="kicker">Drug-Set Enrichment</div>
+    <h2>Find biological patterns in your drug list</h2>
+    <p class="lede">Paste any set of drug names — SynDRA resolves them through its synonym map and runs over-representation analysis (ORA) across 21 pharmacological libraries using the hypergeometric test with Benjamini–Hochberg FDR correction.</p>
+
+    <div class="card" style="margin-top:28px;max-width:680px">
+      <h3 style="margin:0 0 10px;font-size:15px">Drug list</h3>
+      <textarea id="enrich-ta" spellcheck="false"
+        placeholder="atorvastatin&#10;simvastatin&#10;rosuvastatin&#10;lovastatin&#10;pravastatin&#10;pitavastatin"
+        style="width:100%;height:126px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;
+          font-family:var(--mono);font-size:13.5px;resize:vertical;outline:0;display:block"></textarea>
+      <div class="enrich-opts">
+        <label>FDR ≤ <input type="number" id="enrich-fdr" value="0.05" min="0.001" max="1" step="0.001"></label>
+        <label>Min overlap ≥ <input type="number" id="enrich-k" value="2" min="1" max="50"></label>
+        <select id="enrich-lib-filter"><option value="">All libraries</option></select>
+        <button class="btn-go" id="enrich-run" style="padding:9px 22px">Run enrichment</button>
+      </div>
+      <div id="enrich-msg" class="enrich-status" style="display:none"></div>
+    </div>
+
+    <div id="enrich-results-wrap" style="display:none;margin-top:20px">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;gap:12px">
+          <div>
+            <strong id="enrich-res-title"></strong>
+            <div id="enrich-coverage" class="enrich-status"></div>
+          </div>
+          <button class="btn-ghost" id="enrich-export" style="flex:none">Export CSV</button>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="enrich-table">
+            <thead><tr>
+              <th data-col="library">Library</th>
+              <th data-col="term">Term</th>
+              <th data-col="k" title="Overlap / Term members">k / M</th>
+              <th data-col="pval">p-value</th>
+              <th data-col="qval">FDR q</th>
+            </tr></thead>
+            <tbody id="enrich-tbody"></tbody>
+          </table>
+        </div>
+        <div id="enrich-more-wrap" style="text-align:center;margin-top:12px;display:none">
+          <button class="btn-ghost" id="enrich-more">Show all</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -336,11 +406,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
   <div class="wrap">
     <div class="kicker">How it works</div>
     <h2>The same drug, scattered across names and identifiers — reassembled.</h2>
-    <p class="lede">SynDRA integrates drug synonyms from KatDB, TTD, PRISM, and LINCS 2020, then anchors every name to a standardized parent structure so that salts, solvates, and stereoisomers of one molecule resolve together.</p>
+    <p class="lede">SynDRA integrates drug synonyms from KatDB, TTD, PRISM, and LINCS 2020, then anchors every name to a standardized InChIKey so that salts, solvates, and stereoisomers of one molecule all resolve to the same canonical compound.</p>
     <div class="steps">
-      <div class="step"><div class="s-n">01</div><h4>Harmonize names</h4><p>Synonyms, brand names, and identifiers from four sources are normalized and merged into a single map keyed to L1000 BRD identifiers.</p></div>
-      <div class="step"><div class="s-n">02</div><h4>Resolve the parent</h4><p>Each compound is reduced to its salt-stripped parent structure (InChIKey connectivity), so "imatinib mesylate" and "imatinib" become one molecule.</p></div>
-      <div class="step"><div class="s-n">03</div><h4>Consolidate signatures</h4><p>Every BRD identifier sharing a parent is linked, so one query recovers all replicate L1000 signatures instead of a single entry.</p></div>
+      <div class="step"><div class="s-n">01</div><h4>Harmonize names</h4><p>Synonyms, brand names, and identifiers from four sources are normalized and resolved to a single canonical node — keyed by a stable SynDRA ID, not by BRD. Entries with no structure are retained as name-only nodes rather than dropped.</p></div>
+      <div class="step"><div class="s-n">02</div><h4>Anchor to structure</h4><p>Each compound is standardized with RDKit: desalted, charge-neutralized, and assigned a full InChIKey. Structural variants (salts, solvates, stereoforms) share a common connectivity skeleton and are linked automatically.</p></div>
+      <div class="step"><div class="s-n">03</div><h4>Bridge to L1000 & enrichment</h4><p>BRD identifiers, PubChem CIDs, and TTD IDs are cross-references — all xrefs for variants are surfaced together, so one query recovers every L1000 signature and enrichment library member for the same molecule.</p></div>
     </div>
   </div>
 </section>
@@ -382,20 +452,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
 <script>
 const $ = s => document.querySelector(s);
 
-// 1. Declare global variables
+// Global state — compounds keyed by syndra_id (SYN0000001)
 let COMP = {};
 let INDEX = {};
 let KEYS = [];
 let DATA = {};
 
-// 2. Fetch the local JSON and initialize
 fetch('syndra_data.json')
   .then(res => {
     if (!res.ok) throw new Error("Could not find syndra_data.json");
     return res.json();
   })
-  .then(fullData => { 
-    initApp(fullData); 
+  .then(fullData => {
+    initApp(fullData);
   })
   .catch(err => console.error("Error loading data:", err));
 
@@ -405,12 +474,12 @@ function initApp(fullData) {
   INDEX = DATA.index || {};
   KEYS = Object.keys(INDEX);
 
-  // Populate Stats
   const fmt = n => (n || 0).toLocaleString('en-US');
   if (DATA.stats) {
-    $('#s-syn').textContent = fmt(DATA.stats.synonyms);
-    $('#s-brd').textContent = fmt(DATA.stats.broad);
-    $('#s-par').textContent = fmt(DATA.stats.parents);
+    $('#s-syn').textContent    = fmt(DATA.stats.synonyms);
+    $('#s-brd').textContent    = fmt(DATA.stats.compounds);
+    $('#s-par').textContent    = fmt(DATA.stats.with_structure);
+    $('#s-orphan').textContent = fmt(DATA.stats.orphans);
   }
 }
 
@@ -419,28 +488,26 @@ const qEl = $('#q'), acEl = $('#ac');
 let acItems = [], acSel = -1;
 
 function suggest(v) {
-  if (!KEYS.length) return; // Prevent searching before data is loaded
-  
+  if (!KEYS.length) return;
   v = v.trim().toLowerCase();
   if (v.length < 2) { closeAc(); return; }
-  
+
   const starts = [], incl = [];
   for (const k of KEYS) {
     if (k.startsWith(v)) starts.push(k);
     else if (k.includes(v)) incl.push(k);
     if (starts.length >= 8) break;
   }
-  
-  // Deduplicate suggestions by parent InChIKey when available so the
-  // same compound (profiled under multiple BRD IDs) appears once.
-  const seenParent = new Set(), out = [];
+
+  // Deduplicate by full InChIKey (salts/stereo of same compound appear once)
+  const seenIk = new Set(), out = [];
   for (const k of [...starts, ...incl]) {
-    const brd = INDEX[k];
-    const comp = COMP[brd] || {};
-    const dedupeKey = comp.parent ? `parent:${comp.parent}` : `brd:${brd}`;
-    if (seenParent.has(dedupeKey)) continue;
-    seenParent.add(dedupeKey);
-    out.push({key: k, brd});
+    const sid = INDEX[k];
+    const comp = COMP[sid] || {};
+    const dedupeKey = comp.inchikey ? `ik:${comp.inchikey}` : `sid:${sid}`;
+    if (seenIk.has(dedupeKey)) continue;
+    seenIk.add(dedupeKey);
+    out.push({key: k, sid});
     if (out.length >= 7) break;
   }
   renderAc(out, v);
@@ -450,74 +517,45 @@ function renderAc(items, v) {
   acItems = items; acSel = -1;
   if (!items.length) { closeAc(); return; }
   acEl.innerHTML = items.map((it, i) => {
-    const c = COMP[it.brd]; 
-    const nm = c.name || '';
+    const c = COMP[it.sid] || {};
+    const nm = c.name || it.sid;
     const hl = nm.replace(new RegExp('(' + v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<b>$1</b>');
-    const tag = c.n_variants ? (c.n_variants + 1) + ' BRD IDs' : (c.target || '');
-    return `<div class="ac-item" data-i="${i}"><span class="ac-name">${hl}</span><span class="ac-tag">${tag}</span></div>`;
+    const tag = c.n_variants > 0 ? (c.n_variants + 1) + ' variants' : (c.brd || it.sid);
+    return `<div class="ac-item" data-i="${i}"><span class="ac-name">${hl}</span><span class="ac-tag">${esc(tag)}</span></div>`;
   }).join('');
-  
+
   acEl.classList.add('open');
   acEl.querySelectorAll('.ac-item').forEach(el => {
-    el.onclick = () => { 
-      const it = acItems[+el.dataset.i]; 
-      qEl.value = COMP[it.brd].name; 
-      closeAc(); 
-      show(it.brd); 
+    el.onclick = () => {
+      const it = acItems[+el.dataset.i];
+      qEl.value = (COMP[it.sid] || {}).name || it.sid;
+      closeAc();
+      show(it.sid);
     };
   });
 }
 
-function closeAc() { 
-  acEl.classList.remove('open'); 
-  acItems = []; 
-  acSel = -1; 
-}
+function closeAc() { acEl.classList.remove('open'); acItems = []; acSel = -1; }
 
 qEl.addEventListener('input', e => suggest(e.target.value));
 qEl.addEventListener('keydown', e => {
-  if (!acEl.classList.contains('open')) { 
-    if (e.key === 'Enter') runSearch(); 
-    return; 
-  }
-  if (e.key === 'ArrowDown') { 
-    e.preventDefault(); 
-    acSel = Math.min(acSel + 1, acItems.length - 1); 
-    paintSel(); 
-  } else if (e.key === 'ArrowUp') { 
-    e.preventDefault(); 
-    acSel = Math.max(acSel - 1, 0); 
-    paintSel(); 
-  } else if (e.key === 'Enter') { 
-    e.preventDefault(); 
-    if (acSel >= 0) { 
-      const it = acItems[acSel]; 
-      qEl.value = COMP[it.brd].name; 
-      closeAc(); 
-      show(it.brd);
-    } else {
-      runSearch(); 
-    }
-  } else if (e.key === 'Escape') { 
-    closeAc(); 
-  }
+  if (!acEl.classList.contains('open')) { if (e.key === 'Enter') runSearch(); return; }
+  if (e.key === 'ArrowDown') { e.preventDefault(); acSel = Math.min(acSel + 1, acItems.length - 1); paintSel(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); acSel = Math.max(acSel - 1, 0); paintSel(); }
+  else if (e.key === 'Enter') {
+    e.preventDefault();
+    if (acSel >= 0) { const it = acItems[acSel]; qEl.value = (COMP[it.sid] || {}).name || ''; closeAc(); show(it.sid); }
+    else runSearch();
+  } else if (e.key === 'Escape') closeAc();
 });
 
-function paintSel() { 
-  acEl.querySelectorAll('.ac-item').forEach((el, i) => el.classList.toggle('sel', i === acSel)); 
-}
+function paintSel() { acEl.querySelectorAll('.ac-item').forEach((el, i) => el.classList.toggle('sel', i === acSel)); }
 
-document.addEventListener('click', e => { 
-  if (!e.target.closest('.search')) closeAc(); 
-});
+document.addEventListener('click', e => { if (!e.target.closest('.search')) closeAc(); });
 
 $('#go').onclick = runSearch;
 document.querySelectorAll('.chip').forEach(c => {
-  c.onclick = () => { 
-    qEl.value = c.dataset.q; 
-    closeAc(); 
-    runSearch(); 
-  };
+  c.onclick = () => { qEl.value = c.dataset.q; closeAc(); runSearch(); };
 });
 
 // List UI wiring
@@ -526,18 +564,20 @@ $('#list-close').onclick = () => { $('#list-panel').style.display = 'none'; };
 $('#list-clear').onclick = () => { $('#list-ta').value = ''; };
 $('#list-run').onclick = () => { processList($('#list-ta').value); };
 
-// Resolve a single query string to a BRD (or null)
+// Resolve a single query string to a syndra_id (or null)
 function resolveQuery(q) {
   if (!q) return null;
   const raw = String(q).trim();
   if (!raw) return null;
   const v = raw.toLowerCase();
-  const brdMatch = raw.match(/^brd-[a-z0-9]+$/i);
-  if (brdMatch) {
-    const brdKey = raw.toUpperCase();
-    if (COMP[brdKey]) return brdKey;
-  }
+
+  // Direct SynDRA ID lookup (SYN0000001)
+  if (/^syn\d+$/i.test(raw) && COMP[raw.toUpperCase()]) return raw.toUpperCase();
+
+  // Exact index match (covers BRD IDs, synonym norms)
   if (INDEX[v]) return INDEX[v];
+
+  // Prefix / substring fallback
   const k = KEYS.find(k => k.startsWith(v)) || KEYS.find(k => k.includes(v));
   if (k) return INDEX[k];
   return null;
@@ -547,36 +587,40 @@ function resolveQuery(q) {
 function processList(text) {
   const parts = text.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
   if (!parts.length) return toast('No entries in list');
-  const resolved = parts.map(p => ({q: p, brd: resolveQuery(p)}));
+  const resolved = parts.map(p => ({q: p, sid: resolveQuery(p)}));
 
-  // Aggregate by parent (so variants are grouped) and capture target/moa
+  // Aggregate by InChIKey skeleton (groups salt/stereo variants together)
   const agg = {};
   const unmatchedList = [];
   for (const r of resolved) {
-    const brd = r.brd;
-    if (!brd) {
+    const sid = r.sid;
+    if (!sid) {
       unmatchedList.push(r.q);
       agg[`unmatched:${r.q}`] = (agg[`unmatched:${r.q}`] || 0) + 1;
       continue;
     }
-    const comp = COMP[brd] || {};
-    const key = comp.parent ? `parent:${comp.parent}` : `brd:${brd}`;
-    if (!agg[key]) agg[key] = {count:0, brd: brd, name: comp.name || brd, target: comp.target || '', moa: comp.moa || ''};
+    const comp = COMP[sid] || {};
+    const key = comp.skeleton ? `sk:${comp.skeleton}` : `sid:${sid}`;
+    if (!agg[key]) agg[key] = {count: 0, sid, name: comp.name || sid, brd: comp.brd || '', target: comp.target || '', moa: comp.moa || ''};
     agg[key].count += 1;
   }
 
-  // Build HTML summary including target/moa metadata
-  const rows = Object.entries(agg).map(([k,v]) => {
+  const rows = Object.entries(agg).map(([k, v]) => {
     if (k.startsWith('unmatched:')) {
-      const q = k.replace('unmatched:','');
+      const q = k.replace('unmatched:', '');
       return `<div style="padding:8px 12px;border-bottom:1px solid var(--line-2)"><span style="font-weight:600;color:var(--muted)">${esc(q)}</span> <span style="color:var(--coral);margin-left:8px">(no match)</span></div>`;
     }
-    const meta = (v.target || v.moa) ? `<div style="color:var(--muted);font-size:13px;margin-top:6px">${v.target?`Target: ${esc(v.target)}`:''}${v.target && v.moa ? ' · ' : ''}${v.moa?`MOA: ${esc(v.moa)}`:''}</div>` : '';
-    return `<div style="padding:8px 12px;border-bottom:1px solid var(--line-2);display:flex;justify-content:space-between;align-items:center"><div><div style="font-weight:600">${esc(v.name)}</div><div style="font-family:var(--mono);color:var(--muted);font-size:13px">${esc(v.brd)}</div>${meta}</div><div><span class="badge">${v.count} hits</span><button class="btn-ghost" style="margin-left:8px" onclick="show('${v.brd}')">Open</button></div></div>`;
+    const meta = (v.target || v.moa)
+      ? `<div style="color:var(--muted);font-size:13px;margin-top:4px">${v.target ? `Target: ${esc(v.target)}` : ''}${v.target && v.moa ? ' · ' : ''}${v.moa ? `MOA: ${esc(v.moa)}` : ''}</div>`
+      : '';
+    const sub = v.brd ? `<div style="font-family:var(--mono);color:var(--muted);font-size:12px">${esc(v.brd)}</div>` : '';
+    return `<div style="padding:8px 12px;border-bottom:1px solid var(--line-2);display:flex;justify-content:space-between;align-items:center">
+      <div><div style="font-weight:600">${esc(v.name)}</div>${sub}${meta}</div>
+      <div><span class="badge">${v.count} hit${v.count > 1 ? 's' : ''}</span><button class="btn-ghost" style="margin-left:8px" onclick="show('${v.sid}')">Open</button></div>
+    </div>`;
   }).join('');
 
-  // Save last list results for copying
-  window.LAST_LIST_RESULTS = {matched: Object.values(agg).filter(x => x.brd), unmatched: unmatchedList, total: parts.length};
+  window.LAST_LIST_RESULTS = {matched: Object.values(agg).filter(x => x.sid), unmatched: unmatchedList, total: parts.length};
 
   $('#results').innerHTML = `
     <div class="res-head">
@@ -585,67 +629,25 @@ function processList(text) {
         <div class="res-sub"><span class="badge">${parts.length} items</span></div>
       </div>
       <div style="display:flex;gap:8px;align-items:center">
-        <button class="btn-ghost" id="list-copy-names">Copy names</button>
-        <button class="btn-ghost" id="list-copy-brd">Copy BRD IDs</button>
-        <button class="btn-ghost" onclick="resetView()">Clear</button>
+        <button type="button" class="btn-ghost" id="list-copy-names">Copy names</button>
+        <button type="button" class="btn-ghost" id="list-copy-brd">Copy BRD IDs</button>
+        <button type="button" class="btn-ghost" onclick="resetView()">Clear</button>
       </div>
     </div>
     <div class="card">${rows}</div>`;
 
-  // Append a small preview area so users can see what will be copied (debug aid)
-  const preview = document.createElement('pre');
-  preview.id = 'list-copy-preview';
-  preview.style.display = 'none';
-  preview.style.whiteSpace = 'pre-wrap';
-  preview.style.marginTop = '8px';
-  preview.style.padding = '10px';
-  preview.style.border = '1px dashed var(--line-2)';
-  preview.style.borderRadius = '8px';
-  preview.style.fontFamily = 'var(--mono)';
-  preview.style.fontSize = '13px';
-  $('#results').querySelector('.card').appendChild(preview);
-
-  // Attach copy handlers: separate options for names and BRD IDs
   $('#list-copy-names').onclick = () => {
     const L = window.LAST_LIST_RESULTS || {matched: [], unmatched: []};
-    const lines = [];
-    // Normalize: strip any embedded tabs or extra columns to keep only the name
-    for (const m of L.matched) {
-      const nm = m && m.name ? String(m.name).split('\t')[0] : '';
-      lines.push(nm);
-    }
-    if (L.unmatched && L.unmatched.length) {
-      lines.push('');
-      lines.push('Unmatched:');
-      for (const u of L.unmatched) lines.push(u);
-    }
-    const payload = lines.join('\n');
-    console.log('Copy names payload:', payload);
-    // show preview briefly
-    const pv = $('#list-copy-preview'); if (pv) { pv.textContent = payload; pv.style.display = 'block'; setTimeout(()=>pv.style.display='none', 5000); }
-    copy(payload, `Names copied (${L.matched.length} items)`);
+    const lines = L.matched.map(m => m.name || '');
+    if (L.unmatched.length) { lines.push('', 'Unmatched:'); lines.push(...L.unmatched); }
+    copy(lines.join('\n'), `Names copied (${L.matched.length} items)`);
   };
 
   $('#list-copy-brd').onclick = () => {
     const L = window.LAST_LIST_RESULTS || {matched: [], unmatched: []};
-    const lines = [];
-    // Normalize: ensure we only copy the BRD identifier (strip any leading/trailing text)
-    for (const m of L.matched) {
-      let b = m && m.brd ? String(m.brd) : '';
-      // If the brd was accidentally stored as "name\tBRD", take the last column
-      if (b.includes('\t')) b = b.split('\t').pop();
-      // Trim whitespace
-      lines.push(b.trim());
-    }
-    if (L.unmatched && L.unmatched.length) {
-      lines.push('');
-      lines.push('Unmatched:');
-      for (const u of L.unmatched) lines.push(u);
-    }
-    const payload = lines.join('\n');
-    console.log('Copy BRD payload:', payload);
-    const pv2 = $('#list-copy-preview'); if (pv2) { pv2.textContent = payload; pv2.style.display = 'block'; setTimeout(()=>pv2.style.display='none', 5000); }
-    copy(payload, `BRD IDs copied (${L.matched.length} items)`);
+    const lines = L.matched.map(m => m.brd || m.sid || '').filter(Boolean);
+    if (L.unmatched.length) { lines.push('', 'Unmatched:'); lines.push(...L.unmatched); }
+    copy(lines.join('\n'), `BRD IDs copied (${lines.filter(l=>l.startsWith('BRD')).length} items)`);
   };
 
   $('#results').classList.add('show');
@@ -655,25 +657,8 @@ function processList(text) {
 function runSearch() {
   const raw = qEl.value.trim();
   if (!raw) return;
-
-  const v = raw.toLowerCase();
-
-  // If the user entered a BRD identifier directly (case-insensitive),
-  // try resolving it against the compounds map first.
-  const brdMatch = raw.match(/^brd-[a-z0-9]+$/i);
-  if (brdMatch) {
-    const brdKey = raw.toUpperCase();
-    if (COMP[brdKey]) { show(brdKey); return; }
-  }
-
-  // Exact synonym/name match (INDEX keys are lowercase)
-  let brd = INDEX[v];
-  if (!brd) {
-    // Fallback: prefix or substring matches across the searchable keys
-    const k = KEYS.find(k => k.startsWith(v)) || KEYS.find(k => k.includes(v)); 
-    if (k) brd = INDEX[k];
-  }
-  if (brd) show(brd); else noResult();
+  const sid = resolveQuery(raw);
+  if (sid) show(sid); else noResult();
 }
 
 /* ---------- render a compound ---------- */
@@ -682,51 +667,58 @@ let SYN_OPEN = false;
 
 function idRow(k, v, opts={}) {
   if (v == null || v === '') return '';
-  // Normalize numeric-looking values that have a trailing .0 (e.g., PubChem CID "9782.0")
-  let display = v;
-  if (typeof v === 'number') display = String(v);
-  else if (typeof v === 'string' && /^(?:\d+)\.0$/.test(v)) display = v.replace(/\.0$/, '');
-  const inner = opts.href ? `<a href="${opts.href}" target="_blank" rel="noopener">${esc(display)}</a>` : esc(display);
-  const cp = opts.nocopy ? '' : `<button class="copy" title="Copy" data-copy="${esc(v)}"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="5" y="5" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 0 1 1-1h7" stroke="currentColor" stroke-width="1.4"/></svg></button>`;
+  let display = (typeof v === 'number') ? String(v) : String(v).replace(/\.0$/, '');
+  const inner = opts.href
+    ? `<a href="${opts.href}" target="_blank" rel="noopener">${esc(display)}</a>`
+    : esc(display);
+  const cp = opts.nocopy ? '' : `<button class="copy" title="Copy" data-copy="${esc(display)}"><svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="5" y="5" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 11V3a1 1 0 0 1 1-1h7" stroke="currentColor" stroke-width="1.4"/></svg></button>`;
   return `<div class="id-row"><span class="id-k">${k}</span><span class="id-v">${inner}${cp}</span></div>`;
 }
 
-function show(brd) {
-  const c = COMP[brd]; 
+function show(sid) {
+  const c = COMP[sid];
   if (!c) return noResult();
-  
+
   $('#nores').classList.remove('show');
   const variants = c.variants || [];
   const nTotal = (c.n_variants || 0) + 1;
 
   const badges = [
     c.target ? `<span class="badge target">Target · ${esc(c.target)}</span>` : '',
-    c.moa ? `<span class="badge moa">${esc(c.moa)}</span>` : '',
+    c.moa    ? `<span class="badge moa">${esc(c.moa)}</span>` : '',
   ].join('');
+
+  // Collect all BRD IDs: this compound's + variants'
+  const allBrds = [c.brd, ...variants.map(v => (COMP[v] || {}).brd)].filter(Boolean);
 
   const consol = nTotal > 1 ? `
     <div class="consol">
       <div class="consol-top">
         <div class="consol-num">${nTotal}</div>
         <div class="consol-lead">
-          <div class="t">BRD identifiers represent this one molecule</div>
-          <div class="d">In L1000, this compound is profiled under ${nTotal} identifiers — salt, solvate, and stereo variants a name match would treat as different drugs. SynDRA links them so one query recovers every signature.</div>
+          <div class="t">Structural variants of this molecule</div>
+          <div class="d">These entries share the same parent connectivity (InChIKey skeleton). SynDRA links them so one query recovers all related identifiers and every L1000 signature for the same molecule.</div>
         </div>
       </div>
       <div class="consol-mid">
-        <span class="pk">Parent structure&nbsp; <b>${esc(c.parent || '—')}</b></span>
-        <button class="btn-ghost" id="copy-all">Copy all ${nTotal} IDs</button>
+        <span class="pk">Parent skeleton&nbsp; <b>${esc(c.skeleton || '—')}</b></span>
+        ${allBrds.length ? `<button class="btn-ghost" id="copy-all">Copy ${allBrds.length} BRD ID${allBrds.length > 1 ? 's' : ''}</button>` : ''}
       </div>
       <div class="var-grid">
-        <span class="var self">${esc(brd)}</span>
-        ${variants.map(v => `<span class="var">${esc(v)}</span>`).join('')}
+        <span class="var self">${esc(c.brd || sid)}</span>
+        ${variants.map(v => `<span class="var" style="cursor:pointer" onclick="show('${v}')">${esc((COMP[v] || {}).brd || v)}</span>`).join('')}
       </div>
     </div>` : `
     <div class="consol">
       <div class="consol-top">
         <div class="consol-num" style="color:var(--teal)">1</div>
-        <div class="consol-lead"><div class="t">A single L1000 identifier</div>
-        <div class="d">This molecule maps to one BRD identifier in the current catalog. Parent structure <b class="mono">${esc(c.parent || '—')}</b>.</div></div>
+        <div class="consol-lead">
+          <div class="t">${c.has_structure ? 'Single canonical structure' : 'Name-only entry'}</div>
+          <div class="d">${c.has_structure
+            ? `This molecule has a unique canonical structure. Parent skeleton <b class="mono">${esc(c.skeleton || '—')}</b>.`
+            : 'No structure resolved for this entry. It was retained from a synonym-only source rather than dropped.'
+          }</div>
+        </div>
       </div>
     </div>`;
 
@@ -743,39 +735,39 @@ function show(brd) {
     <div class="card">
       <h3><span class="ic">⬡</span> Structure</h3>
       <div class="struct">
-        ${c.smiles ? `<canvas id="struct-canvas"></canvas><div class="smiles">${esc(c.smiles)}</div>`
-          : `<div class="struct-empty">No structure on record for this compound.</div>`}
+        ${c.smiles
+          ? `<canvas id="struct-canvas"></canvas><div class="smiles">${esc(c.smiles)}</div>`
+          : `<div class="struct-empty">No structure on record for this entry.</div>`}
       </div>
     </div>`;
 
-  // Normalize PubChem CID for hyperlink (strip trailing .0 if present)
-  const rawPubchem = c.pubchem;
-  let pubchemHref = null;
-  if (rawPubchem != null && rawPubchem !== '') {
-    const s = (typeof rawPubchem === 'number') ? String(rawPubchem) : String(rawPubchem);
-    const norm = s.replace(/\.0$/, '');
-    pubchemHref = `https://pubchem.ncbi.nlm.nih.gov/compound/${encodeURIComponent(norm)}`;
-  }
+  const pubchemHref = c.pubchem
+    ? `https://pubchem.ncbi.nlm.nih.gov/compound/${encodeURIComponent(String(c.pubchem).replace(/\.0$/, ''))}`
+    : null;
 
   $('#results').innerHTML = `
     <div class="res-head">
       <div>
         <h2 class="res-name">${esc(c.name)}</h2>
-        <div class="res-sub">${badges || ''}</div>
+        <div class="res-sub">${badges}</div>
       </div>
-      <button class="btn-ghost" id="dl"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Download</button>
+      <button class="btn-ghost" id="dl">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download
+      </button>
     </div>
     <div class="grid">
       <div>
         <div class="card">
           <h3><span class="ic">⬡</span> Identifiers</h3>
-          ${idRow('LINCS BRD ID', brd)}
-          ${idRow('Parent InChIKey', c.parent)}
-          ${idRow('Full InChIKey', c.inchikey)}
+          ${idRow('SynDRA ID', sid)}
+          ${idRow('LINCS BRD ID', c.brd)}
+          ${idRow('InChIKey', c.inchikey)}
+          ${idRow('Parent skeleton', c.skeleton)}
           ${idRow('Target', c.target)}
           ${idRow('MOA', c.moa)}
           ${idRow('PubChem CID', c.pubchem, {href: pubchemHref})}
-          ${idRow('TTD drug ID', c.ttd, {nocopy: false})}
+          ${idRow('TTD drug ID', c.ttd)}
         </div>
         ${consol}
       </div>
@@ -793,26 +785,21 @@ function show(brd) {
         width: 280, height: 200, bondThickness: 1.0, padding: 18,
         themes: { light: { C: '#16223C', O: '#EE6A4D', N: '#0E9C92', F: '#6B5BD2', S: '#caa21a', Cl: '#0E9C92', Br: '#a8553a', BACKGROUND: '#fff' } }
       };
-      const sd = new SmiDrawer(opt);
-      sd.draw(c.smiles, '#struct-canvas', 'light');
+      new SmiDrawer(opt).draw(c.smiles, '#struct-canvas', 'light');
     } catch (e) {}
   }
 
   $('#results').querySelectorAll('[data-copy]').forEach(b => b.onclick = () => copy(b.dataset.copy));
-  
-  const ca = $('#copy-all'); 
-  if (ca) ca.onclick = () => copy([brd, ...variants].join('\n'), `${nTotal} IDs copied`);
-  
-  const sm = $('#syn-more'); 
-  if (sm) sm.onclick = () => { SYN_OPEN = !SYN_OPEN; show(brd); };
-  
-  const dl = $('#dl'); 
-  if (dl) dl.onclick = () => download(brd, c);
 
-  // Make badges clickable: show other compounds sharing the same target or MOA
-  $('#results').querySelectorAll('.badge').forEach(b => {
-    b.style.cursor = 'pointer';
-  });
+  const ca = $('#copy-all');
+  if (ca) ca.onclick = () => copy(allBrds.join('\n'), `${allBrds.length} BRD ID${allBrds.length > 1 ? 's' : ''} copied`);
+
+  const sm = $('#syn-more');
+  if (sm) sm.onclick = () => { SYN_OPEN = !SYN_OPEN; show(sid); };
+
+  const dl = $('#dl');
+  if (dl) dl.onclick = () => download(sid, c);
+
   const targBadge = $('#results').querySelector('.badge.target');
   if (targBadge) targBadge.onclick = () => showByTag('target', c.target);
   const moaBadge = $('#results').querySelector('.badge.moa');
@@ -843,8 +830,37 @@ function resetView() {
 }
 
 /* ---------- utilities ---------- */
-function copy(text, msg) { 
-  navigator.clipboard?.writeText(text).then(() => toast(msg || 'Copied'), () => toast('Copy failed')); 
+function copy(text, msg) {
+  const str = (text == null) ? '' : String(text);
+  // Try modern clipboard API first
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(str).then(() => toast(msg || 'Copied'), () => {
+      // Fallback to execCommand if clipboard API fails
+      fallbackCopy(str, msg);
+    });
+  } else {
+    fallbackCopy(str, msg);
+  }
+}
+
+function fallbackCopy(str, msg) {
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = str;
+    // Prevent scrolling to bottom
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    ta.style.top = '0';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    const ok = document.execCommand('copy');
+    document.body.removeChild(ta);
+    if (ok) toast(msg || 'Copied'); else toast('Copy failed');
+  } catch (e) {
+    try { document.body.removeChild(ta); } catch(e) {}
+    toast('Copy failed');
+  }
 }
 
 let tT;
@@ -856,49 +872,298 @@ function toast(m) {
   tT = setTimeout(() => t.classList.remove('show'), 1800); 
 }
 
-function download(brd, c) {
+function download(sid, c) {
+  const allBrds = [c.brd, ...(c.variants || []).map(v => (COMP[v] || {}).brd)].filter(Boolean);
   const row = {
-    query_resolved_to: brd, name: c.name, target: c.target, moa: c.moa, parent_inchikey: c.parent,
-    full_inchikey: c.inchikey, pubchem_cid: c.pubchem, ttd_id: c.ttd, canonical_smiles: c.smiles,
-    n_brd_identifiers: (c.n_variants || 0) + 1, all_brd_ids: [brd, ...(c.variants || [])], synonyms: c.synonyms
+    syndra_id: sid, name: c.name, has_structure: c.has_structure,
+    inchikey: c.inchikey, inchikey_skeleton: c.skeleton, canonical_smiles: c.smiles,
+    brd_id: c.brd, pubchem_cid: c.pubchem, ttd_id: c.ttd,
+    target: c.target, moa: c.moa,
+    n_variants: c.n_variants || 0, all_brd_ids: allBrds,
+    synonyms: c.synonyms,
   };
   const blob = new Blob([JSON.stringify(row, null, 2)], {type: 'application/json'});
-  const a = document.createElement('a'); 
-  a.href = URL.createObjectURL(blob); 
-  a.download = `syndra_${brd}.json`; 
-  a.click(); 
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `syndra_${sid}.json`;
+  a.click();
   URL.revokeObjectURL(a.href);
 }
 
-// Show other compounds that share a target or MOA
+/* ============================================================
+   Drug-Set Enrichment (ORA)
+   Fisher's exact = hypergeometric one-sided p; BH FDR correction
+   ============================================================ */
+let ENRICH_PARSED = null;
+let ENRICH_ROWS   = [];
+let ENRICH_SORT   = {col: 'pval', asc: true};
+
+function _logBinom(n, k) {
+  if (k < 0 || k > n) return -Infinity;
+  if (k === 0 || k === n) return 0;
+  k = Math.min(k, n - k);
+  let r = 0;
+  for (let i = 0; i < k; i++) r += Math.log(n - i) - Math.log(i + 1);
+  return r;
+}
+
+function _hypergeomPval(k, N, M, K) {
+  // P(X >= k) where X ~ Hypergeometric(N, M, K) — one-sided Fisher's exact
+  if (k <= 0) return 1;
+  const logDenom = _logBinom(N, K);
+  let p = 0;
+  const hi = Math.min(K, M);
+  for (let i = k; i <= hi; i++) {
+    p += Math.exp(_logBinom(M, i) + _logBinom(N - M, K - i) - logDenom);
+  }
+  return Math.min(1, p);
+}
+
+function _bhFDR(pvals) {
+  const n = pvals.length;
+  const ord = pvals.map((p, i) => ({p, i})).sort((a, b) => a.p - b.p);
+  const q = new Array(n);
+  let min = 1;
+  for (let i = n - 1; i >= 0; i--) {
+    min = Math.min(min, ord[i].p * n / (i + 1));
+    q[ord[i].i] = min;
+  }
+  return q;
+}
+
+async function _loadEnrichData() {
+  if (ENRICH_PARSED) return ENRICH_PARSED;
+  const msg = $('#enrich-msg');
+  msg.style.display = 'block';
+  msg.textContent = 'Loading enrichment libraries (7 MB, one-time)…';
+  const res = await fetch('enrichment_data.json');
+  if (!res.ok) throw new Error('enrichment_data.json not found — run build_enrichment_data.py');
+  const raw = await res.json();
+  const drugs = raw.drugs;
+
+  const libs = {};
+  for (const [name, lib] of Object.entries(raw.libraries)) {
+    const universe = new Set();
+    const terms = {};
+    for (const [term, idx] of Object.entries(lib.terms)) {
+      terms[term] = idx;
+      for (const i of idx) universe.add(i);
+    }
+    libs[name] = {universe, terms, N: universe.size};
+  }
+
+  // Populate library selector
+  const sel = $('#enrich-lib-filter');
+  sel.innerHTML = `<option value="">All libraries (${Object.keys(libs).length})</option>`;
+  for (const name of Object.keys(libs)) {
+    const o = document.createElement('option');
+    o.value = name;
+    o.textContent = name.replace(/_/g, ' ');
+    sel.appendChild(o);
+  }
+
+  ENRICH_PARSED = {
+    drugs,
+    drugIndex: Object.fromEntries(drugs.map((s, i) => [s, i])),
+    libs,
+  };
+  msg.style.display = 'none';
+  return ENRICH_PARSED;
+}
+
+async function runEnrichment() {
+  const btn = $('#enrich-run');
+  const msg = $('#enrich-msg');
+  try {
+    btn.disabled = true;
+    msg.style.display = 'block';
+    msg.textContent = 'Resolving drug names…';
+
+    const {drugs, drugIndex, libs} = await _loadEnrichData();
+
+    const lines = $('#enrich-ta').value.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
+    if (!lines.length) { msg.textContent = 'Enter at least one drug name.'; return; }
+
+    const resolved = new Set();
+    const unresolved = [];
+    for (const name of lines) {
+      const sid = resolveQuery(name);
+      if (sid) resolved.add(sid);
+      else unresolved.push(name);
+    }
+
+    const minFDR  = parseFloat($('#enrich-fdr').value) || 0.05;
+    const minOver = parseInt($('#enrich-k').value) || 2;
+    const libPick = $('#enrich-lib-filter').value;
+
+    // Map resolved syndra_ids to drug indices present in any library
+    const qIdx = new Set();
+    for (const sid of resolved) {
+      const i = drugIndex[sid];
+      if (i !== undefined) qIdx.add(i);
+    }
+
+    if (!qIdx.size) {
+      msg.textContent = `None of the ${resolved.size} resolved drug(s) appear in the enrichment libraries.`;
+      return;
+    }
+
+    msg.textContent = 'Running ORA…';
+    const rows = [];
+    const libsToTest = libPick ? {[libPick]: libs[libPick]} : libs;
+
+    for (const [libName, {universe, terms, N}] of Object.entries(libsToTest)) {
+      // K = query drugs that appear in this library
+      const qInLib = [...qIdx].filter(i => universe.has(i));
+      const K = qInLib.length;
+      if (K === 0) continue;
+      const qSet = new Set(qInLib);
+
+      for (const [term, idx] of Object.entries(terms)) {
+        const M = idx.length;
+        let k = 0;
+        for (const i of idx) { if (qSet.has(i)) k++; }
+        if (k < minOver) continue;
+        rows.push({library: libName, term, k, M, K, N, pval: _hypergeomPval(k, N, M, K)});
+      }
+    }
+
+    if (!rows.length) {
+      msg.style.display = 'block';
+      msg.textContent = `No terms with overlap ≥ ${minOver}. Try lowering min overlap or adding more drugs.`;
+      $('#enrich-results-wrap').style.display = 'none';
+      return;
+    }
+
+    const qvals = _bhFDR(rows.map(r => r.pval));
+    rows.forEach((r, i) => r.qval = qvals[i]);
+
+    ENRICH_ROWS = rows.filter(r => r.qval <= minFDR);
+    ENRICH_ROWS.sort((a, b) => a.pval - b.pval);
+
+    const pct = Math.round(resolved.size / lines.length * 100);
+    let covHtml = `${resolved.size}/${lines.length} names resolved (${pct}%)`;
+    if (unresolved.length) {
+      covHtml += ` &middot; <span style="color:var(--coral)">${unresolved.length} not found: ${unresolved.slice(0,5).map(esc).join(', ')}${unresolved.length > 5 ? '…' : ''}</span>`;
+    }
+    covHtml += ` &middot; ${qIdx.size} in enrichment universe`;
+    $('#enrich-coverage').innerHTML = covHtml;
+
+    msg.style.display = 'none';
+    _renderEnrich();
+  } catch(e) {
+    msg.textContent = 'Error: ' + e.message;
+    console.error(e);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function _fmtP(p) {
+  return p < 0.0005 ? p.toExponential(2) : p.toPrecision(3);
+}
+
+function _renderEnrich() {
+  const wrap  = $('#enrich-results-wrap');
+  const tbody = $('#enrich-tbody');
+  const rows  = ENRICH_ROWS;
+
+  if (!rows.length) {
+    wrap.style.display = 'none';
+    $('#enrich-msg').style.display = 'block';
+    $('#enrich-msg').textContent = 'No terms survived FDR filtering. Try raising the FDR threshold.';
+    return;
+  }
+
+  $('#enrich-res-title').textContent = `${rows.length} enriched term${rows.length !== 1 ? 's' : ''}`;
+
+  function makeRow(r) {
+    const cls = r.qval < 0.01 ? 'sig-h' : r.qval < 0.05 ? 'sig-m' : '';
+    const barW = Math.max(2, Math.round(r.k / r.K * 56));
+    return `<tr>
+      <td style="color:var(--muted);font-size:12px;white-space:nowrap">${esc(r.library.replace(/_/g,' '))}</td>
+      <td style="font-weight:500">${esc(r.term)}</td>
+      <td style="white-space:nowrap;font-family:var(--mono)"><b>${r.k}</b><span style="color:var(--muted)">/${r.M}</span><span class="enrich-bar" style="width:${barW}px"></span></td>
+      <td class="mono">${_fmtP(r.pval)}</td>
+      <td class="mono ${cls}">${_fmtP(r.qval)}</td>
+    </tr>`;
+  }
+
+  const PAGE = 50;
+  tbody.innerHTML = rows.slice(0, PAGE).map(makeRow).join('');
+  const moreWrap = $('#enrich-more-wrap');
+  if (rows.length > PAGE) {
+    moreWrap.style.display = 'block';
+    const moreBtn = $('#enrich-more');
+    moreBtn.textContent = `Show all ${rows.length} terms`;
+    moreBtn.onclick = () => { tbody.innerHTML = rows.map(makeRow).join(''); moreWrap.style.display = 'none'; };
+  } else {
+    moreWrap.style.display = 'none';
+  }
+
+  wrap.style.display = 'block';
+  wrap.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+$('#enrich-run').onclick = runEnrichment;
+
+$('#enrich-export').onclick = () => {
+  if (!ENRICH_ROWS.length) return;
+  const hdr = 'library,term,overlap_k,term_size_M,query_in_lib_K,universe_N,pval,fdr_qval';
+  const body = ENRICH_ROWS.map(r =>
+    [r.library, `"${r.term.replace(/"/g,'""')}"`, r.k, r.M, r.K, r.N,
+     r.pval.toExponential(4), r.qval.toExponential(4)].join(',')
+  );
+  const blob = new Blob([[hdr, ...body].join('\n')], {type: 'text/csv'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'syndra_enrichment.csv'; a.click(); URL.revokeObjectURL(a.href);
+};
+
+// Column header sort
+document.querySelector('.enrich-table thead').addEventListener('click', e => {
+  const th = e.target.closest('th[data-col]');
+  if (!th || !ENRICH_ROWS.length) return;
+  const col = th.dataset.col;
+  if (ENRICH_SORT.col === col) ENRICH_SORT.asc = !ENRICH_SORT.asc;
+  else { ENRICH_SORT.col = col; ENRICH_SORT.asc = (col === 'pval' || col === 'qval'); }
+  ENRICH_ROWS.sort((a, b) => {
+    const cmp = typeof a[col] === 'string' ? a[col].localeCompare(b[col]) : a[col] - b[col];
+    return ENRICH_SORT.asc ? cmp : -cmp;
+  });
+  _renderEnrich();
+});
+
+// Show other compounds sharing the same target or MOA
 function showByTag(tagType, tagValue) {
   if (!tagValue) return toast('No value to search');
   const key = tagType === 'target' ? 'target' : 'moa';
-  const matches = Object.entries(COMP).filter(([brd, c]) => {
-    return c && c[key] && String(c[key]).toLowerCase() === String(tagValue).toLowerCase();
-  }).map(([brd, c]) => ({brd, name: c.name || brd, parent: c.parent}));
+  const matches = Object.entries(COMP)
+    .filter(([sid, c]) => c && c[key] && String(c[key]).toLowerCase() === String(tagValue).toLowerCase())
+    .map(([sid, c]) => ({sid, name: c.name || sid, brd: c.brd || ''}));
 
   if (!matches.length) return toast('No matching compounds found');
 
-  // Render a compact list of matches
   $('#results').innerHTML = `
     <div class="res-head">
       <div>
         <h2 class="res-name">${esc(tagValue)}</h2>
-        <div class="res-sub"><span class="badge">${matches.length} matches</span></div>
+        <div class="res-sub"><span class="badge">${matches.length} match${matches.length > 1 ? 'es' : ''}</span></div>
       </div>
       <button class="btn-ghost" onclick="resetView()">Close</button>
     </div>
     <div class="card">
       <h3><span class="ic">⬡</span> Compounds sharing this ${esc(tagType)}</h3>
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
-        ${matches.map(m => `<div class="ac-item" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:8px;cursor:pointer" data-brd="${m.brd}"><span style="font-weight:600">${esc(m.name)}</span><span style="float:right;font-family:var(--mono);color:var(--muted)">${esc(m.brd)}</span></div>`).join('')}
+        ${matches.map(m => `
+          <div class="ac-item" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:8px;cursor:pointer" data-sid="${m.sid}">
+            <span style="font-weight:600">${esc(m.name)}</span>
+            <span style="float:right;font-family:var(--mono);color:var(--muted);font-size:12px">${esc(m.brd || m.sid)}</span>
+          </div>`).join('')}
       </div>
     </div>`;
 
-  // Attach click handlers
-  $('#results').querySelectorAll('[data-brd]').forEach(el => {
-    el.onclick = () => show(el.dataset.brd);
+  $('#results').querySelectorAll('[data-sid]').forEach(el => {
+    el.onclick = () => show(el.dataset.sid);
   });
   $('#results').classList.add('show');
   scrollToEl('#results');

@@ -3,7 +3,11 @@
 build_webapp_data.py — generate syndra_data.json from the new structure-anchored build.
 
 Reads from outputs/syndra_redistributable_*.parquet (produced by build/build_all.py).
-Optionally enriches with target/MOA from LINCS compoundinfo_beta.txt.
+Optionally enriches with:
+  - target/MOA          from LINCS compoundinfo_beta.txt    (keyed by BRD ID)
+  - clinical_phase,
+    disease_area,
+    indication          from Repurposing Hub annotation file (keyed by pert_iname)
 
 Output schema:
   {
@@ -11,6 +15,8 @@ Output schema:
       "SYN0000001": {
         "name": str, "inchikey": str|null, "skeleton": str|null, "smiles": str|null,
         "has_structure": bool, "brd": str|null, "pubchem": str|null, "ttd": str|null,
+        "approval": str|null,
+        "clinical_phase": str|null, "disease_area": str|null, "indication": str|null,
         "target": str|null, "moa": str|null,
         "synonyms": [str],       # up to MAX_SYN
         "variants": [syndra_id], # other IDs sharing the same skeleton, up to MAX_VARIANTS
@@ -26,23 +32,30 @@ Run from the project root:
 """
 import json
 from pathlib import Path
+from unicodedata import normalize as _unorm
 
 import pandas as pd
 
 ROOT = Path(__file__).parent
 OUTPUTS = ROOT / "outputs"
 LINCS_PATH = ROOT / "synonyms" / "input" / "compoundinfo_beta.txt"
+REPHUB_PATH = ROOT / "synonyms" / "input" / "repurposing_hub_annotation.txt"
 OUT_PATH = ROOT / "syndra_data.json"
 
 MAX_SYN = 40
 MAX_VARIANTS = 60
 
 _SENTINELS = {"", "nan", "none", "null", "n/a", "na"}
+_STATUS_LABEL = {"ONP": "Approved · Rx", "OFP": "Approved · Rx/OTC", "OFM": "Approved · OTC"}
 
 
 def _clean(v):
     s = str(v).strip() if v is not None else ""
     return None if s.lower() in _SENTINELS else s
+
+
+def _norm(s: str) -> str:
+    return _unorm("NFKC", str(s)).strip().lower()
 
 
 def _load(stem):
@@ -55,6 +68,45 @@ def _load(stem):
     raise FileNotFoundError(f"Not found: {p} or {c}. Run build/build_all.py first.")
 
 
+def _load_rephub(filepath: Path, syn_index: dict[str, str]) -> dict[str, dict]:
+    """Parse Repurposing Hub drug annotation file (! header lines, then TSV).
+
+    Columns used: pert_iname, clinical_phase, moa, target, disease_area, indication.
+    Returns {syndra_id: {clinical_phase, disease_area, indication, rephub_moa, rephub_target}}.
+    """
+    sid_to_rephub: dict[str, dict] = {}
+    unresolved = 0
+
+    with open(filepath, encoding="utf-8", errors="replace") as fh:
+        headers = None
+        for line in fh:
+            line = line.rstrip("\n")
+            if line.startswith("!") or not line.strip():
+                continue
+            parts = line.split("\t")
+            if headers is None:
+                headers = [h.strip() for h in parts]
+                continue
+            row = dict(zip(headers, parts))
+            pert = _clean(row.get("pert_iname", ""))
+            if not pert:
+                continue
+            sid = syn_index.get(_norm(pert))
+            if not sid:
+                unresolved += 1
+                continue
+            if sid not in sid_to_rephub:
+                sid_to_rephub[sid] = {
+                    "clinical_phase": _clean(row.get("clinical_phase", "")),
+                    "disease_area":   _clean(row.get("disease_area", "")),
+                    "indication":     _clean(row.get("indication", "")),
+                    "rephub_moa":     _clean(row.get("moa", "")),
+                    "rephub_target":  _clean(row.get("target", "")),
+                }
+
+    return sid_to_rephub, unresolved
+
+
 def main():
     print("Loading SynDRA outputs …")
     compounds_df = _load("syndra_redistributable_compounds")
@@ -62,9 +114,20 @@ def main():
     synonyms_df  = _load("syndra_redistributable_synonyms")
 
     # ------------------------------------------------------------------
+    # Build synonym index early — needed to resolve RepHub pert_inames
+    # ------------------------------------------------------------------
+    print("  Building synonym index …")
+    syn_index: dict[str, str] = {}
+    for _, row in synonyms_df.iterrows():
+        sid  = _clean(str(row.get("syndra_id", "")))
+        norm = _clean(str(row.get("synonym_norm", "")))
+        if sid and norm and norm not in syn_index:
+            syn_index[norm] = sid
+
+    # ------------------------------------------------------------------
     # Optional: LINCS target/MOA enrichment (keyed by BRD ID)
     # ------------------------------------------------------------------
-    brd_to_meta = {}
+    brd_to_meta: dict[str, dict] = {}
     if LINCS_PATH.exists():
         lincs = pd.read_csv(LINCS_PATH, sep="\t", dtype=str).fillna("")
         for _, row in lincs.iterrows():
@@ -77,13 +140,24 @@ def main():
         print(f"  LINCS target/MOA loaded: {len(brd_to_meta):,} entries")
 
     # ------------------------------------------------------------------
+    # Optional: Repurposing Hub clinical annotation (keyed by pert_iname)
+    # ------------------------------------------------------------------
+    sid_to_rephub: dict[str, dict] = {}
+    if REPHUB_PATH.exists():
+        sid_to_rephub, unresolved = _load_rephub(REPHUB_PATH, syn_index)
+        print(f"  Repurposing Hub annotation loaded: {len(sid_to_rephub):,} matched "
+              f"({unresolved:,} pert_inames unresolved)")
+    else:
+        print(f"  Repurposing Hub annotation not found, skipping: {REPHUB_PATH.name}")
+
+    # ------------------------------------------------------------------
     # Build per-compound xref lookup
     # ------------------------------------------------------------------
     xref_by_sid: dict[str, dict[str, list[str]]] = {}
     for _, row in xrefs_df.iterrows():
-        sid  = _clean(str(row.get("syndra_id", "")))
+        sid   = _clean(str(row.get("syndra_id", "")))
         itype = _clean(str(row.get("id_type", "")))
-        val  = _clean(str(row.get("id_value", "")))
+        val   = _clean(str(row.get("id_value", "")))
         if sid and itype and val:
             xref_by_sid.setdefault(sid, {}).setdefault(itype, [])
             if val not in xref_by_sid[sid][itype]:
@@ -117,66 +191,57 @@ def main():
     # ------------------------------------------------------------------
     print("Building compound records …")
     records: dict[str, dict] = {}
-    index:   dict[str, str]  = {}
 
     for _, row in compounds_df.iterrows():
         sid = _clean(str(row.get("syndra_id", "")))
         if not sid:
             continue
 
-        ik    = _clean(str(row.get("inchikey", "")))
-        sk    = _clean(str(row.get("inchikey_skeleton", "")))
-        smi   = _clean(str(row.get("canonical_smiles", "")))
-        name  = _clean(str(row.get("preferred_name", ""))) or sid
-        hs    = str(row.get("has_structure", "false")).lower() == "true"
+        ik   = _clean(str(row.get("inchikey", "")))
+        sk   = _clean(str(row.get("inchikey_skeleton", "")))
+        smi  = _clean(str(row.get("canonical_smiles", "")))
+        name = _clean(str(row.get("preferred_name", ""))) or sid
+        hs   = str(row.get("has_structure", "false")).lower() == "true"
 
         xrefs = xref_by_sid.get(sid, {})
         brd   = xrefs.get("BRD", [None])[0]
         pubch = xrefs.get("PUBCHEM_CID", [None])[0]
         ttd   = xrefs.get("TTD", [None])[0]
 
-        # Enrich with LINCS target/MOA if we have a BRD xref
-        meta = brd_to_meta.get(brd, {}) if brd else {}
-        target = meta.get("target")
-        moa    = meta.get("moa")
+        # Approval status from DrugCentral
+        dc_status = xrefs.get("DC_STATUS", [None])[0]
+        approval  = _STATUS_LABEL.get(dc_status) if dc_status else None
 
-        # Variants: other syndra_ids sharing the same skeleton
+        # Repurposing Hub clinical annotation
+        rh = sid_to_rephub.get(sid, {})
+
+        # target/MOA: LINCS BRD match has priority; fall back to RepHub
+        lincs_meta = brd_to_meta.get(brd, {}) if brd else {}
+        target = lincs_meta.get("target") or rh.get("rephub_target")
+        moa    = lincs_meta.get("moa")    or rh.get("rephub_moa")
+
         siblings = skeleton_groups.get(sk, []) if sk else []
         variants = [s for s in siblings if s != sid][:MAX_VARIANTS]
+        syns     = syns_by_sid.get(sid, [])[:MAX_SYN]
 
-        syns = syns_by_sid.get(sid, [])[:MAX_SYN]
-
-        records[sid] = {
-            "name": name, "inchikey": ik, "skeleton": sk, "smiles": smi,
-            "has_structure": hs, "brd": brd, "pubchem": pubch, "ttd": ttd,
+        rec = {
+            "name": name, "has_structure": hs,
+            "inchikey": ik, "skeleton": sk, "smiles": smi,
+            "brd": brd, "pubchem": pubch, "ttd": ttd,
+            "approval":       approval,
+            "clinical_phase": rh.get("clinical_phase"),
+            "disease_area":   rh.get("disease_area"),
+            "indication":     rh.get("indication"),
             "target": target, "moa": moa,
             "synonyms": syns, "variants": variants,
-            "n_variants": len(siblings) - 1,   # excludes self
+            "n_variants": len(siblings) - 1,
         }
+        records[sid] = {k: v for k, v in rec.items() if v is not None}
 
-        # Build search index from all synonyms
-        for _, srow in synonyms_df[synonyms_df["syndra_id"] == sid].iterrows():
-            norm = _clean(str(srow.get("synonym_norm", "")))
-            if norm and norm not in index:
-                index[norm] = sid
-
-        # Also index BRD IDs (so BRD-K... searches work)
-        for brd_val in xrefs.get("BRD", []):
-            if brd_val:
-                bv = brd_val.lower()
-                if bv not in index:
-                    index[bv] = sid
-
-    # Rebuild index from normalized synonyms for performance (avoids per-sid iterrows)
-    print("  Building search index …")
-    index = {}
-    for _, row in synonyms_df.iterrows():
-        sid  = _clean(str(row.get("syndra_id", "")))
-        norm = _clean(str(row.get("synonym_norm", "")))
-        if sid and norm and norm not in index:
-            index[norm] = sid
-
-    # Also add BRD IDs to the index
+    # ------------------------------------------------------------------
+    # Build output index: synonym norms + BRD IDs
+    # ------------------------------------------------------------------
+    index = dict(syn_index)  # already built above
     for _, row in xrefs_df.iterrows():
         sid   = _clean(str(row.get("syndra_id", "")))
         itype = _clean(str(row.get("id_type", "")))
@@ -187,10 +252,10 @@ def main():
                 index[bv] = sid
 
     # Stats
-    n_compounds = len(compounds_df)
+    n_compounds   = len(compounds_df)
     n_with_struct = int(compounds_df["has_structure"].astype(str).str.lower().eq("true").sum())
-    n_orphans = n_compounds - n_with_struct
-    n_synonyms = len(synonyms_df)
+    n_orphans     = n_compounds - n_with_struct
+    n_synonyms    = len(synonyms_df)
 
     data = {
         "compounds": records,

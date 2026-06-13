@@ -85,7 +85,9 @@ def _parse_sql_tables(filepath: str):
                 name = parts[9] if parts[9] != _NULL else ""
                 smiles = parts[26] if parts[26] != _NULL else ""
                 inchikey = parts[29] if parts[29] != _NULL else ""
-                structures[dc_id] = {"name": name, "smiles": smiles, "inchikey": inchikey}
+                status = parts[30] if len(parts) > 30 and parts[30] != _NULL else ""
+                structures[dc_id] = {"name": name, "smiles": smiles,
+                                     "inchikey": inchikey, "status": status}
 
             elif current == "synonyms":
                 if len(parts) < 3:
@@ -149,6 +151,7 @@ def add_drugcentral(hub: CompoundHub, filepath: str) -> int:
         pref_name = names[0] if names else struct["name"] or None
         smiles = struct["smiles"]
         inchikey = struct["inchikey"]
+        status = struct.get("status", "")
         xrefs = identifiers.get(dc_id, [])
 
         sid: str | None = None
@@ -191,6 +194,10 @@ def add_drugcentral(hub: CompoundHub, filepath: str) -> int:
 
         # DrugCentral compound ID as xref
         hub.add_xref(sid, "DRUGCENTRAL", dc_id, source=_SOURCE, license=_LICENSE)
+
+        # Approval status (ONP = Rx, OFP = Rx/OTC, OFM = OTC)
+        if status:
+            hub.add_xref(sid, "DC_STATUS", status, source=_SOURCE, license=_LICENSE)
 
         # Other identifier xrefs
         for hub_type, val in xrefs:

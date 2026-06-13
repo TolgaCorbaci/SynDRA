@@ -112,6 +112,11 @@ h1.head em{font-style:normal;color:var(--teal);position:relative;white-space:now
 .badge.target{background:#eef0fb;border-color:#dadffa;color:#4b46b8}
 .badge.moa{background:#fff;color:var(--ink-2)}
 .badge.class{background:var(--teal-050);border-color:#cfe9e5;color:var(--teal-700)}
+.badge.approved{background:#e8f7ef;border-color:#b6dfc8;color:#1a6b3c;cursor:default}
+.badge.ph-launched{background:#e8f7ef;border-color:#b6dfc8;color:#1a6b3c;cursor:default}
+.badge.ph-late{background:#e7f5f3;border-color:#cfe9e5;color:var(--teal-700);cursor:default}
+.badge.ph-early{background:#eef0fb;border-color:#dadffa;color:#4b46b8;cursor:default}
+.badge.ph-pre{background:var(--bg);border-color:var(--line);color:var(--muted);cursor:default}
 .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--ink);
   background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:9px 15px;cursor:pointer;transition:border-color .15s}
 .btn-ghost:hover{border-color:var(--teal)}
@@ -662,6 +667,15 @@ function runSearch() {
 const esc = s => (s == null ? '' : String(s)).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let SYN_OPEN = false;
 
+function _phaseClass(ph) {
+  if (!ph) return 'ph-pre';
+  const l = ph.toLowerCase();
+  if (l === 'launched') return 'ph-launched';
+  if (l.includes('3') || l.includes('4')) return 'ph-late';
+  if (l.includes('1') || l.includes('2')) return 'ph-early';
+  return 'ph-pre';
+}
+
 function idRow(k, v, opts={}) {
   if (v == null || v === '') return '';
   let display = (typeof v === 'number') ? String(v) : String(v).replace(/\.0$/, '');
@@ -681,8 +695,10 @@ function show(sid) {
   const nTotal = (c.n_variants || 0) + 1;
 
   const badges = [
-    c.target ? `<span class="badge target">Target · ${esc(c.target)}</span>` : '',
-    c.moa    ? `<span class="badge moa">${esc(c.moa)}</span>` : '',
+    c.approval       ? `<span class="badge approved">✓ ${esc(c.approval)}</span>` : '',
+    c.clinical_phase ? `<span class="badge ${_phaseClass(c.clinical_phase)}">${esc(c.clinical_phase)}</span>` : '',
+    c.target         ? `<span class="badge target">Target · ${esc(c.target)}</span>` : '',
+    c.moa            ? `<span class="badge moa">${esc(c.moa)}</span>` : '',
   ].join('');
 
   // Collect all BRD IDs: this compound's + variants'
@@ -758,6 +774,10 @@ function show(sid) {
         <div class="card">
           <h3><span class="ic">⬡</span> Identifiers</h3>
           ${idRow('SynDRA ID', sid)}
+          ${idRow('Approval status', c.approval)}
+          ${idRow('Clinical phase', c.clinical_phase)}
+          ${idRow('Disease area', c.disease_area)}
+          ${idRow('Indication', c.indication)}
           ${idRow('LINCS BRD ID', c.brd)}
           ${idRow('InChIKey', c.inchikey)}
           ${idRow('Parent skeleton', c.skeleton)}
@@ -879,6 +899,8 @@ function download(sid, c) {
   const row = {
     syndra_id: sid, name: c.name, has_structure: c.has_structure,
     inchikey: c.inchikey, inchikey_skeleton: c.skeleton, canonical_smiles: c.smiles,
+    approval_status: c.approval || '', clinical_phase: c.clinical_phase || '',
+    disease_area: c.disease_area || '', indication: c.indication || '',
     brd_id: c.brd, pubchem_cid: c.pubchem, ttd_id: c.ttd,
     target: c.target, moa: c.moa,
     n_variants: c.n_variants || 0, all_brd_ids: allBrds,

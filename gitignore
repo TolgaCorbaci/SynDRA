@@ -25,3 +25,6 @@ synonyms/input/Drugcentral/drugcentral.dump.11012023.sql
 build/__pycache__/
 build/*.pyc
 # If you have other junk like logs or temp files, add them here
+
+# Large Data
+synonyms/input/Drugcentral/
